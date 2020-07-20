@@ -1,0 +1,6 @@
+<Driver type="c4z" name="dlna_example" squishLua="false" Encryption="false">
+<Items>
+	<Item type="file" name="driver.xml" c4zDir = "" />
+	<Item type="file" name="driver.lua" c4zDir = "" />
+</Items>
+</Driver>

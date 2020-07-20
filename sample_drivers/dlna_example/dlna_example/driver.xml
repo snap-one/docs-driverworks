@@ -1,0 +1,41 @@
+<devicedata>
+	<copyright>Copyright 2019 Control4 Corporation. All rights reserved.</copyright>
+	<creator>Control4</creator>
+	<manufacturer>Control4</manufacturer>
+	<name>DLNA Example</name>
+	<model>DLNA Example</model>
+	<created>04/25/2017 15:30</created>
+	<modified>04/23/2019 14:00</modified>
+	<version>2</version>
+	<control>lua_gen</control>
+	<driver>DriverWorks</driver>
+	<config>
+		<script file="driver.lua"/>
+		<properties>
+			<property>
+				<name>Driver Version</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>true</readonly>
+			</property>
+			<property>
+				<name>Selected Device</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>true</readonly>
+			</property>
+			<property>
+				<name>Device Selector</name>
+				<type>DYNAMIC_LIST</type>
+				<readonly>false</readonly>
+			</property>
+		</properties>
+		<commands/>
+		<actions/>
+	</config>
+	<capabilities/>
+	<proxies>
+		<proxy proxybindingid="5001" name="DLNA Example">dlna_example</proxy>
+	</proxies>
+	<connections/>
+</devicedata>

@@ -1,0 +1,46 @@
+<devicedata>
+	<copyright>Copyright 2020 Control4 Corporation. All rights reserved.</copyright>
+	<creator>Control4</creator>
+	<manufacturer>Control4</manufacturer>
+	<name>WebSocket Demo</name>
+	<model>WebSocket Demo</model>
+	<created>12/12/2016 12:00</created>
+	<modified>07/16/2020 10:00</modified>
+	<version>6</version>
+	<control>lua_gen</control>
+	<driver>DriverWorks</driver>
+	<config>
+		<documentation>
+WebSocket class demo
+
+You can use the websocket.org demo server to test regular and secure WebSockets:
+
+ws://echo.websocket.org
+wss://echo.websocket.org
+		</documentation>
+		<script file="driver.lua"/>
+		<properties>
+			<property>
+				<name>WebSocket URL</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>false</readonly>
+			</property>
+			<property>
+				<name>Message To Send</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>false</readonly>
+			</property>
+			<property>
+				<name>Message Received</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>true</readonly>
+			</property>
+		</properties>
+	</config>
+	<proxies>
+		<proxy proxybindingid="5001" name="WebSocket Demo">websocket</proxy>
+	</proxies>
+</devicedata>

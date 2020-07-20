@@ -1,0 +1,88 @@
+<devicedata>
+	<copyright>Copyright 2019 Control4 Corporation. All Rights Reserved.</copyright>
+	<manufacturer>Control4</manufacturer>
+	<name>Generic TCP Tester</name>
+	<model>Generic TCP Tester</model>
+	<creator>Control4</creator>
+	<created>02/08/2019 16:00</created>
+	<modified>02/08/2019 16:00</modified>
+	<version>1</version>
+	<control>lua_gen</control>
+	<driver>DriverWorks</driver>
+	<auto_update>true</auto_update>
+	<minimum_auto_update_version>1</minimum_auto_update_version>
+	<minimum_os_version>2.9.0</minimum_os_version>
+	<config>
+		<script file="driver.lua"></script>
+		<properties>
+			<property>
+				<name>Server Address</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>false</readonly>
+				<description>This can be either a hostname or an IP address</description>
+			</property>
+			<property>
+				<name>Server Port</name>
+				<minimum>1</minimum>
+				<maximum>65535</maximum>
+				<default>23</default>
+				<type>RANGED_INTEGER</type>
+				<readonly>false</readonly>
+				<description>The port to connect to on the remote server. Some standard ports: HTTP 80, HTTPS 443 [Set Use SSL to Yes], TELNET 23</description>
+			</property>
+			<property>
+				<name>Connection Type</name>
+				<type>LIST</type>
+				<items>
+					<item>TCP</item>
+					<item>UDP</item>
+					<item>MULTICAST</item>
+				</items>
+				<default>TCP</default>
+				<readonly>false</readonly>
+				<description>Which protocol to use (SSL only supports TCP)</description>
+			</property>
+			<property>
+				<name>Use SSL</name>
+				<type>LIST</type>
+				<items>
+					<item>Yes</item>
+					<item>No</item>
+				</items>
+				<default>No</default>
+				<readonly>false</readonly>
+				<description>Whether to use SSL on the connection</description>
+			</property>
+			<property>
+				<name>Open Connection</name>
+				<type>LIST</type>
+				<items>
+					<item>Open</item>
+					<item>Close</item>
+				</items>
+				<default>Close</default>
+				<readonly>false</readonly>
+				<description>Set to Open to open the connection with the above settings</description>
+			</property>
+			<property>
+				<name>Send Data</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>false</readonly>
+				<description>Enter text to send to the remote server.\n is turned into a newline and \r is turned into a carriage return</description>
+			</property>
+			<property>
+				<name>Server Response</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>true</readonly>
+				<description>Response from the remote server</description>
+			</property>
+		</properties>
+	</config>
+	<combo>true</combo>
+	<proxies>
+		<proxy>generic_http</proxy>
+	</proxies>
+</devicedata>

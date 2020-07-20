@@ -1,0 +1,192 @@
+<devicedata>
+	<copyright>Copyright 2018 Control4 Corporation. All Rights Reserved.</copyright>
+	<manufacturer>Control4</manufacturer>
+	<name>Generic HTTP Sender</name>
+	<model>Generic HTTP Sender</model>
+	<creator>Control4</creator>
+	<created>01/26/2018 11:00</created>
+	<modified>07/13/2019 12:30</modified>
+	<version>5</version>
+	<control>lua_gen</control>
+	<driver>DriverWorks</driver>
+	<auto_update>true</auto_update>
+	<minimum_auto_update_version>1</minimum_auto_update_version>
+	<minimum_os_version>2.9.0</minimum_os_version>
+	<config>
+		<script file="driver.lua"></script>
+		<documentation file="www/documentation.html"/>
+		<properties>
+			<property>
+				<name>Debug Mode</name>
+				<type>LIST</type>
+				<items>
+					<item>Off</item>
+					<item>On</item>
+				</items>
+				<default>Off</default>
+				<readonly>false</readonly>
+			</property>
+			<property>
+				<name>URL Timeout</name>
+				<type>RANGED_INTEGER</type>
+				<minimum>1</minimum>
+				<maximum>30</maximum>
+				<default>5</default>
+			</property>
+			<property>
+				<name>Preset URL 1</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>false</readonly>
+			</property>
+			<property>
+				<name>Preset URL 2</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>false</readonly>
+			</property>
+			<property>
+				<name>Preset URL 3</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>false</readonly>
+			</property>
+			<property>
+				<name>Preset URL 4</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>false</readonly>
+			</property>
+			<property>
+				<name>Preset URL 5</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>false</readonly>
+			</property>
+		</properties>
+		<commands>
+			<command>
+				<name>GET Preset</name>
+				<description>Send HTTP GET for URL Preset PARAM1</description>
+				<params>
+					<param>
+						<name>PRESET</name>
+						<type>RANGED_INTEGER</type>
+						<minimum>1</minimum>
+						<maximum>5</maximum>
+					</param>
+				</params>
+			</command>
+			<command>
+				<name>GET Manual</name>
+				<description>Send HTTP GET for URL PARAM1</description>
+				<params>
+					<param>
+						<name>URL</name>
+						<type>STRING</type>
+					</param>
+				</params>
+			</command>
+			<command>
+				<name>POST Preset</name>
+				<description>Send HTTP POST for URL Preset PARAM1 with data PARAM2</description>
+				<params>
+					<param>
+						<name>PRESET</name>
+						<type>RANGED_INTEGER</type>
+						<minimum>1</minimum>
+						<maximum>5</maximum>
+					</param>
+					<param>
+						<name>DATA</name>
+						<type>STRING</type>
+					</param>
+				</params>
+			</command>
+			<command>
+				<name>POST Manual</name>
+				<description>Send HTTP POST for URL PARAM1 with data PARAM2</description>
+				<params>
+					<param>
+						<name>URL</name>
+						<type>STRING</type>
+					</param>
+					<param>
+						<name>DATA</name>
+						<type>STRING</type>
+					</param>
+				</params>
+			</command>
+		</commands>
+		<actions>
+			<action>
+				<name>Send HTTP GET for URL Preset </name>
+				<command>GET Preset</command>
+				<params>
+					<param>
+						<name>PRESET</name>
+						<type>RANGED_INTEGER</type>
+						<minimum>1</minimum>
+						<maximum>5</maximum>
+					</param>
+				</params>
+			</action>
+			<action>
+				<name>Send HTTP GET for manual URL</name>
+				<command>GET Manual</command>
+				<params>
+					<param>
+						<name>URL</name>
+						<type>STRING</type>
+					</param>
+				</params>
+			</action>
+			<action>
+				<name>Send HTTP POST for URL Preset</name>
+				<command>POST Preset</command>
+				<params>
+					<param>
+						<name>PRESET</name>
+						<type>RANGED_INTEGER</type>
+						<minimum>1</minimum>
+						<maximum>5</maximum>
+					</param>
+					<param>
+						<name>DATA</name>
+						<type>STRING</type>
+					</param>
+				</params>
+			</action>
+			<action>
+				<name>Send HTTP POST for manual URL</name>
+				<command>POST Manual</command>
+				<params>
+					<param>
+						<name>URL</name>
+						<type>STRING</type>
+					</param>
+					<param>
+						<name>DATA</name>
+						<type>STRING</type>
+					</param>
+				</params>
+			</action>
+		</actions>
+	</config>
+	<combo>true</combo>
+	<proxies>
+		<proxy>generic_http</proxy>
+	</proxies>
+	<events>
+		<event>
+			<id>1</id>
+			<name>Success</name>
+			<description>No cURL errors</description>
+		</event>
+		<event>
+			<id>2</id>
+			<name>Error</name>
+			<description>cURL error received</description>
+		</event>
+	</events>
+</devicedata>

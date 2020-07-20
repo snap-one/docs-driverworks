@@ -1,0 +1,93 @@
+<devicedata>
+	<copyright>Copyright 2019 Control4 Corporation.  All rights reserved.</copyright>
+	<creator>Control4</creator>
+	<manufacturer>Control4</manufacturer>
+	<name>InterDriver Comms Sub</name>
+	<model>InterDriver Comms Sub</model>
+	<created>11/27/2019 10:00</created>
+	<modified>11/27/2019 10:00</modified>
+	<version>1</version>
+	<control>lua_gen</control>
+	<driver>DriverWorks</driver>
+	<config>
+		<script jit="1" file="lua/squished.lua"/>
+		<properties>
+			<property>
+				<name>Driver Version</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>true</readonly>
+			</property>
+			<property>
+				<name>Debug Mode</name>
+				<type>LIST</type>
+				<items>
+					<item>Off</item>
+					<item>On</item>
+				</items>
+				<default>Off</default>
+				<readonly>false</readonly>
+			</property>
+			<property>
+				<name>ID</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>false</readonly>
+			</property>
+		</properties>
+		<actions/>
+		<commands/>
+	</config>
+	<proxies>
+		<proxy name="IDC Sub Media Player">media_player</proxy>
+	</proxies>
+	<events/>
+	<connections>
+		<connection>
+			<id>5001</id>
+			<facing>6</facing>
+			<connectionname>MEDIA_PLAYER</connectionname>
+			<type>2</type>
+			<consumer>False</consumer>
+			<audiosource>False</audiosource>
+			<videosource>False</videosource>
+			<linelevel>False</linelevel>
+			<classes>
+				<class>
+					<classname>MEDIA_PLAYER</classname>
+				</class>
+			</classes>
+			<hidden>True</hidden>
+		</connection>
+		<connection>
+			<id>1</id>
+			<facing>6</facing>
+			<connectionname>IDC Connection</connectionname>
+			<type>1</type>
+			<consumer>True</consumer>
+			<audiosource>False</audiosource>
+			<videosource>False</videosource>
+			<linelevel>False</linelevel>
+			<classes>
+				<class>
+					<classname>IDC</classname>
+					<autobind>True</autobind>
+				</class>
+			</classes>
+			<hidden>False</hidden>
+		</connection>
+		<connection proxybindingid="5001">
+			<id>2001</id>
+			<type>5</type>
+			<connectionname>AV Out</connectionname>
+			<consumer>False</consumer>
+			<linelevel>True</linelevel>
+			<classes>
+				<class>
+					<classname>HDMI</classname>
+				</class>
+			</classes>
+		</connection>
+	</connections>
+	<capabilities/>
+</devicedata>
