@@ -1,0 +1,36 @@
+<extras_setup>
+    <extra>
+        <section label="HVAC">
+            <object type="button" id="one" label="Humidifier Filter Needs Replacement" command="commandResetHumidifier">
+            <buttontext>Reset for 6 months</buttontext></object>
+            <object type="checkbox" id="2" label="Fresh Air" command="FreshAirEnabled"/>
+            <object type="list" id="Three 3" label="Indoor Air Quality Event" command="Deadzone"> <!-- value missing => default entry is "Not Set" -->
+                <list maxselections="1" minselections="1">
+                    <item text="Off" value="0"/>
+                    <item text="3 Hour Event" value="1"/>
+                    <item text="24 Hour Event" value="2"/>
+                    <item text="Hour Event" value="3"/>
+                    <item text="Automatic" value="4"/>
+                	    </list>
+            </object>
+        </section>
+        <section label="Zone Averaging">
+            <object type="list" id="4" label="Indoor Air Quality Event"> <!-- no command => empty ReceivedFromProxy, id is sent -->
+                <list maxselections="1">
+                    <item text="Zone 1" value="1"/>
+                    <item text="Zone 2" value="2"/>
+                    <item text="Zone 3" value="3"/>
+                    <item text="Zone 4" value="4"/>
+                    <item text="All Zones" value="all"/>
+                </list>
+            </object>
+            <object type="checkbox" id="5" label="Zones Averaging Enabled" command="zones_average">
+                <extraparameters>
+                    <param name="possibleoptions" object_link_id="2"/>
+                </extraparameters>
+            </object>
+        </section>
+    </extra>
+</extras_setup>
+
+
