@@ -1,0 +1,157 @@
+<devicedata>
+  <copyright>Copyright 2019 Control4 Corporation.  All rights reserved.</copyright>
+  <creator>Control4</creator>
+  <manufacturer>Template</manufacturer>
+  <name>Dynamic Binding Sample</name>
+  <model>Dynamic Binding Sample</model>
+  <created>03/27/2019 3:55 PM</created>
+  <modified>03/27/2019 3:55 PM</modified>
+  <version>1</version>
+  <small>devices_sm\C4.gif</small>
+  <large>devices_lg\C4.gif</large>
+  <control>lua_gen</control>
+  <driver>DriverWorks</driver>
+  <proxies qty="1">
+    <proxy name="Sample Dynamic Bindings">sample_dynamic_bindings</proxy>
+  </proxies>
+  <combo>true</combo>
+  <capabilities>
+  </capabilities>
+  <connections>
+  </connections>
+  <config>
+	<properties>
+		<property>
+			<name>==Dynamic Bindings==</name>
+			<type>STRING</type>
+			<default>Warning - changing the number of dynamic bindings will delete and recreate all bindings</default>
+			<readonly>true</readonly>
+			<tooltip>Warning - changing the number of dynamic bindings will delete and recreate all bindings</tooltip>
+		</property>
+		<property>
+			<name>Number of Dynamic Bindings</name>
+			<type>RANGED_INTEGER</type>
+			<minimum>1</minimum>
+			<maximum>128</maximum>
+			<default>32</default>
+			<tooltip>Changing the number of dynamic bindings will delete and recreate all bindings</tooltip>
+		</property>
+	</properties>
+
+  <script><![CDATA[
+--[[=============================================================================
+    Sample Driver for Dynamic Bindings
+
+    Copyright 2019 Control4 Corporation. All Rights Reserved.
+===============================================================================]]------------
+
+--[[=============================================================================
+    Constants
+===============================================================================]]
+ON_PROPERTY_CHANGED = {}
+PROXY_CMDS = {}
+BINDINGS_MANAGED = Properties['Number of Dynamic Bindings']
+if (nil == PersistData.zonebindings) then
+	PersistData["zonebindings"] = {}
+end
+
+--[[=============================================================================
+    Device Commands
+===============================================================================]]
+CMDS = {
+}
+
+function OnDriverLateInit()
+	if (PersistData.zonebindings ~= nil) then
+		for key,value in pairs(PersistData["zonebindings"]) do 
+		C4:AddDynamicBinding(key, "CONTROL", true, value, "CONTACT_SENSOR", false, false)
+	end
+end
+
+end
+
+function OnPropertyChanged(sProperty)
+	print ("OnPropertyChanged(" .. sProperty .. ") changed to: " .. Properties[sProperty])
+
+	local propertyValue = Properties[sProperty]
+
+	-- Remove any spaces (trim the property)
+	local trimmedProperty = string.gsub(sProperty, " ", "")
+
+	-- if function exists then execute (non-stripped)
+	if (ON_PROPERTY_CHANGED[sProperty] ~= nil and type(ON_PROPERTY_CHANGED[sProperty]) == "function") then
+		ON_PROPERTY_CHANGED[sProperty](propertyValue)
+		return
+	-- elseif trimmed function exists then execute
+	elseif (ON_PROPERTY_CHANGED[trimmedProperty] ~= nil and type(ON_PROPERTY_CHANGED[trimmedProperty]) == "function") then
+		ON_PROPERTY_CHANGED[trimmedProperty](propertyValue)
+		return
+	end
+end
+
+function ON_PROPERTY_CHANGED.NumberofDynamicBindings (value)
+	print("ON_PROPERTY_CHANGED.NumberofDynamicBindings ("..value..")")
+	if (BINDINGS_MANAGED ~= value) then
+		removeDynamicBindings()
+		addDynamicBindings(value)
+	end
+end
+
+function removeDynamicBindings()
+	print('> removing ' .. BINDINGS_MANAGED .. ' bindings')
+	for i=1,BINDINGS_MANAGED,1 do
+		local bindingId = 100 + i
+		C4:RemoveDynamicBinding(bindingId)
+		PersistData["zonebindings"] = {}
+	end
+end
+
+function addDynamicBindings(number)
+	BINDINGS_MANAGED = number
+	print('> adding and persisting ' .. BINDINGS_MANAGED .. ' bindings')
+	for i=1,number,1 do
+		local bindingId = 100 + i
+		local zoneLabel = "Zone "..i
+		C4:AddDynamicBinding(bindingId, "CONTROL", true, zoneLabel, "CONTACT_SENSOR", false, false)
+		PersistData["zonebindings"][bindingId] = zoneLabel
+	end
+end
+
+
+
+function ReceivedFromProxy(idBinding, sCommand, tParams)
+    if (sCommand ~= nil) then
+	   print("ReceivedFromProxy(): " .. sCommand .. " on binding " .. idBinding)
+	   if tParams then 
+	   	if (type (tParams) == 'table') then
+			for k, v in pairs (tParams) do print (k, v) end
+		elseif (type (tParams) ~= 'nil') then
+			print (type (tParams), tParams)
+		end
+	   end
+
+	   local cmd = ""
+	   if ((CMDS[sCommand]) ~= nil) then
+		  cmd = CMDS[sCommand]
+		  C4:SendToNetwork(NETWORK_CONNECTION_ID, NETWORK_CONNECTION_PORT, cmd)
+		  print("Sending command: " .. cmd)
+	   elseif (sCommand == "GET_CONNECTED_STATE") then
+		  C4:SendToProxy(LIGHT_PROXY_BINDINGID, "ONLINE_CHANGED", {STATE="true"}, "NOTIFY")
+		  --not sure what else to do here...
+	   elseif ((PROXY_CMDS[sCommand]) ~= nil) then
+		  PROXY_CMDS[sCommand](tParams, idBinding)
+	   else
+		  print("ReceivedFromProxy: Unhandled command = " .. sCommand)
+	   end
+    end
+end
+
+
+]]></script></config>
+  <search_types>
+    <type></type>
+  </search_types>
+  <composer_categories>
+    <category>Security</category>
+  </composer_categories>
+</devicedata>
