@@ -1,0 +1,282 @@
+<devicedata>
+  <copyright>Copyright 2019 Control4 Corporation.  All rights reserved.</copyright>
+  <creator>Control4</creator>
+  <manufacturer>Control4 Sample</manufacturer>
+  <name>Simple Light Proxy Sample</name>
+  <model>Simple Light Sample</model>
+  <created>01/03/2018 5:55 PM</created>
+  <modified>8/29/2019 2:42 PM</modified>
+  <version>110</version>
+  <small>devices_sm\C4.gif</small>
+  <large>devices_lg\C4.gif</large>
+  <control>lua_gen</control>
+  <controlmethod>serial</controlmethod>
+  <driver>DriverWorks</driver>
+  <proxies qty="1">
+    <proxy proxybindingid="5001" name="Sample Light">light_v2</proxy>
+  </proxies>
+  <capabilities>
+	  <dimmer>True</dimmer>
+	  <set_level>True</set_level>
+	  <ramp_level>True</ramp_level>
+	  <on_off>True</on_off>
+	  <min_max>False</min_max>
+	  <click_rates>False</click_rates>
+	  <hold_rates>False</hold_rates>
+	  <cold_start>False</cold_start>
+	  <has_leds>False</has_leds>
+	  <supports_broadcast_scenes>False</supports_broadcast_scenes>
+	  <supports_multichannel_scenes>False</supports_multichannel_scenes>
+	  <hide_proxy_properties>True</hide_proxy_properties>
+	  <hide_proxy_events>False</hide_proxy_events>
+	  <reduced_als_support>False</reduced_als_support>
+	  <advanced_scene_support>True</advanced_scene_support>
+	  <load_group_support>False</load_group_support>
+	  <buttons_are_virtual>True</buttons_are_virtual>
+  </capabilities>
+  <connections>
+  	<connection>
+		<id>300</id>
+		<facing>6</facing>
+		<connectionname>On Button Link</connectionname>
+		<type>1</type>
+		<consumer>False</consumer>
+		<audiosource>False</audiosource>
+		<videosource>False</videosource>
+		<linelevel>True</linelevel>
+		<classes>
+			<class>
+				<classname>BUTTON_LINK</classname>
+			</class>
+		</classes>
+	</connection>
+	<connection>
+		<id>301</id>
+		<facing>6</facing>
+		<connectionname>Toggle Button Link</connectionname>
+		<type>1</type>
+		<consumer>False</consumer>
+		<audiosource>False</audiosource>
+		<videosource>False</videosource>
+		<linelevel>True</linelevel>
+		<classes>
+			<class>
+				<classname>BUTTON_LINK</classname>
+			</class>
+		</classes>
+	</connection>
+	<connection>
+		<id>302</id>
+		<facing>6</facing>
+		<connectionname>Off Button Link</connectionname>
+		<type>1</type>
+		<consumer>False</consumer>
+		<audiosource>False</audiosource>
+		<videosource>False</videosource>
+		<linelevel>True</linelevel>
+		<classes>
+			<class>
+				<classname>BUTTON_LINK</classname>
+			</class>
+		</classes>
+	</connection>
+    <connection>
+      <id>5001</id>
+      <facing>6</facing>
+      <connectionname>LIGHT</connectionname>
+      <type>2</type>
+      <consumer>false</consumer>
+      <audiosource>false</audiosource>
+      <videosource>false</videosource>
+      <linelevel>false</linelevel>
+      <classes>
+        <class>
+          <classname>LIGHT_V2</classname>
+        </class>
+      </classes>
+    </connection>
+  </connections>
+  <config>
+	<properties>
+      <property>
+        <name>Driver Version</name>
+        <default>Lua error</default>
+        <type>STRING</type>
+        <readonly>true</readonly>
+      </property>
+ 	  <property>
+		<name>Light Level</name>
+		<type>RANGED_INTEGER</type>
+		<minimum>0</minimum>
+		<maximum>100</maximum>
+		<default>0</default>
+	  </property>
+	</properties>
+  <conditionals>
+    <conditional>
+	  <id>1</id>
+	  <name>NUMBER_LIGHT_LEVEL</name>
+	  <type>NUMBER</type>
+	  <condition_statement>Light Level</condition_statement>
+	  <description>NAME is LOGIC INTEGER</description>
+	  <minimum>0</minimum>
+	  <maximum>100</maximum>
+	</conditional>
+  </conditionals>
+  <documentation>
+Control4 has not yet developed a template driver for the light proxy. This is primarily because the lighting systems we work with typically use a network driver for communications with the system and individual drivers for the various types of lights/devices (dimmers, switches, keypads) that the system supports. The variability of these types of implementations makes a simple template not very useful or practical.
+
+However, this is a “very simple” driver that some partners have found useful in understanding the basic flow of commands from the light proxy and notifications back. This is certainly not intended to be a template, but you might find it to be a helpful learning aid as you learn about the light_v2 proxy.
+
+Change Log:
+v110 - cleaned up to distribute with SDK sample code
+  </documentation>
+
+  <script><![CDATA[--[[=============================================================================
+    Simple Light Sample Driver
+
+    Copyright 2019 Control4 Corporation. All Rights Reserved.
+===============================================================================]]------------
+
+--[[=============================================================================
+    Constants
+===============================================================================]]
+do	--Version globals
+  if (C4.GetDriverConfigInfo) then
+    VERSION = C4:GetDriverConfigInfo ("version")
+  else
+    VERSION = 'check version with info...'
+  end
+end
+
+LIGHT_PROXY_BINDINGID = 5001
+
+ON_PROPERTY_CHANGED = {}
+PROXY_CMDS = {}
+
+--[[=============================================================================
+    Device Commands
+===============================================================================]]
+CMDS = {
+    ["ON"]		= "DEV_ON\r",
+    ["OFF"]    	= "DEV_OFF\r",
+    ["TOGGLE"] 	= "DEV_TOGGLE\r",
+}
+
+function OnDriverLateInit()
+    C4:SendToProxy(LIGHT_PROXY_BINDINGID, "ONLINE_CHANGED", {STATE="true"}, "NOTIFY")
+	OnPropertyChanged ('Driver Version')
+end
+
+function OnPropertyChanged(sProperty)
+	if (sProperty == 'Driver Version') then
+		C4:UpdateProperty ('Driver Version', VERSION)
+	end
+	print ("OnPropertyChanged(" .. sProperty .. ") changed to: " .. Properties[sProperty])
+
+	local propertyValue = Properties[sProperty]
+
+	-- Remove any spaces (trim the property)
+	local trimmedProperty = string.gsub(sProperty, " ", "")
+
+	-- if function exists then execute (non-stripped)
+	if (ON_PROPERTY_CHANGED[sProperty] ~= nil and type(ON_PROPERTY_CHANGED[sProperty]) == "function") then
+		ON_PROPERTY_CHANGED[sProperty](propertyValue)
+		return
+	-- elseif trimmed function exists then execute
+	elseif (ON_PROPERTY_CHANGED[trimmedProperty] ~= nil and type(ON_PROPERTY_CHANGED[trimmedProperty]) == "function") then
+		ON_PROPERTY_CHANGED[trimmedProperty](propertyValue)
+		return
+	end
+end
+
+function ON_PROPERTY_CHANGED.LightLevel (value)
+	C4:SendToProxy(LIGHT_PROXY_BINDINGID,"LIGHT_LEVEL",value)
+end
+
+function ReceivedFromProxy(idBinding, sCommand, tParams)
+    if (sCommand ~= nil) then
+	   print("ReceivedFromProxy(): " .. sCommand .. " on binding " .. idBinding)
+	   if tParams then 
+	   	if (type (tParams) == 'table') then
+			for k, v in pairs (tParams) do print (k, v) end
+		elseif (type (tParams) ~= 'nil') then
+			print (type (tParams), tParams)
+		end
+	   end
+
+	   local cmd = ""
+	   if ((CMDS[sCommand]) ~= nil) then
+		  cmd = CMDS[sCommand]
+		  -- TODO: add network or serial communication to send command from CMDS table to device
+		  print("Sending command: " .. cmd)
+	   elseif (sCommand == "GET_CONNECTED_STATE") then
+		  C4:SendToProxy(LIGHT_PROXY_BINDINGID, "ONLINE_CHANGED", {STATE="true"}, "NOTIFY")
+	   elseif ((PROXY_CMDS[sCommand]) ~= nil) then
+		  PROXY_CMDS[sCommand](tParams, idBinding)
+	   else
+		  print("ReceivedFromProxy: Unhandled command = " .. sCommand)
+	   end
+    end
+end
+
+function PROXY_CMDS.SET_LEVEL (tParams, idBinding)
+	print ("PROXY_CMDS.SET_LEVEL() with idBinding: ", idBinding)
+	-- TODO: Implement handling for sending command to device
+	-- TODO: Place the notify that we're sending here in the correct place when the device returns the light level
+	C4:SendToProxy(LIGHT_PROXY_BINDINGID,"LIGHT_LEVEL",tParams.LEVEL,"NOTIFY")
+	C4:UpdateProperty ('Light Level', tParams.LEVEL)
+end
+
+function PROXY_CMDS.RAMP_TO_LEVEL (tParams, idBinding)
+	print ("PROXY_CMDS.RAMP_TO_LEVEL() with idBinding: ", idBinding)
+	-- TODO: Implement handling for sending command to device
+	-- TODO: Place the notify that we're sending here in the correct place when the device returns the light level
+	C4:SendToProxy(LIGHT_PROXY_BINDINGID,"LIGHT_LEVEL",tParams.LEVEL,"NOTIFY")
+	C4:UpdateProperty ('Light Level', tParams.LEVEL)
+end
+
+function PROXY_CMDS.BUTTON_ACTION (tParams, idBinding)
+	-- buttonID 0 = top button
+	-- buttonID 1 = bottom button
+	-- buttonID 2 = toggle button (also sent by Android Navigator on the Toggle command)
+	-- action 0 = long release (on remote); action 1 = press; action 2 = release
+	print ("PROXY_CMDS.BUTTON_ACTION() with idBinding: ", idBinding)
+	-- TODO: Implement handling for sending command to device
+	-- TODO: Place the notify that we're sending here in the correct place when the device returns the light level
+	if (tParams.BUTTON_ID == "0") then
+		if (tParams.ACTION == "2") then
+			print("turn on")
+			C4:SendToProxy(LIGHT_PROXY_BINDINGID,"LIGHT_LEVEL",100,"NOTIFY")
+			C4:UpdateProperty ('Light Level', "100")
+		end
+	elseif (tParams.BUTTON_ID == "1") then
+		if (tParams.ACTION == "2") then
+			print("turn off")
+			C4:SendToProxy(LIGHT_PROXY_BINDINGID,"LIGHT_LEVEL",0,"NOTIFY")
+			C4:UpdateProperty ('Light Level', "0")
+		end
+	elseif (tParams.BUTTON_ID == "2") then
+		if (tParams.ACTION == "2") then
+			if (Properties["Light Level"] == "0") then
+				print("turn on")
+				C4:SendToProxy(LIGHT_PROXY_BINDINGID,"LIGHT_LEVEL",100,"NOTIFY")
+				C4:UpdateProperty ('Light Level', "100")
+			else 
+				print("turn off")
+				C4:SendToProxy(LIGHT_PROXY_BINDINGID,"LIGHT_LEVEL",0,"NOTIFY")
+				C4:UpdateProperty ('Light Level', "0")
+			end
+		end
+	end
+end
+
+
+]]></script></config>
+  <search_types>
+    <type></type>
+  </search_types>
+  <composer_categories>
+    <category>Lighting</category>
+  </composer_categories>
+</devicedata>
