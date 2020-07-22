@@ -2,7 +2,7 @@
 
 The DriverWorks Software Development Kit (SDK) provides dealers and partners with the ability to independently develop custom two-way (Serial & Network) drivers to incorporate new devices into the Control4 environment or to customize existing drivers. DriverWorks uses the Lua programming language, which is delivered within the Composer software application and within the Control4 OS. Completed drivers do not require platform or version-specific compiling. The development kit consists of the Lua Development Environment (included within Composer and the OS), several documentation resources as well sample drivers and code example.
 
-If you are first time user of the SDK you may find [An Introduction to DriverWorks][1] useful.
+If you are new to the SDK you will find [An Introduction to DriverWorks][1] to be useful reading.
 
 
 **The latest version of the DriverWorks SDK is 3.2.0. Currently, 3.2.0 is in a beta state. While use of the beta version of the SDK is encouraged and feedback welcome, changes will continue to be made to the contents of the SDK until an official release is delivered. Anticipation of these changes should be considered in your development efforts when using this version of the SDK.**
@@ -22,6 +22,21 @@ If you are first time user of the SDK you may find [An Introduction to DriverWor
 The directories above contain various resources to support your driver development efforts. They include:
 
 ####  Driver Development Templates
+The SDK includes numerous Driver Development Templates to help jump start your development efforts. Currently, the following Proxies are supported with a Template:
+
+- AV Switch
+- Blind
+- Doorstation
+- DVD
+- Generic Proxy
+- IP Camera
+- Lock
+- Pool
+- Projector
+- Receiver
+- Security Controller
+- Thermostat
+- TV
 
 #### Icon Templates
 
