@@ -1,4 +1,4 @@
-# ** QR Code Implementation Guide**
+#  QR Code Implementation Guide
 
 
 #### Using QR Codes to Identify and Download Device Drivers in Composer Express (CE)
@@ -18,6 +18,7 @@ For the purposes of a creating a QR code for driver download, the utility needs 
 For example, when the following text is entered into a QR code generator the code to the right is created:
 
 qr_1_
+
 
 It is important to note that the name of the driver defined in the text of the QR code must exactly match the text defined in the driver's name XML element. Using the example above, control4_device would need to match the driver's XML of:
 
