@@ -44,6 +44,9 @@ The SDK includes numerous Driver Development Templates to help jump start your d
 
 #### QR Branding
 
+Composer Express supports the ability for a device driver to be downloaded by way of scanning a Quick Response code (QR code). QR codes are useful as they can be placed on a product, product packaging, within documentation or embedded on a product webpage.  When scanned within the Composer Express (CE) environment, they not only provide a way to download the correct driver, but also offer a convenient way to build a project at an offsite location.
+
+
 #### Sample Drivers
 
 #### Table Logger Utility
