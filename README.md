@@ -19,7 +19,19 @@ If you are first time user of the SDK you may find [An Introduction to DriverWor
 
 ## DriverWorks Development Resources
 
-The directories above comprise the 
+The directories above contain various resources to support your driver development efforts. They include:
+
+####  Driver Development Templates
+
+#### Icon Templates
+
+#### Media Service Proxy
+
+#### QR Branding
+
+#### Sample Drivers
+
+#### Table Logger Utility
 
 [1]:	https://control4.github.io/docs-driverworks-introduction/#introduction
 [2]:	https://control4.github.io/docs-driverworks-fundamentals/#introduction
