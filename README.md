@@ -56,6 +56,8 @@ Composer Express supports the ability for a device driver to be downloaded by wa
 
 #### Sample Drivers
 
+The DriverWorks SDK provides code examples as well as sample drivers which are useful in understanding some of the more complex areas of device driver development. The examples found here is referred to throughout the SDK documentation. This directory serves a collection area for that code. 
+
 #### Table Logger Utility
 
 The Table Logger utility has been provided to assist driver developers in identifying areas within their driver that may be using a growing amount of memory. The utility is executed from within ComposerPro at the driver level on the Lua tab. The utility code is copied into the driver's Lua Command window. Once executed, the Lua output contains an iterated list of all Lua tables found within the driver at the time of execution. This list of tables can then be reviewed for suspect table entries or tables with anonymously added entries (using table.insert) that may be growing over time without any checks.
