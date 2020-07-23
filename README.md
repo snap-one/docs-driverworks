@@ -40,7 +40,7 @@ The SDK includes numerous Driver Development Templates to help jump start your d
 
 #### Icon Templates
 
-The DriverWorks SDK includes Adobe Illustrator and Photoshop template and guidelines to assist with the creation of driver icons. These icons represent devices and services and are displayed on devices running Navigator.
+The DriverWorks SDK provides templates and instructions on how to create icons that will blend in with the default icons inside Control4 interfaces. Conforming to these guidelines insures that custom icons feel like part of the system. 
 
 #### Media Service Proxy
 
