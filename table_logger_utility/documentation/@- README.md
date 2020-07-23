@@ -30,7 +30,7 @@ The output can also be accessed on the Control4 controller using Windows network
 
 #### Using the Output
 
-The utility iterates through every table in the driver, starting with the global table _G and lists its contents. To the right is  an example of the first 15 lines._
+The utility iterates through every table in the driver, starting with the global table _G and lists its contents. Below is an example of the first 15 lines.
 
 
 ```xml
@@ -58,7 +58,7 @@ If the value is a number, or is a Boolean value, it is shown without quotes, as 
 
 If the value is a table, it is listed as a number in curly braces, as on line 3. This number in curly braces is a unique index that is used later in the output to show the key/value pairs of that table. The listing for that table can be found by searching the output for the listed value (in this case, searching for {2} would find the tPictureModeCommandMap table).
 
-It is expected that there will be many tables in a reasonable driver, and these are required for operation and are unlikely to indicate a memory leak. The most likely memory leak will be found in tables that have entries added to them with the expectation that the entry will be used later to handle a response. These entries are often added anonymously (using table.insert) rather than having a specific key. Tables of this format will appear slightly differently, and will be listed just as the values rather than as key/value pairs. Table 15 of the sample output shows this to the right:
+It is expected that there will be many tables in a reasonable driver, and these are required for operation and are unlikely to indicate a memory leak. The most likely memory leak will be found in tables that have entries added to them with the expectation that the entry will be used later to handle a response. These entries are often added anonymously (using table.insert) rather than having a specific key. Tables of this format will appear slightly differently, and will be listed just as the values rather than as key/value pairs. Table 15 of the sample output shows this:
 
 ```xml
 - Table: {15} {
@@ -82,7 +82,7 @@ The search locates the following:
 
 As the driver writer, we know that the tInputConnMapByID table is a valid table within the driver and is a map of the input connection IDs to device IDs. This table is unlikely to grow further with regular use.
 
-Continuing to review the output, to the right we encounter the following:
+Continuing to review the output, we encounter the following:
 
 ```xml
 - Table: {34} {
