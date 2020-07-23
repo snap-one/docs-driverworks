@@ -19,7 +19,7 @@ If you are new to the SDK you will find [An Introduction to DriverWorks][1] to b
 
 ## DriverWorks Development Resources
 
-The directories above contain various resources to support your driver development efforts. They include:
+The directories at the top of this page contain various resources to support your driver development efforts. They include:
 
 #### Driver Development Templates
 The SDK includes numerous Driver Development Templates to help jump start your development efforts. Currently, the following Proxies are supported with a Template:
