@@ -21,7 +21,7 @@ If you are new to the SDK you will find [An Introduction to DriverWorks][1] to b
 
 The directories above contain various resources to support your driver development efforts. They include:
 
-####  Driver Development Templates
+#### Driver Development Templates
 The SDK includes numerous Driver Development Templates to help jump start your development efforts. Currently, the following Proxies are supported with a Template:
 
 - AV Switch
@@ -39,6 +39,8 @@ The SDK includes numerous Driver Development Templates to help jump start your d
 - TV
 
 #### Icon Templates
+
+The DriverWorks SDK includes Adobe Illustrator and Photoshop template and guidelines to assist with the creation of driver icons. These icons represent devices and services and are displayed on devices running Navigator.
 
 #### Media Service Proxy
 
