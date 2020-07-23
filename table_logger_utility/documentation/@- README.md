@@ -14,7 +14,8 @@ The Table Logger utility has been provided to assist driver developers in identi
 2. Click on the Lua tab.
 3. Copy and paste the TableLogger utility code into the Lua Command window.
 
-tl__1_ 
+tl__1___ 
+
 4. Click on Execute
 
 The output of the utility will be saved to a file named with the current timestamp (e.g. 1521556723 ) on the controller at:
