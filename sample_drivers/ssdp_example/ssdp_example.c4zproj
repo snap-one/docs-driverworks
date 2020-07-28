@@ -7,6 +7,7 @@
 	<Item type="file" name="./../common_msp/common/common_lib.lua" c4zDir="common"/>
 	<Item type="file" name="./../common_msp/common/common_timer.lua" c4zDir="common"/>
 	<Item type="file" name="./../common_msp/common/common_handlers.lua" c4zDir="common"/>
+	<Item type="file" name="./../common_msp/common/common_url.lua" c4zDir="common"/>
 	<Item type="file" name="./../common_msp/common/common_ssdp.lua" c4zDir="common"/>
 </Items>
 </Driver>

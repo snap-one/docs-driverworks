@@ -17,6 +17,9 @@ function OnDriverLateInit ()
 
 	C4:urlSetTimeout (10)
 
+	PersistData = PersistData or {}
+
+
 	for property, _ in pairs (Properties) do
 		OnPropertyChanged (property)
 	end
@@ -32,6 +35,7 @@ function OPC.Search_Target (value)
 	end
 
 	Discovery = SSDP:new (value)
+	Discovery.CurrentDeviceUUID = PersistData.CurrentDeviceUUID
 
 	local _processXML = function (ssdp, uuid, data)
 		print ('XML device data received for: ' .. uuid)
@@ -40,22 +44,31 @@ function OPC.Search_Target (value)
 	Discovery:SetProcessXMLFunction (_processXML)
 
 	local _updateDevices = function (ssdp, devices)
-		print ('devices updated, count: ', #devices)
+		print ('devices updated')
 		DiscoveredDevices = devices
 		UpdateServerList ()
 	end
 
 	Discovery:SetUpdateDevicesFunction (_updateDevices)
+
+	Discovery:StartDiscovery (_updateDevices)
 end
 
 function OPC.Device_Selector (value)
 	if (value ~= '') then
 		for uuid, device in pairs (DiscoveredDevices or {}) do
 			if (value == device.friendlyName) then
-				C4:UpdateProperty ('Device Selector', '')
-				C4:UpdateProperty ('Selected Device', device.friendlyName)
+				if (uuid ~= PersistData.CurrentDeviceUUID) then
+					C4:UpdateProperty ('Device Selector', '')
+					C4:UpdateProperty ('Selected Device', device.friendlyName)
 
-				-- XXX this is where we would trigger setting up of the device, connecting to the control protocol, etc
+					PersistData.CurrentDeviceUUID = uuid
+					Discovery.CurrentDeviceUUID = uuid
+
+					print ('starting up device connection to ' .. device.friendlyName)
+
+					-- TODO rest of your driver triggered here
+				end
 			end
 		end
 	end
@@ -64,12 +77,24 @@ end
 function UpdateServerList ()
 	local names = {[1] = ''}
 
+	local foundCurrentUUID
+
 	for uuid, device in pairs (DiscoveredDevices or {}) do
 		table.insert (names, device.friendlyName)
+
+		if (uuid == PersistData.CurrentDeviceUUID) then
+			foundCurrentUUID = device.friendlyName
+		end
 	end
+
 	table.sort (names)
 	names = table.concat (names, ',')
 
 	C4:UpdatePropertyList ('Device Selector', names)
+
+	if (foundCurrentUUID) then
+		C4:UpdateProperty ('Device Selector', foundCurrentUUID)
+		OnPropertyChanged ('Device Selector')
+	end
 end
 
