@@ -22,7 +22,7 @@ connected to the Control4 system (e.g., Vudu mini driver linked to a Roku media 
 
 #### Device Icon Design Guidelines
 
-it_1_
+![it_1]
 
 - Artwork for device icons should be simplified and vector-based (not a photo) and represent the device’s most recognizable or signature shape and color(s). This may include the products logo as it appears on the device.
 
@@ -31,7 +31,7 @@ it_1_
 
 #### Service Icon Design Guidelines
 
-it_2_
+![it_2]
 
 - Artwork used for service icons should have a simple, clear, app-like appearance. Usually displaying an icon or logo mark. 
 
@@ -45,17 +45,17 @@ If the service is accessed via a particular hardware device, Control4 will typic
 logotype on the icon.
 
 
-it_3_
+![it_3]
 
 Spotify Example:
 
-it_4_
+![it_4]
 
 #### Illustrator Directions
 
 Artwork is Horizontally centered to container and offset from the top. This is done in consideration of the 3-dimensional shadow introduced in 3.0. 
 
-it_5_
+![it_5]
 
 1. Open the provided Illustrator template named “Device & Service Icon Template 3.0.ai” 
 
@@ -63,7 +63,7 @@ it_5_
 
 3. Make sure after exiting isolation mode that in the appearance panel the group has a “Drop Shadow fx” attached to it. If the effect is missing, add it by going to: Effect \> Stylize \> Drop Shadow.
 
-it_6_
+![it_6]
 
 
 Once the effect is added or confirmed that it exist, time to export...
@@ -85,7 +85,7 @@ Before you begin, you may choose to hide placeholder graphics or toggle their vi
 
 Artwork is Horizontally centered to container and offset from the top. This is done in consideration of the 3-dimensional shadow introduced in 3.0. 
 
-it_5_
+![it_5]
 
 
 Open the provided Photoshop template named “Device & Service Icon Template 3.0.psd” 
@@ -100,14 +100,14 @@ Open the provided Photoshop template named “Device & Service Icon Template 3.0
 
 5. Verify the  icons appear correctly visually and the file names are correct.
 
-it_7_
+![it_7]
 
 
 #### Sketch Directions
 
 Artwork is Horizontally centered to container and offset from the top. This is done in consideration of the 3-dimensional shadow introduced in 3.0. 
 
-it_5_
+![it_5]
 
 Open the provided Photoshop template named “Device & Service Icon Template 3.0.sketch” 
 
@@ -124,7 +124,17 @@ The current requirement for device icons is to include artwork at the following 
 
 For all icons used with the Media Service Proxy (or if your device icon is used in the MSP itself) you should include the standard set of 20x20 through 140x140 pixel resolutions for each icon. The larger icon set is due to the MSP icons being used in many different locations throughout the UI. See the Media Service Proxy Driver Development documentation included in this SDK for more information. Media Service Proxy drivers should also include the branding icon at the sizes outlined above.
 
-Sample Icons 
+#### Sample Icons 
 Please see sample icons that are included on the layers in the templates. These examples will show you the placement of the icons, size, shadows, and more.
 
-it_8_
+![it_8]
+
+
+[it_1]:https://github.com/control4/docs-driverworks/raw/media/images/it_1.png
+[it_2]:https://github.com/control4/docs-driverworks/raw/media/images/it_2.png
+[it_3]:https://github.com/control4/docs-driverworks/raw/media/images/it_3.png
+[it_4]:https://github.com/control4/docs-driverworks/raw/media/images/it_4.png
+[it_5]:https://github.com/control4/docs-driverworks/raw/media/images/it_5.png
+[it_6]:https://github.com/control4/docs-driverworks/raw/media/images/it_6.png
+[it_7]:https://github.com/control4/docs-driverworks/raw/media/images/it_7.png
+[it_8]:https://github.com/control4/docs-driverworks/raw/media/images/it_8.png
