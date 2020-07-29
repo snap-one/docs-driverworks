@@ -13,9 +13,6 @@ The Table Logger utility has been provided to assist driver developers in identi
 1. From within ComposerPro, open the driver's Properties/AdvancedProperties screen.
 2. Click on the Lua tab.
 3. Copy and paste the TableLogger utility code into the Lua Command window.
-
-tl__1___ 
-
 4. Click on Execute
 
 The output of the utility will be saved to a file named with the current timestamp (e.g. 1521556723 ) on the controller at:
@@ -31,7 +28,7 @@ The output can also be accessed on the Control4 controller using Windows network
 
 #### Using the Output
 
-The utility iterates through every table in the driver, starting with the global table _G and lists its contents. Below is an example of the first 15 lines.
+The utility iterates through every table in the driver, starting with the global table \_G and lists its contents. Below is an example of the first 15 lines.
 
 
 ```xml
