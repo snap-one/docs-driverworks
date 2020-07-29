@@ -1,5 +1,6 @@
 
 ![Logo](https://github.com/control4/docs-driverworks/raw/media/images/logo.png)
+![Test Image 4](https://github.com/tograh/testrepository/3DTest.png)
 
 # **Welcome to the DriverWorks Software Development Kit!**
 
