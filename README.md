@@ -1,5 +1,5 @@
 
-![Logo][logo]
+![Logo](https://github.com/control4/docs-driverworks/raw/media/images/logo.png)
 
 # **Welcome to the DriverWorks Software Development Kit!**
 
@@ -69,4 +69,3 @@ The Table Logger utility has been provided to assist driver developers in identi
 [2]:	https://control4.github.io/docs-driverworks-fundamentals/#introduction
 [3]:	https://control4.github.io/docs-driverworks-proxyprotocol/#introduction
 [4]:	https://control4.github.io/docs-driverworks-api/#introduction
-[logo]: https://raw.githubusercontent.com/control4/docs-driverworks/media/images/logo.png?token=AM44IETJWTIBQFLQER4H3PC7FK62E
