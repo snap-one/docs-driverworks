@@ -68,4 +68,4 @@ The Table Logger utility has been provided to assist driver developers in identi
 [2]:	https://control4.github.io/docs-driverworks-fundamentals/#introduction
 [3]:	https://control4.github.io/docs-driverworks-proxyprotocol/#introduction
 [4]:	https://control4.github.io/docs-driverworks-api/#introduction
-[logo]: ./../media/images/logo.png?raw=true
+[logo]: https://github.com/control4/docs-driverworks/blob/media/images/logo.png?raw=true
