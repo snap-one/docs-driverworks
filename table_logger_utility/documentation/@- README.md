@@ -14,7 +14,7 @@ The Table Logger utility has been provided to assist driver developers in identi
 2. Click on the Lua tab.
 3. Copy and paste the TableLogger utility code into the Lua Command window.
 
-tl__1___ 
+![][tl_1] 
 
 4. Click on Execute
 
@@ -115,3 +115,5 @@ As the driver writer, we know that the gGlobalTicketHandlers table contains the 
 
 ##### Copyright
 Wirepath Home Systems, LLC. All rights reserved. Control4 and Snap AV and their respective logos are registered trademarks or trademarks of Wirepath Home Systems, LLC, dba “Control4” and/or dba “SnapAV” in the United States and/or other countries. Other names and brands may be claimed as the property of their respective owners. All specifications subject to change without notice.
+
+[tl_1]: https://github.com/control4/docs-driverworks/blob/media/images/tl_1.png?raw=true
