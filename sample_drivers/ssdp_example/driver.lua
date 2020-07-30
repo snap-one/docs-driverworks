@@ -51,7 +51,7 @@ function OPC.Search_Target (value)
 
 	Discovery:SetUpdateDevicesFunction (_updateDevices)
 
-	Discovery:StartDiscovery (_updateDevices)
+	Discovery:StartDiscovery ()
 end
 
 function OPC.Device_Selector (value)
@@ -59,7 +59,6 @@ function OPC.Device_Selector (value)
 		for uuid, device in pairs (DiscoveredDevices or {}) do
 			if (value == device.friendlyName) then
 				if (uuid ~= PersistData.CurrentDeviceUUID) then
-					C4:UpdateProperty ('Device Selector', '')
 					C4:UpdateProperty ('Selected Device', device.friendlyName)
 
 					PersistData.CurrentDeviceUUID = uuid
@@ -72,6 +71,7 @@ function OPC.Device_Selector (value)
 			end
 		end
 	end
+	C4:UpdateProperty ('Device Selector', '')
 end
 
 function UpdateServerList ()
