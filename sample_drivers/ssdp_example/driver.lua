@@ -26,7 +26,7 @@ function OnDriverLateInit ()
 end
 
 function OPC.Driver_Version (value)
-	C4:UpdateProperty ('Driver Version', C4:GetDriverConfigInfo ('version'))
+	UpdateProperty ('Driver Version', C4:GetDriverConfigInfo ('version'))
 end
 
 function OPC.Search_Target (value)
@@ -58,20 +58,20 @@ function OPC.Device_Selector (value)
 	if (value ~= '') then
 		for uuid, device in pairs (DiscoveredDevices or {}) do
 			if (value == device.friendlyName) then
-				if (uuid ~= PersistData.CurrentDeviceUUID) then
-					C4:UpdateProperty ('Selected Device', device.friendlyName)
+				-- TODO this will trigger on every SSDP discovery that finds your device
 
-					PersistData.CurrentDeviceUUID = uuid
-					Discovery.CurrentDeviceUUID = uuid
+				UpdateProperty ('Selected Device', device.friendlyName)
 
-					print ('starting up device connection to ' .. device.friendlyName)
+				PersistData.CurrentDeviceUUID = uuid
+				Discovery.CurrentDeviceUUID = uuid
 
-					-- TODO rest of your driver triggered here
-				end
+				print ('starting up device connection to ' .. device.friendlyName)
+
+				-- TODO rest of your driver triggered here
 			end
 		end
 	end
-	C4:UpdateProperty ('Device Selector', '')
+	UpdateProperty ('Device Selector', '')
 end
 
 function UpdateServerList ()
@@ -93,7 +93,7 @@ function UpdateServerList ()
 	C4:UpdatePropertyList ('Device Selector', names)
 
 	if (foundCurrentUUID) then
-		C4:UpdateProperty ('Device Selector', foundCurrentUUID)
+		UpdateProperty ('Device Selector', foundCurrentUUID)
 		OnPropertyChanged ('Device Selector')
 	end
 end
