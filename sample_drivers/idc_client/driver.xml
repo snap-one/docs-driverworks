@@ -1,12 +1,12 @@
 <devicedata>
-	<copyright>Copyright 2019 Control4 Corporation.  All rights reserved.</copyright>
+	<copyright>Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.</copyright>
 	<creator>Control4</creator>
 	<manufacturer>Control4</manufacturer>
-	<name>InterDriver Comms Sub</name>
-	<model>InterDriver Comms Sub</model>
+	<name>InterDriver Comms Client</name>
+	<model>InterDriver Comms Client</model>
 	<created>11/27/2019 10:00</created>
-	<modified>11/27/2019 10:00</modified>
-	<version>1</version>
+	<modified>08/01/2020 10:00</modified>
+	<version>2</version>
 	<control>lua_gen</control>
 	<driver>DriverWorks</driver>
 	<config>
@@ -39,7 +39,7 @@
 		<commands/>
 	</config>
 	<proxies>
-		<proxy name="IDC Sub Media Player">media_player</proxy>
+		<proxy name="IDC Client Media Player">media_player</proxy>
 	</proxies>
 	<events/>
 	<connections>

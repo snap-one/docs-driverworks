@@ -1,4 +1,4 @@
---Copyright 2019 Control4 Corporation. All rights reserved.
+-- Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.
 
 common_lib = require ('common.common_lib')
 common_timer = require ('common.common_timer')
@@ -24,6 +24,21 @@ do	--Globals
 	end
 end
 
+function EC.AddClientDevices (tParams)
+	local apiClients = {}
+	for k, v in pairs (tParams) do
+		if (v ~= '') then
+			local device = {
+				id = v,
+				name = 'Client ' .. v .. ' - AutoAdded',
+				type = 'Media Player Client',
+			}
+			table.insert (apiClients, device)
+		end
+	end
+	AddClientDrivers (apiClients)
+end
+
 function EC.API_COMMAND (tParams)
 	local deviceId = tParams.deviceId
 	local payload = Deserialize (tParams.payload)
@@ -33,7 +48,7 @@ function EC.API_COMMAND (tParams)
 	Print (payload)
 end
 
-function EC.Send_Command_To_Sub (tParams)
+function EC.Send_Command_To_Client (tParams)
 	local id = tParams.ID
 	local command = tParams.Command
 	local commandType = tParams.Type
@@ -52,7 +67,7 @@ function EC.Send_Command_To_Sub (tParams)
 	end
 end
 
-function EC.Send_Command_To_All_Subs (tParams)
+function EC.Send_Command_To_All_Clients (tParams)
 	local command = tParams.Command
 	C4:SendToProxy (IDC_BINDING, 'UPDATE_DEVICE', {command = command})
 end
@@ -91,15 +106,15 @@ function OnDriverLateInit ()
 end
 
 function OPC.Debug_Mode (value)
+	CancelTimer ('DEBUGPRINT')
+	DEBUGPRINT = (value == 'On')
+
 	if (DEBUGPRINT) then
-		DEBUGPRINT = CancelTimer (DEBUGPRINT)
-	end
-	if (value == 'On') then
 		local _timer = function (timer)
 			C4:UpdateProperty ('Debug Mode', 'Off')
 			OnPropertyChanged ('Debug Mode')
 		end
-		DEBUGPRINT = SetTimer (DEBUGPRINT, 36000000, _timer)
+		SetTimer ('DEBUGPRINT', 36000000, _timer)
 	end
 end
 
@@ -240,3 +255,94 @@ function GetCommandList (currentValue, callbackWhenDone, search, filter)
 
 	return list
 end
+
+function AddClientDrivers (apiClients)
+	if (not (VersionCheck ('3.2.0'))) then
+		print ('Add Driver functionality requires C4 OS 3.2.0 or later')
+		return
+	end
+
+	if (Timer.AddClientsFlag) then return end
+
+	SetTimer ('AddClientsFlag', 30 * ONE_SECOND)
+
+	ConfiguredClientDrivers = {}
+	UnconfiguredClientDrivers = {}
+
+	for deviceId, _ in pairs (C4:GetDevicesByC4iName ('idc_client.c4z') or {}) do
+		local apiDeviceId = C4:GetDeviceVariable (deviceId, UV.API_DEVICE_ID)
+		if (apiDeviceId and apiDeviceId ~= '') then
+			ConfiguredClientDrivers [apiDeviceId] = deviceId
+		else
+			table.insert (UnconfiguredClientDrivers, deviceId)
+		end
+	end
+
+	print ('Adding client drivers')
+
+	local devicesToAdd = {}
+
+	for _, client in pairs (apiClients) do
+		local apiDeviceId = client.id
+		if (apiDeviceId) then
+			if (ConfiguredClientDrivers [apiDeviceId] == nil) then
+				table.insert (devicesToAdd, client)
+			end
+		end
+	end
+
+	AddNextClient (devicesToAdd)
+end
+
+function AddNextClient (devicesToAdd)
+
+	local client = table.remove (devicesToAdd)
+
+	if (client) then
+		local id = client.id
+		local deviceType = client.type
+		local deviceName = client.name
+
+		local _addNextDevice = function (timer)
+			AddNextClient (devicesToAdd)
+		end
+
+		if (ConfiguredClientDrivers [id]) then
+			SetTimer (nil, 100, _addNextDevice)
+
+		else
+			local _onAdded = function (deviceId)
+				if (deviceId == 0) then
+					print ('Could not install driver!')
+					return
+				end
+
+				local _setupClient = function (timer)
+					local contextInfo = {
+						clientInfo = Serialize (client)
+					}
+					C4:SendToDevice (deviceId, 'AddClient', contextInfo)
+				end
+				SetTimer (nil, 10 * ONE_SECOND, _setupClient)
+			end
+
+			local unconfiguredClient = table.remove (UnconfiguredClientDrivers)
+
+			if (unconfiguredClient) then
+				_onAdded (unconfiguredClient)
+
+			else
+				C4:AddDevice ('idc_client.c4z', C4:RoomGetId (), deviceName, _onAdded)
+			end
+
+			SetTimer (nil, 3 * ONE_SECOND, _addNextDevice)
+		end
+		return
+	end
+
+	CancelTimer ('AddClientsFlag')
+	ConfiguredClientDrivers = nil
+	UnconfiguredClientDrivers = nil
+	print ('All client drivers added')
+end
+

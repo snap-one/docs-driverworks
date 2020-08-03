@@ -1,4 +1,5 @@
---Copyright 2019 Control4 Corporation. All rights reserved.
+-- Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.
+
 JSON = require ('common.json')
 
 common_lib = require ('common.common_lib')
@@ -19,6 +20,18 @@ do
 	}
 end
 
+function EC.AddClient (tParams)
+	local clientInfo = Deserialize (tParams.clientInfo)
+
+	local id = clientInfo.id
+	local clientName = clientInfo.name
+
+	C4:RenameDevice (PROXY_ID, clientName)
+
+	UpdateProperty ('ID', id)
+	OnPropertyChanged ('ID')
+end
+
 function EC.UPDATE_DEVICE (tParams)
 	print ('Received UPDATE_DEVICE as command:')
 	Print (tParams)
@@ -33,7 +46,7 @@ function OnBindingChanged (idBinding, strClass, bStatus)
 	end
 
 	if (idBinding == IDC_BINDING) then
-		IDC_MASTER = C4:GetBoundProviderDevice (DEVICE_ID, IDC_BINDING)
+		IDC_CONTROLLER = C4:GetBoundProviderDevice (DEVICE_ID, IDC_BINDING)
 	end
 end
 
@@ -65,7 +78,7 @@ function OnDriverLateInit ()
 
 	C4:SetVariable ('API_DEVICE_ID', PersistData.API_DEVICE_ID or '')
 
-	IDC_MASTER = C4:GetBoundProviderDevice (DEVICE_ID, IDC_BINDING)
+	IDC_CONTROLLER = C4:GetBoundProviderDevice (DEVICE_ID, IDC_BINDING)
 
 	if (PersistData.API_DEVICE_ID) then
 		C4:SendToProxy (IDC_BINDING, 'RESYNC_DATA', {deviceId = PersistData.API_DEVICE_ID})
@@ -95,10 +108,6 @@ function OPC.Driver_Version (value)
 end
 
 function OPC.ID (value)
-	if (value == '') then
-		value = tostring (math.random (100, 999))
-		C4:UpdateProperty ('ID', value)
-	end
 	PersistData.API_DEVICE_ID = value
 	C4:SetVariable ('API_DEVICE_ID', PersistData.API_DEVICE_ID)
 	C4:SendToProxy (IDC_BINDING, 'RESYNC_DATA', {deviceId = PersistData.API_DEVICE_ID})
@@ -111,7 +120,7 @@ function SendToIDCAsProxy (payload)
 end
 
 function SendToIDCAsDevice (payload)
-	C4:SendToDevice (IDC_MASTER, 'API_COMMAND', {deviceId = PersistData.API_DEVICE_ID, payload = Serialize (payload)})
+	C4:SendToDevice (IDC_CONTROLLER, 'API_COMMAND', {deviceId = PersistData.API_DEVICE_ID, payload = Serialize (payload)})
 end
 
 function RFP.UPDATE_DEVICE  (idBinding, strCommand, tParams, args)

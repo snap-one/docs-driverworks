@@ -1,12 +1,12 @@
 <devicedata>
-	<copyright>Copyright 2019 Control4 Corporation.  All rights reserved.</copyright>
+	<copyright>Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.</copyright>
 	<creator>Control4</creator>
 	<manufacturer>Control4</manufacturer>
-	<name>InterDriver Comms Master</name>
-	<model>InterDriver Comms Master</model>
+	<name>InterDriver Comms Controller</name>
+	<model>InterDriver Comms Controller</model>
 	<created>11/27/2019 10:00</created>
-	<modified>11/27/2019 10:00</modified>
-	<version>1</version>
+	<modified>08/01/2020 10:00</modified>
+	<version>2</version>
 	<control>lua_gen</control>
 	<driver>DriverWorks</driver>
 	<config>
@@ -31,8 +31,8 @@
 		</properties>
 		<actions>
 			<action>
-				<name>Send Command To Sub</name>
-				<command>Send Command To Sub</command>
+				<name>Send Command To Client</name>
+				<command>Send Command To Client</command>
 				<params>
 					<param>
 						<name>Command</name>
@@ -53,8 +53,8 @@
 				</params>
 			</action>
 			<action>
-				<name>Send Command To All Subs</name>
-				<command>Send Command To All Subs</command>
+				<name>Send Command To All Clients</name>
+				<command>Send Command To All Clients</command>
 				<params>
 					<param>
 						<name>Command</name>
@@ -62,11 +62,33 @@
 					</param>
 				</params>
 			</action>
+			<action>
+				<name>Add Client Devices</name>
+				<command>AddClientDevices</command>
+				<params>
+					<param>
+						<name>ID_1</name>
+						<type>STRING</type>
+					</param>
+					<param>
+						<name>ID_2</name>
+						<type>STRING</type>
+					</param>
+					<param>
+						<name>ID_3</name>
+						<type>STRING</type>
+					</param>
+					<param>
+						<name>ID_4</name>
+						<type>STRING</type>
+					</param>
+				</params>
+			</action>
 		</actions>
 		<commands>
 			<command>
-				<name>Send Command To Sub</name>
-				<description>Send PARAM1 To Sub with ID PARAM2 as PARAM3 on NAME</description>
+				<name>Send Command To Client</name>
+				<description>Send PARAM1 To Client with ID PARAM2 as PARAM3 on NAME</description>
 				<params>
 					<param>
 						<name>Command</name>
@@ -87,8 +109,8 @@
 				</params>
 			</command>
 			<command>
-				<name>Send Command To All Subs</name>
-				<description>Send PARAM1 To All Subs on NAME</description>
+				<name>Send Command To All Clients</name>
+				<description>Send PARAM1 To All Clients on NAME</description>
 				<params>
 					<param>
 						<name>Command</name>
@@ -97,9 +119,10 @@
 				</params>
 			</command>
 		</commands>
+
 	</config>
 	<proxies>
-		<proxy name="InterDriver Comms Master">idc_master</proxy>
+		<proxy name="InterDriver Comms Controller">idc_controller</proxy>
 	</proxies>
 	<combo>true</combo>
 	<events/>
