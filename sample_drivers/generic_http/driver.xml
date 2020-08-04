@@ -1,11 +1,11 @@
 <devicedata>
-	<copyright>Copyright 2018 Control4 Corporation. All Rights Reserved.</copyright>
+	<copyright>Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.</copyright>
 	<manufacturer>Control4</manufacturer>
 	<name>Generic HTTP Sender</name>
 	<model>Generic HTTP Sender</model>
 	<creator>Control4</creator>
 	<created>01/26/2018 11:00</created>
-	<modified>07/13/2019 12:30</modified>
+	<modified>08/04/2020 12:30</modified>
 	<version>5</version>
 	<control>lua_gen</control>
 	<driver>DriverWorks</driver>
