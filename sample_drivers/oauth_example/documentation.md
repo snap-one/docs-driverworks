@@ -6,64 +6,56 @@ C4 OS 2.7+
 
 ## Introduction
 
-First, you'll need to create an "Authorization Code" flow sample on https://www.oauth.com/playground/
-
 ## Properties
 
 ### Debug Mode [ *Off* | On ]
 
 When set to On, prints out on the Lua tab the URL being requested and the response from the remote server (or in case of an error, the error message)
 
-### URL Timeout
+### Authentication URL
 
-The time (in seconds) that the URL engine will wait for a response before timing out and returning an error.
+The URL to visit in a browser to complete the OAuth flow
 
-### Preset URL [1-5]
+## Actions
 
-Enter a URL here (including the leading http:// or https://) for later access in programming
+### Setup OAuth
 
-## Commands
+Creates the OAuth object to manage the example OAuth flow.
 
-### GET Preset [PRESET]
+Parameters:
 
-Send an HTTP GET command to the URL predefined on the Properties page in Preset [PRESET]
+#### C4 OAuth API Key [STRING - required]
 
-### GET Manual [URL]
+The API key provided by Control4 for using with this OAuth integration
 
-Send an HTTP GET command to the URL specified in [URL]
+#### C4 Link API Key [STRING - optional]
 
-### POST Preset [PRESET, DATA]
+The API key provided by Control4 for generating a short link code for this OAuth integration
 
-Send an HTTP POST command to the URL predefined on the Properties page in Preset [PRESET] with attached data as specified in [DATA]
+#### Authorization Endpoint [STRING - required]
 
-### POST Manual [URL, DATA]
+The base URL for the authorization endpoint for this OAuth integration
 
-Send an HTTP POST command to the URL specified in [URL] with attached data as specified in [DATA]
+#### Token Endpoint [STRING - required]
 
-## Variables
+The base URL for the token endpoint for this OAuth integration
 
-### HTTP_ERROR (string)
+#### Client ID [STRING - required]
 
-The error string returned from the URL engine, or an empty string if there was no error.
+The client ID for this OAuth integration
 
-### HTTP_RESPONSE_CODE (number)
+#### Client Secret [STRING - required]
 
-The HTTP response code returned from the HTTP server, or 0 if there was an error.
+The client secret for this OAuth integration
 
-### HTTP_RESPONSE_DATA (string)
+#### Scope [STRING - optional]
 
-The data returned from the HTTP server, or an empty string if there was an error.
+Any scope(s) (comma separated, no spaces) required for this OAuth integration
 
-## Events
+#### Send Authorization In [*Payload* | Header]
 
-### Success
+Whether to send the client ID and secret as an HTTP Basic Authorization header or include in the payload of the POST request.
 
-Fires when the HTTP GET or POST command was successfully sent to the server and an HTTP response code was returned. The HTTP_RESPONSE_DATA and HTTP_RESPONSE_CODE variables will be populated with the data from the URL call.
+#### Choose C4 OAuth Redirect Server [*Develop* | Production]
 
-Note that an HTTP 400 or 500 response will still result in the Success event but indicates either a client or server error.
-
-For more information on HTTP response codes, see [Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
-
-### Error
-
-Fires when the URL engine returns an error. The HTTP_ERROR variable will be populated with the error code from the URL engine.
+Which instance of the Control4 OAuth lambda to send the state request to.  Note that each lambda will have different API keys.

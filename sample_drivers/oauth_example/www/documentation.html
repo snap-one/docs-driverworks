@@ -447,36 +447,32 @@
 <h2 id="system-requirements">System requirements</h2>
 <p>C4 OS 2.7+</p>
 <h2 id="introduction">Introduction</h2>
-<p>First, you’ll need to create an “Authorization Code” flow sample on https://www.oauth.com/playground/</p>
 <h2 id="properties">Properties</h2>
 <h3 id="debug-mode-off-on">Debug Mode [ <em>Off</em> | On ]</h3>
 <p>When set to On, prints out on the Lua tab the URL being requested and the response from the remote server (or in case of an error, the error message)</p>
-<h3 id="url-timeout">URL Timeout</h3>
-<p>The time (in seconds) that the URL engine will wait for a response before timing out and returning an error.</p>
-<h3 id="preset-url-1-5">Preset URL [1-5]</h3>
-<p>Enter a URL here (including the leading http:// or https://) for later access in programming</p>
-<h2 id="commands">Commands</h2>
-<h3 id="get-preset-preset">GET Preset [PRESET]</h3>
-<p>Send an HTTP GET command to the URL predefined on the Properties page in Preset [PRESET]</p>
-<h3 id="get-manual-url">GET Manual [URL]</h3>
-<p>Send an HTTP GET command to the URL specified in [URL]</p>
-<h3 id="post-preset-preset-data">POST Preset [PRESET, DATA]</h3>
-<p>Send an HTTP POST command to the URL predefined on the Properties page in Preset [PRESET] with attached data as specified in [DATA]</p>
-<h3 id="post-manual-url-data">POST Manual [URL, DATA]</h3>
-<p>Send an HTTP POST command to the URL specified in [URL] with attached data as specified in [DATA]</p>
-<h2 id="variables">Variables</h2>
-<h3 id="http_error-string">HTTP_ERROR (string)</h3>
-<p>The error string returned from the URL engine, or an empty string if there was no error.</p>
-<h3 id="http_response_code-number">HTTP_RESPONSE_CODE (number)</h3>
-<p>The HTTP response code returned from the HTTP server, or 0 if there was an error.</p>
-<h3 id="http_response_data-string">HTTP_RESPONSE_DATA (string)</h3>
-<p>The data returned from the HTTP server, or an empty string if there was an error.</p>
-<h2 id="events">Events</h2>
-<h3 id="success">Success</h3>
-<p>Fires when the HTTP GET or POST command was successfully sent to the server and an HTTP response code was returned. The HTTP_RESPONSE_DATA and HTTP_RESPONSE_CODE variables will be populated with the data from the URL call.</p>
-<p>Note that an HTTP 400 or 500 response will still result in the Success event but indicates either a client or server error.</p>
-<p>For more information on HTTP response codes, see <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">Wikipedia</a></p>
-<h3 id="error">Error</h3>
-<p>Fires when the URL engine returns an error. The HTTP_ERROR variable will be populated with the error code from the URL engine.</p>
+<h3 id="authentication-url">Authentication URL</h3>
+<p>The URL to visit in a browser to complete the OAuth flow</p>
+<h2 id="actions">Actions</h2>
+<h3 id="setup-oauth">Setup OAuth</h3>
+<p>Creates the OAuth object to manage the example OAuth flow.</p>
+<p>Parameters:</p>
+<h4 id="c4-oauth-api-key-string---required">C4 OAuth API Key [STRING - required]</h4>
+<p>The API key provided by Control4 for using with this OAuth integration</p>
+<h4 id="c4-link-api-key-string---optional">C4 Link API Key [STRING - optional]</h4>
+<p>The API key provided by Control4 for generating a short link code for this OAuth integration</p>
+<h4 id="authorization-endpoint-string---required">Authorization Endpoint [STRING - required]</h4>
+<p>The base URL for the authorization endpoint for this OAuth integration</p>
+<h4 id="token-endpoint-string---required">Token Endpoint [STRING - required]</h4>
+<p>The base URL for the token endpoint for this OAuth integration</p>
+<h4 id="client-id-string---required">Client ID [STRING - required]</h4>
+<p>The client ID for this OAuth integration</p>
+<h4 id="client-secret-string---required">Client Secret [STRING - required]</h4>
+<p>The client secret for this OAuth integration</p>
+<h4 id="scope-string---optional">Scope [STRING - optional]</h4>
+<p>Any scope(s) (comma separated, no spaces) required for this OAuth integration</p>
+<h4 id="send-authorization-in-payload-header">Send Authorization In [<em>Payload</em> | Header]</h4>
+<p>Whether to send the client ID and secret as an HTTP Basic Authorization header or include in the payload of the POST request.</p>
+<h4 id="choose-c4-oauth-redirect-server-develop-production">Choose C4 OAuth Redirect Server [<em>Develop</em> | Production]</h4>
+<p>Which instance of the Control4 OAuth lambda to send the state request to. Note that each lambda will have different API keys.</p>
 </body>
 </html>
