@@ -1,0 +1,148 @@
+<devicedata>
+	<copyright>Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.</copyright>
+	<creator>Control4</creator>
+	<manufacturer>Control4</manufacturer>
+	<name>InterDriver Comms Controller</name>
+	<model>InterDriver Comms Controller</model>
+	<created>11/27/2019 10:00</created>
+	<modified>08/01/2020 10:00</modified>
+	<version>2</version>
+	<control>lua_gen</control>
+	<driver>DriverWorks</driver>
+	<config>
+		<script jit="1" file="lua/squished.lua"/>
+		<properties>
+			<property>
+				<name>Driver Version</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>true</readonly>
+			</property>
+			<property>
+				<name>Debug Mode</name>
+				<type>LIST</type>
+				<items>
+					<item>Off</item>
+					<item>On</item>
+				</items>
+				<default>Off</default>
+				<readonly>false</readonly>
+			</property>
+		</properties>
+		<actions>
+			<action>
+				<name>Send Command To Client</name>
+				<command>Send Command To Client</command>
+				<params>
+					<param>
+						<name>Command</name>
+						<type>CUSTOM_SELECT:GetCommandList</type>
+					</param>
+					<param>
+						<name>ID</name>
+						<type>STRING</type>
+					</param>
+					<param>
+						<name>Type</name>
+						<type>LIST</type>
+						<items>
+							<item>Proxy</item>
+							<item>Device</item>
+						</items>
+					</param>
+				</params>
+			</action>
+			<action>
+				<name>Send Command To All Clients</name>
+				<command>Send Command To All Clients</command>
+				<params>
+					<param>
+						<name>Command</name>
+						<type>CUSTOM_SELECT:GetCommandList</type>
+					</param>
+				</params>
+			</action>
+			<action>
+				<name>Add Client Devices</name>
+				<command>AddClientDevices</command>
+				<params>
+					<param>
+						<name>ID_1</name>
+						<type>STRING</type>
+					</param>
+					<param>
+						<name>ID_2</name>
+						<type>STRING</type>
+					</param>
+					<param>
+						<name>ID_3</name>
+						<type>STRING</type>
+					</param>
+					<param>
+						<name>ID_4</name>
+						<type>STRING</type>
+					</param>
+				</params>
+			</action>
+		</actions>
+		<commands>
+			<command>
+				<name>Send Command To Client</name>
+				<description>Send PARAM1 To Client with ID PARAM2 as PARAM3 on NAME</description>
+				<params>
+					<param>
+						<name>Command</name>
+						<type>CUSTOM_SELECT:GetCommandList</type>
+					</param>
+					<param>
+						<name>ID</name>
+						<type>STRING</type>
+					</param>
+					<param>
+						<name>Type</name>
+						<type>LIST</type>
+						<items>
+							<item>Proxy</item>
+							<item>Device</item>
+						</items>
+					</param>
+				</params>
+			</command>
+			<command>
+				<name>Send Command To All Clients</name>
+				<description>Send PARAM1 To All Clients on NAME</description>
+				<params>
+					<param>
+						<name>Command</name>
+						<type>CUSTOM_SELECT:GetCommandList</type>
+					</param>
+				</params>
+			</command>
+		</commands>
+
+	</config>
+	<proxies>
+		<proxy name="InterDriver Comms Controller">idc_controller</proxy>
+	</proxies>
+	<combo>true</combo>
+	<events/>
+	<connections>
+		<connection>
+			<id>1</id>
+			<facing>6</facing>
+			<connectionname>IDC Connection</connectionname>
+			<type>1</type>
+			<consumer>False</consumer>
+			<audiosource>False</audiosource>
+			<videosource>False</videosource>
+			<linelevel>False</linelevel>
+			<classes>
+				<class>
+					<classname>IDC</classname>
+					<autobind>True</autobind>
+				</class>
+			</classes>
+			<hidden>False</hidden>
+		</connection>
+	</connections>
+</devicedata>

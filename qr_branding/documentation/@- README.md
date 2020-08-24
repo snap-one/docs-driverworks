@@ -17,7 +17,7 @@ For the purposes of a creating a QR code for driver download, the utility needs 
 
 For example, when the following text is entered into a QR code generator the code to the right is created:
 
-qr_1_
+![qr_1]
 
 
 It is important to note that the name of the driver defined in the text of the QR code must exactly match the text defined in the driver's name XML element. Using the example above, control4_device would need to match the driver's XML of:
@@ -32,25 +32,25 @@ Once the QR code is created, it needs to be scaled and branded. The guidelines f
 
 For example, the code created for the example in this document would look like this:
 
-qr_2 _
+![qr_2]
 
 
 #### QR Codes and ComposerExpress
 The dealer or installer experience when using QR codes to add device drivers is very straightforward. With the project loaded and the Design page open, the "+" button is selected to Add a Device.
 
-qr_3_
+![qr_3]
 
 From the Add Device page, the Scan QR Code button is selected:
 
-qr_4_
+![qr_4]
 
 The mobile device is held approximately 8" from the QR code to initiate the scan process:
 
-qr_5_
+![qr_5]
 
 When the code is scanned, the Add Device page is displayed. At this point, the installer can select the room where the device will reside and rename the driver if desired. 
 
-qr_6_
+![qr_6]
 
 When the Add Device button is selected, the driver is downloaded to the controller and installed into the project. It is then ready for identification and configuration.
 
@@ -58,3 +58,11 @@ When the Add Device button is selected, the driver is downloaded to the controll
 
 ## Copyright
 Wirepath Home Systems, LLC. All rights reserved. Control4 and Snap AV and their respective logos are registered trademarks or trademarks of Wirepath Home Systems, LLC, dba “Control4” and/or dba “SnapAV” in the United States and/or other countries. Other names and brands may be claimed as the property of their respective owners. All specifications subject to change without notice.
+
+
+[qr_1]:https://github.com/control4/docs-driverworks/raw/media/images/qr_1.png
+[qr_2]:https://github.com/control4/docs-driverworks/raw/media/images/qr_2.png
+[qr_3]:https://github.com/control4/docs-driverworks/raw/media/images/qr_3.png
+[qr_4]:https://github.com/control4/docs-driverworks/raw/media/images/qr_4.png
+[qr_5]:https://github.com/control4/docs-driverworks/raw/media/images/qr_5.png
+[qr_6]:https://github.com/control4/docs-driverworks/raw/media/images/qr_6.png

@@ -1,0 +1,97 @@
+<devicedata>
+	<copyright>Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.</copyright>
+	<manufacturer>Control4</manufacturer>
+	<name>OAuth Example</name>
+	<model>OAuth Example</model>
+	<creator>Control4</creator>
+	<created>08/04/2020 12:00</created>
+	<modified>08/04/2020 12:00</modified>
+	<version>1</version>
+	<control>lua_gen</control>
+	<driver>DriverWorks</driver>
+	<auto_update>true</auto_update>
+	<minimum_auto_update_version>1</minimum_auto_update_version>
+	<minimum_os_version>2.9.0</minimum_os_version>
+	<config>
+		<script file="driver.lua"></script>
+		<documentation file="www/documentation.html"/>
+		<properties>
+			<property>
+				<name>Debug Mode</name>
+				<type>LIST</type>
+				<items>
+					<item>Off</item>
+					<item>On</item>
+				</items>
+				<default>Off</default>
+				<readonly>false</readonly>
+			</property>
+			<property>
+				<name>Authentication URL</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>false</readonly>
+			</property>
+		</properties>
+		<commands>
+		</commands>
+		<actions>
+			<action>
+				<name>Setup OAuth</name>
+				<command>SetupOAuth</command>
+				<params>
+					<param>
+						<name>C4 OAuth API Key</name>
+						<type>STRING</type>
+					</param>
+					<param>
+						<name>C4 Link API Key</name>
+						<type>STRING</type>
+					</param>
+					<param>
+						<name>Authorization Endpoint</name>
+						<type>STRING</type>
+					</param>
+					<param>
+						<name>Token Endpoint</name>
+						<type>STRING</type>
+					</param>
+					<param>
+						<name>Client ID</name>
+						<type>STRING</type>
+					</param>
+					<param>
+						<name>Client Secret</name>
+						<type>STRING</type>
+					</param>
+					<param>
+						<name>Scope</name>
+						<type>STRING</type>
+					</param>
+					<param>
+						<name>Send Authorization In</name>
+						<type>LIST</type>
+						<items>
+							<item>Payload</item>
+							<item>Header</item>
+						</items>
+					</param>
+					<param>
+						<name>Choose C4 OAuth Redirect Server</name>
+						<type>LIST</type>
+						<items>
+							<item>Develop</item>
+							<item>Production</item>
+						</items>
+					</param>
+				</params>
+			</action>
+		</actions>
+	</config>
+	<combo>true</combo>
+	<proxies>
+		<proxy>oauth_example</proxy>
+	</proxies>
+	<events>
+	</events>
+</devicedata>

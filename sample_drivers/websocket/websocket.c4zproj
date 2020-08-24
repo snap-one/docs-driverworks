@@ -1,0 +1,13 @@
+<Driver type="c4z" name="websocket" squishLua="false">
+<Items>
+	<Item type="file" name="driver.xml" c4zDir = ""/>
+	<Item type="file" name="driver.lua" c4zDir = ""/>
+
+	<Item type="file" name="./../common_msp/common/json.lua" c4zDir="common"/>
+	<Item type="file" name="./../common_msp/common/common_lib.lua" c4zDir="common"/>
+	<Item type="file" name="./../common_msp/common/common_timer.lua" c4zDir="common"/>
+	<Item type="file" name="./../common_msp/common/common_handlers.lua" c4zDir="common"/>
+	<Item type="file" name="./../common_msp/common/common_websocket.lua" c4zDir="common"/>
+
+</Items>
+</Driver>
