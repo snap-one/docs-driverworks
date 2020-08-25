@@ -18,7 +18,15 @@ If you are new to the SDK you will find [An Introduction to DriverWorks][1] to b
 
 - The 3.2.0 DriverWorks API Reference Guide can be found [here][4].
 
-If needed, the DriverWorks documentation content can be downloaded and reviewed offline. 
+Note that the intention is to update the SDK documentation on a more frequesnt basis. Previsouly, updates coincided with O.S. releases. You are encourged to review the documentation through the links provided above. This will ensure that you have the latest driver deveoipment content possiible. However, if needed, the DriverWorks documentation content can be downloaded and reviewed offline. Please keep in mind that working from previously downloaded content may not always refelect the latest SDK content.
+
+From Safari:
+An entire guide can be saved as a .PDF from the Safari toolbar under File --> Export as .PDF option.
+
+From Chrome:
+An entire guide can be saved as a .PDF from the Chrome toolbar under File --> Print and selecting "Save as PDF for the Destination.
+An entire guide can be saved as an HTML file from the Chrome toolbar under: File --> Save Page As and selecting the "Webpage, HTML only" option.
+
 
 ## DriverWorks Development Resources
 
