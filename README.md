@@ -18,6 +18,7 @@ If you are new to the SDK you will find [An Introduction to DriverWorks][1] to b
 
 - The 3.2.0 DriverWorks API Reference Guide can be found [here][4].
 
+If needed, the DriverWorks documentation content can be downloaded and reviewed offline. 
 
 ## DriverWorks Development Resources
 
