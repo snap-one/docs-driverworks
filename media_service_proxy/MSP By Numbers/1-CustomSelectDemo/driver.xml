@@ -1,0 +1,74 @@
+<devicedata>
+	<copyright>Copyright 2017 Control4 Corporation. All rights reserved.</copyright>
+	<creator>Control4</creator>
+	<manufacturer>Control4</manufacturer>
+	<name>MSP By Numbers - 1 - Custom Select Demo</name>
+	<model>MSP By Numbers - 1 - Custom Select Demo</model>
+	<created>4/4/2017 10:30</created>
+	<modified>4/13/2017 10:30</modified>
+	<version>4</version>
+	<control>lua_gen</control>
+	<driver>DriverWorks</driver>
+	<config>
+		<script file="driver.lua"/>
+		<commands>
+		<!--Defines what appears in Composer's Programming tab in the Device Specific Commands dropdown for this device when selected in Actions pane-->
+			<command>
+				<name>Command Select Item</name>
+				<!--The name that appears for this command in Composer-->
+				<!--Also the value that will be sent to the ExecuteCommand function in the driver as the first argument-->
+				<!--ExecuteCommand will be called when a programming script that contains this command is triggered-->
+				<description>Select PARAM1 from NAME (Commands)</description>
+				<!--The description for this command that will appear in the Script section of Composer -->
+				<!--NAME is auto-replaced with the name of the driver set in Composer System Design-->
+				<!--PARAM# is auto-replaced with the value set for each <param> in order below-->
+				<params>
+					<param>
+						<name>Item</name>
+						<!--The name shown for this parameter in Composer-->
+						<!--Also the key in the table sent to the ExecuteCommand function in the driver as the second argument-->
+						<type>CUSTOM_SELECT:CustomSelectDemoFunction</type>
+						<!--Calls the function CustomSelectDemoFunction in the lua script file when ... button is pressed next to this parameter-->
+						<search>
+							<filters>
+								<!--name attribute is the value presented to the above function as the fourth argument when searching.
+									Value is the text that appears in the dialog box in Composer-->
+								<filter name="popular">Popular</filter>
+								<filter name="playlists">Playlists</filter>
+								<filter name="favorites">Favorites</filter>
+							</filters>
+						</search>
+					</param>
+				</params>
+			</command>
+		</commands>
+		<actions>
+		<!--Defines what appears in Composer's Action tab for this driver -->
+			<action>
+				<name>Select Item (Actions)</name>
+				<!--The name that appears for this action in Composer-->
+				<command>Action Select Item</command>
+				<!--The value that will be sent to the ExecuteCommand function in the driver as the value to the ACTION key in the second argument table-->
+				<!--LUA_ACTION will be sent to the ExecuteCommand function in the driver as the first argument-->
+				<!--ExecuteCommand will be called when a programming script when OK is pressed on the Action Parameter LIst dialog in Composer -->
+				<params>
+				<!--This section is the same as the params section on the command-->
+					<param>
+						<name>Item</name>
+						<type>CUSTOM_SELECT:CustomSelectDemoFunction</type>
+						<search>
+							<filters>
+								<filter name="popular">Popular</filter>
+								<filter name="playlists">Playlists</filter>
+								<filter name="favorites">Favorites</filter>
+							</filters>
+						</search>
+					</param>
+				</params>
+			</action>
+		</actions>
+	</config>
+	<proxies>
+		<proxy name="MSP By Numbers - 1 - Custom Select Demo" >CustomSelectDemo</proxy>
+	</proxies>
+</devicedata>

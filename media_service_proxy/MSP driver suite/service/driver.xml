@@ -1,0 +1,34 @@
+<devicedata>
+	<copyright>Copyright 2015 Control4 Corporation. All rights reserved.</copyright>
+	<proxies>
+		<proxy name="Music Service">media_service</proxy>
+	</proxies>
+	<connections>
+		<connection>
+			<id>5001</id>
+			<connectionname>Media Service</connectionname>
+			<type>2</type>
+			<consumer>False</consumer>
+			<linelevel>False</linelevel>
+			<classes>
+				<class>
+					<classname>MediaService</classname>
+				</class>
+			</classes>
+		</connection>
+		<connection proxybindingid="5001">
+			<id>4001</id>
+			<type>6</type>
+			<connectionname>Service</connectionname>
+			<consumer>False</consumer>
+			<linelevel>False</linelevel>
+			<idautobind>XXYOURNUMHEREXX05</idautobind>
+			<classes>
+				<class>
+					<classname>RF_XXYYZZNET_SERVICE</classname>
+					<autobind>True</autobind>
+				</class>
+			</classes>
+		</connection>
+	</connections>
+</devicedata>

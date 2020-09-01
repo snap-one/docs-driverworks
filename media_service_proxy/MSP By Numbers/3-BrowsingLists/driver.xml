@@ -1,0 +1,685 @@
+<devicedata>
+	<copyright>Copyright 2017 Control4 Corporation. All rights reserved.</copyright>
+	<creator>Control4</creator>
+	<manufacturer>Control4</manufacturer>
+	<name>MSP By Numbers - 3 - Browsing Lists</name>
+	<model>MSP By Numbers - 3 - Browsing Lists</model>
+	<created>06/26/2017 14:30</created>
+	<modified>06/26/2017 14:30</modified>
+	<version>1</version>
+	<control>lua_gen</control>
+	<driver>DriverWorks</driver>
+	<small image_source="c4z">composer/device_sm.png</small>
+	<large image_source="c4z">composer/device_lg.png</large>
+	<composer_categories>
+		<category>Audio/Video</category>
+	</composer_categories>
+	<config>
+		<script file="driver.lua"/>
+		<properties>
+			<property>
+				<name>Driver Version</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>true</readonly>
+			</property>
+			<property>
+				<name>Debug Mode</name>
+				<type>LIST</type>
+				<items>
+					<item>Off</item>
+					<item>On</item>
+				</items>
+				<default>Off</default>
+				<readonly>false</readonly>
+			</property>
+		</properties>
+		<commands>
+			<!--Defines what appears in Composer's Programming tab in the Device Specific Commands dropdown for this device when selected in Actions pane-->
+			<command>
+				<name>Command Select Item</name>
+				<!--The name that appears for this command in Composer-->
+				<!--Also the value that will be sent to the ExecuteCommand function in the driver as the first argument-->
+				<!--ExecuteCommand will be called when a programming script that contains this command is triggered-->
+				<description>Select PARAM1 from NAME (Commands)</description>
+				<!--The description for this command that will appear in the Script section of Composer -->
+				<!--NAME is auto-replaced with the name of the driver set in Composer System Design-->
+				<!--PARAM# is auto-replaced with the value set for each <param> in order below-->
+				<params>
+					<param>
+						<name>Item</name>
+						<!--The name shown for this parameter in Composer-->
+						<!--Also the key in the table sent to the ExecuteCommand function in the driver as the second argument-->
+						<type>CUSTOM_SELECT:CustomSelectDemoFunction</type>
+						<!--Calls the function CustomSelectDemoFunction in the lua script file when ... button is pressed next to this parameter-->
+						<search>
+							<filters>
+								<!--name attribute is the value presented to the above function as the fourth argument when searching.
+									Value is the text that appears in the dialog box in Composer-->
+								<filter name="popular">Popular</filter>
+								<filter name="playlists">Playlists</filter>
+								<filter name="favorites">Favorites</filter>
+							</filters>
+						</search>
+					</param>
+				</params>
+			</command>
+		</commands>
+		<actions>
+			<!--Defines what appears in Composer's Action tab for this driver -->
+			<action>
+				<name>Select Item (Actions)</name>
+				<!--The name that appears for this action in Composer-->
+				<command>Action Select Item</command>
+				<!--The value that will be sent to the ExecuteCommand function in the driver as the value to the ACTION key in the second argument table-->
+				<!--LUA_ACTION will be sent to the ExecuteCommand function in the driver as the first argument-->
+				<!--ExecuteCommand will be called when a programming script when OK is pressed on the Action Parameter LIst dialog in Composer -->
+				<params>
+					<!--This section is the same as the params section on the command-->
+					<param>
+						<name>Item</name>
+						<type>CUSTOM_SELECT:CustomSelectDemoFunction</type>
+						<search>
+							<filters>
+								<filter name="popular">Popular</filter>
+								<filter name="playlists">Playlists</filter>
+								<filter name="favorites">Favorites</filter>
+							</filters>
+						</search>
+					</param>
+				</params>
+			</action>
+		</actions>
+	</config>
+	<capabilities>
+		<hide_in_list_nav>False</hide_in_list_nav>
+		<hide_in_media>True</hide_in_media>
+		<digital_audio_support>False</digital_audio_support>
+		<can_scan_media>False</can_scan_media>
+		<ui_selects_device>True</ui_selects_device>
+		<UI xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" proxybindingid="5001">
+			<DeviceIcon>device</DeviceIcon>
+			<BrandingIcon>branding</BrandingIcon>
+			<Icons>
+				<IconGroup id="branding">
+					<Icon width="20" height="20">controller://driver/2-NowPlaying/icons/branding/branding_20.png</Icon>
+					<Icon width="30" height="30">controller://driver/2-NowPlaying/icons/branding/branding_30.png</Icon>
+					<Icon width="40" height="40">controller://driver/2-NowPlaying/icons/branding/branding_40.png</Icon>
+					<Icon width="50" height="50">controller://driver/2-NowPlaying/icons/branding/branding_50.png</Icon>
+					<Icon width="60" height="60">controller://driver/2-NowPlaying/icons/branding/branding_60.png</Icon>
+					<Icon width="70" height="70">controller://driver/2-NowPlaying/icons/branding/branding_70.png</Icon>
+					<Icon width="80" height="80">controller://driver/2-NowPlaying/icons/branding/branding_80.png</Icon>
+					<Icon width="90" height="90">controller://driver/2-NowPlaying/icons/branding/branding_90.png</Icon>
+					<Icon width="100" height="100">controller://driver/2-NowPlaying/icons/branding/branding_100.png</Icon>
+					<Icon width="110" height="110">controller://driver/2-NowPlaying/icons/branding/branding_110.png</Icon>
+					<Icon width="120" height="120">controller://driver/2-NowPlaying/icons/branding/branding_120.png</Icon>
+					<Icon width="130" height="130">controller://driver/2-NowPlaying/icons/branding/branding_130.png</Icon>
+					<Icon width="140" height="140">controller://driver/2-NowPlaying/icons/branding/branding_140.png</Icon>
+					<Icon width="150" height="150">controller://driver/2-NowPlaying/icons/branding/branding_150.png</Icon>
+					<Icon width="300" height="300">controller://driver/2-NowPlaying/icons/branding/branding_300.png</Icon>
+					<Icon width="400" height="400">controller://driver/2-NowPlaying/icons/branding/branding_400.png</Icon>
+				</IconGroup>
+				<IconGroup id="device">
+					<Icon width="20" height="20">controller://driver/2-NowPlaying/icons/device/device_20.png</Icon>
+					<Icon width="30" height="30">controller://driver/2-NowPlaying/icons/device/device_30.png</Icon>
+					<Icon width="40" height="40">controller://driver/2-NowPlaying/icons/device/device_40.png</Icon>
+					<Icon width="50" height="50">controller://driver/2-NowPlaying/icons/device/device_50.png</Icon>
+					<Icon width="60" height="60">controller://driver/2-NowPlaying/icons/device/device_60.png</Icon>
+					<Icon width="70" height="70">controller://driver/2-NowPlaying/icons/device/device_70.png</Icon>
+					<Icon width="80" height="80">controller://driver/2-NowPlaying/icons/device/device_80.png</Icon>
+					<Icon width="90" height="90">controller://driver/2-NowPlaying/icons/device/device_90.png</Icon>
+					<Icon width="100" height="100">controller://driver/2-NowPlaying/icons/device/device_100.png</Icon>
+					<Icon width="110" height="110">controller://driver/2-NowPlaying/icons/device/device_110.png</Icon>
+					<Icon width="120" height="120">controller://driver/2-NowPlaying/icons/device/device_120.png</Icon>
+					<Icon width="130" height="130">controller://driver/2-NowPlaying/icons/device/device_130.png</Icon>
+					<Icon width="140" height="140">controller://driver/2-NowPlaying/icons/device/device_140.png</Icon>
+					<Icon width="150" height="150">controller://driver/2-NowPlaying/icons/device/device_150.png</Icon>
+					<Icon width="300" height="300">controller://driver/2-NowPlaying/icons/device/device_300.png</Icon>
+					<Icon width="400" height="400">controller://driver/2-NowPlaying/icons/device/device_400.png</Icon>
+				</IconGroup>
+				<IconGroup id="np_repeat">
+					<Icon width="20" height="20">controller://driver/2-NowPlaying/icons/np_repeat/np_repeat_20.png</Icon>
+					<Icon width="30" height="30">controller://driver/2-NowPlaying/icons/np_repeat/np_repeat_30.png</Icon>
+					<Icon width="40" height="40">controller://driver/2-NowPlaying/icons/np_repeat/np_repeat_40.png</Icon>
+					<Icon width="50" height="50">controller://driver/2-NowPlaying/icons/np_repeat/np_repeat_50.png</Icon>
+					<Icon width="60" height="60">controller://driver/2-NowPlaying/icons/np_repeat/np_repeat_60.png</Icon>
+					<Icon width="70" height="70">controller://driver/2-NowPlaying/icons/np_repeat/np_repeat_70.png</Icon>
+					<Icon width="80" height="80">controller://driver/2-NowPlaying/icons/np_repeat/np_repeat_80.png</Icon>
+					<Icon width="90" height="90">controller://driver/2-NowPlaying/icons/np_repeat/np_repeat_90.png</Icon>
+					<Icon width="100" height="100">controller://driver/2-NowPlaying/icons/np_repeat/np_repeat_100.png</Icon>
+					<Icon width="110" height="110">controller://driver/2-NowPlaying/icons/np_repeat/np_repeat_110.png</Icon>
+					<Icon width="120" height="120">controller://driver/2-NowPlaying/icons/np_repeat/np_repeat_120.png</Icon>
+					<Icon width="130" height="130">controller://driver/2-NowPlaying/icons/np_repeat/np_repeat_130.png</Icon>
+					<Icon width="140" height="140">controller://driver/2-NowPlaying/icons/np_repeat/np_repeat_140.png</Icon>
+				</IconGroup>
+				<IconGroup id="np_repeat_a">
+					<Icon width="20" height="20">controller://driver/2-NowPlaying/icons/np_repeat_a/np_repeat_a_20.png</Icon>
+					<Icon width="30" height="30">controller://driver/2-NowPlaying/icons/np_repeat_a/np_repeat_a_30.png</Icon>
+					<Icon width="40" height="40">controller://driver/2-NowPlaying/icons/np_repeat_a/np_repeat_a_40.png</Icon>
+					<Icon width="50" height="50">controller://driver/2-NowPlaying/icons/np_repeat_a/np_repeat_a_50.png</Icon>
+					<Icon width="60" height="60">controller://driver/2-NowPlaying/icons/np_repeat_a/np_repeat_a_60.png</Icon>
+					<Icon width="70" height="70">controller://driver/2-NowPlaying/icons/np_repeat_a/np_repeat_a_70.png</Icon>
+					<Icon width="80" height="80">controller://driver/2-NowPlaying/icons/np_repeat_a/np_repeat_a_80.png</Icon>
+					<Icon width="90" height="90">controller://driver/2-NowPlaying/icons/np_repeat_a/np_repeat_a_90.png</Icon>
+					<Icon width="100" height="100">controller://driver/2-NowPlaying/icons/np_repeat_a/np_repeat_a_100.png</Icon>
+					<Icon width="110" height="110">controller://driver/2-NowPlaying/icons/np_repeat_a/np_repeat_a_110.png</Icon>
+					<Icon width="120" height="120">controller://driver/2-NowPlaying/icons/np_repeat_a/np_repeat_a_120.png</Icon>
+					<Icon width="130" height="130">controller://driver/2-NowPlaying/icons/np_repeat_a/np_repeat_a_130.png</Icon>
+					<Icon width="140" height="140">controller://driver/2-NowPlaying/icons/np_repeat_a/np_repeat_a_140.png</Icon>
+				</IconGroup>
+				<IconGroup id="np_shuffle">
+					<Icon width="20" height="20">controller://driver/2-NowPlaying/icons/np_shuffle/np_shuffle_20.png</Icon>
+					<Icon width="30" height="30">controller://driver/2-NowPlaying/icons/np_shuffle/np_shuffle_30.png</Icon>
+					<Icon width="40" height="40">controller://driver/2-NowPlaying/icons/np_shuffle/np_shuffle_40.png</Icon>
+					<Icon width="50" height="50">controller://driver/2-NowPlaying/icons/np_shuffle/np_shuffle_50.png</Icon>
+					<Icon width="60" height="60">controller://driver/2-NowPlaying/icons/np_shuffle/np_shuffle_60.png</Icon>
+					<Icon width="70" height="70">controller://driver/2-NowPlaying/icons/np_shuffle/np_shuffle_70.png</Icon>
+					<Icon width="80" height="80">controller://driver/2-NowPlaying/icons/np_shuffle/np_shuffle_80.png</Icon>
+					<Icon width="90" height="90">controller://driver/2-NowPlaying/icons/np_shuffle/np_shuffle_90.png</Icon>
+					<Icon width="100" height="100">controller://driver/2-NowPlaying/icons/np_shuffle/np_shuffle_100.png</Icon>
+					<Icon width="110" height="110">controller://driver/2-NowPlaying/icons/np_shuffle/np_shuffle_110.png</Icon>
+					<Icon width="120" height="120">controller://driver/2-NowPlaying/icons/np_shuffle/np_shuffle_120.png</Icon>
+					<Icon width="130" height="130">controller://driver/2-NowPlaying/icons/np_shuffle/np_shuffle_130.png</Icon>
+					<Icon width="140" height="140">controller://driver/2-NowPlaying/icons/np_shuffle/np_shuffle_140.png</Icon>
+				</IconGroup>
+				<IconGroup id="np_shuffle_a">
+					<Icon width="20" height="20">controller://driver/2-NowPlaying/icons/np_shuffle_a/np_shuffle_a_20.png</Icon>
+					<Icon width="30" height="30">controller://driver/2-NowPlaying/icons/np_shuffle_a/np_shuffle_a_30.png</Icon>
+					<Icon width="40" height="40">controller://driver/2-NowPlaying/icons/np_shuffle_a/np_shuffle_a_40.png</Icon>
+					<Icon width="50" height="50">controller://driver/2-NowPlaying/icons/np_shuffle_a/np_shuffle_a_50.png</Icon>
+					<Icon width="60" height="60">controller://driver/2-NowPlaying/icons/np_shuffle_a/np_shuffle_a_60.png</Icon>
+					<Icon width="70" height="70">controller://driver/2-NowPlaying/icons/np_shuffle_a/np_shuffle_a_70.png</Icon>
+					<Icon width="80" height="80">controller://driver/2-NowPlaying/icons/np_shuffle_a/np_shuffle_a_80.png</Icon>
+					<Icon width="90" height="90">controller://driver/2-NowPlaying/icons/np_shuffle_a/np_shuffle_a_90.png</Icon>
+					<Icon width="100" height="100">controller://driver/2-NowPlaying/icons/np_shuffle_a/np_shuffle_a_100.png</Icon>
+					<Icon width="110" height="110">controller://driver/2-NowPlaying/icons/np_shuffle_a/np_shuffle_a_110.png</Icon>
+					<Icon width="120" height="120">controller://driver/2-NowPlaying/icons/np_shuffle_a/np_shuffle_a_120.png</Icon>
+					<Icon width="130" height="130">controller://driver/2-NowPlaying/icons/np_shuffle_a/np_shuffle_a_130.png</Icon>
+					<Icon width="140" height="140">controller://driver/2-NowPlaying/icons/np_shuffle_a/np_shuffle_a_140.png</Icon>
+				</IconGroup>
+				<IconGroup id="tab_charts">
+					<Icon width="20" height="20">controller://driver/3-BrowsingLists/icons/tab_charts/tab_charts_20.png</Icon>
+					<Icon width="30" height="30">controller://driver/3-BrowsingLists/icons/tab_charts/tab_charts_30.png</Icon>
+					<Icon width="40" height="40">controller://driver/3-BrowsingLists/icons/tab_charts/tab_charts_40.png</Icon>
+					<Icon width="50" height="50">controller://driver/3-BrowsingLists/icons/tab_charts/tab_charts_50.png</Icon>
+					<Icon width="60" height="60">controller://driver/3-BrowsingLists/icons/tab_charts/tab_charts_60.png</Icon>
+					<Icon width="70" height="70">controller://driver/3-BrowsingLists/icons/tab_charts/tab_charts_70.png</Icon>
+					<Icon width="80" height="80">controller://driver/3-BrowsingLists/icons/tab_charts/tab_charts_80.png</Icon>
+					<Icon width="90" height="90">controller://driver/3-BrowsingLists/icons/tab_charts/tab_charts_90.png</Icon>
+					<Icon width="100" height="100">controller://driver/3-BrowsingLists/icons/tab_charts/tab_charts_100.png</Icon>
+					<Icon width="110" height="110">controller://driver/3-BrowsingLists/icons/tab_charts/tab_charts_110.png</Icon>
+					<Icon width="120" height="120">controller://driver/3-BrowsingLists/icons/tab_charts/tab_charts_120.png</Icon>
+					<Icon width="130" height="130">controller://driver/3-BrowsingLists/icons/tab_charts/tab_charts_120.png</Icon>
+					<Icon width="140" height="140">controller://driver/3-BrowsingLists/icons/tab_charts/tab_charts_140.png</Icon>
+				</IconGroup>
+				<IconGroup id="tab_explore">
+					<Icon width="20" height="20">controller://driver/3-BrowsingLists/icons/tab_explore/tab_explore_20.png</Icon>
+					<Icon width="30" height="30">controller://driver/3-BrowsingLists/icons/tab_explore/tab_explore_30.png</Icon>
+					<Icon width="40" height="40">controller://driver/3-BrowsingLists/icons/tab_explore/tab_explore_40.png</Icon>
+					<Icon width="50" height="50">controller://driver/3-BrowsingLists/icons/tab_explore/tab_explore_50.png</Icon>
+					<Icon width="60" height="60">controller://driver/3-BrowsingLists/icons/tab_explore/tab_explore_60.png</Icon>
+					<Icon width="70" height="70">controller://driver/3-BrowsingLists/icons/tab_explore/tab_explore_70.png</Icon>
+					<Icon width="80" height="80">controller://driver/3-BrowsingLists/icons/tab_explore/tab_explore_80.png</Icon>
+					<Icon width="90" height="90">controller://driver/3-BrowsingLists/icons/tab_explore/tab_explore_90.png</Icon>
+					<Icon width="100" height="100">controller://driver/3-BrowsingLists/icons/tab_explore/tab_explore_100.png</Icon>
+					<Icon width="110" height="110">controller://driver/3-BrowsingLists/icons/tab_explore/tab_explore_110.png</Icon>
+					<Icon width="120" height="120">controller://driver/3-BrowsingLists/icons/tab_explore/tab_explore_120.png</Icon>
+					<Icon width="130" height="130">controller://driver/3-BrowsingLists/icons/tab_explore/tab_explore_120.png</Icon>
+					<Icon width="140" height="140">controller://driver/3-BrowsingLists/icons/tab_explore/tab_explore_140.png</Icon>
+				</IconGroup>
+				<IconGroup id="tab_hearthis">
+					<Icon width="20" height="20">controller://driver/3-BrowsingLists/icons/tab_hearthis/tab_hearthis_20.png</Icon>
+					<Icon width="30" height="30">controller://driver/3-BrowsingLists/icons/tab_hearthis/tab_hearthis_30.png</Icon>
+					<Icon width="40" height="40">controller://driver/3-BrowsingLists/icons/tab_hearthis/tab_hearthis_40.png</Icon>
+					<Icon width="50" height="50">controller://driver/3-BrowsingLists/icons/tab_hearthis/tab_hearthis_50.png</Icon>
+					<Icon width="60" height="60">controller://driver/3-BrowsingLists/icons/tab_hearthis/tab_hearthis_60.png</Icon>
+					<Icon width="70" height="70">controller://driver/3-BrowsingLists/icons/tab_hearthis/tab_hearthis_70.png</Icon>
+					<Icon width="80" height="80">controller://driver/3-BrowsingLists/icons/tab_hearthis/tab_hearthis_80.png</Icon>
+					<Icon width="90" height="90">controller://driver/3-BrowsingLists/icons/tab_hearthis/tab_hearthis_90.png</Icon>
+					<Icon width="100" height="100">controller://driver/3-BrowsingLists/icons/tab_hearthis/tab_hearthis_100.png</Icon>
+					<Icon width="110" height="110">controller://driver/3-BrowsingLists/icons/tab_hearthis/tab_hearthis_110.png</Icon>
+					<Icon width="120" height="120">controller://driver/3-BrowsingLists/icons/tab_hearthis/tab_hearthis_120.png</Icon>
+					<Icon width="130" height="130">controller://driver/3-BrowsingLists/icons/tab_hearthis/tab_hearthis_120.png</Icon>
+					<Icon width="140" height="140">controller://driver/3-BrowsingLists/icons/tab_hearthis/tab_hearthis_140.png</Icon>
+				</IconGroup>
+				<IconGroup id="tab_library">
+					<Icon width="20" height="20">controller://driver/3-BrowsingLists/icons/tab_library/tab_library_20.png</Icon>
+					<Icon width="30" height="30">controller://driver/3-BrowsingLists/icons/tab_library/tab_library_30.png</Icon>
+					<Icon width="40" height="40">controller://driver/3-BrowsingLists/icons/tab_library/tab_library_40.png</Icon>
+					<Icon width="50" height="50">controller://driver/3-BrowsingLists/icons/tab_library/tab_library_50.png</Icon>
+					<Icon width="60" height="60">controller://driver/3-BrowsingLists/icons/tab_library/tab_library_60.png</Icon>
+					<Icon width="70" height="70">controller://driver/3-BrowsingLists/icons/tab_library/tab_library_70.png</Icon>
+					<Icon width="80" height="80">controller://driver/3-BrowsingLists/icons/tab_library/tab_library_80.png</Icon>
+					<Icon width="90" height="90">controller://driver/3-BrowsingLists/icons/tab_library/tab_library_90.png</Icon>
+					<Icon width="100" height="100">controller://driver/3-BrowsingLists/icons/tab_library/tab_library_100.png</Icon>
+					<Icon width="110" height="110">controller://driver/3-BrowsingLists/icons/tab_library/tab_library_110.png</Icon>
+					<Icon width="120" height="120">controller://driver/3-BrowsingLists/icons/tab_library/tab_library_120.png</Icon>
+					<Icon width="130" height="130">controller://driver/3-BrowsingLists/icons/tab_library/tab_library_120.png</Icon>
+					<Icon width="140" height="140">controller://driver/3-BrowsingLists/icons/tab_library/tab_library_140.png</Icon>
+				</IconGroup>
+			</Icons>
+			<Tabs>
+				<!-- Defines the tabs shown on the UI.  If only one tab is defined, no tabs are shown and that tab is selected by default -->
+				<Tab>
+					<Id>Users</Id>
+					<Name>Users</Name>
+					<IconId>tab_charts</IconId>
+					<ScreenId>UsersScreen</ScreenId>
+				</Tab>
+				<Tab>
+					<Id>Albums</Id>
+					<Name>Albums</Name>
+					<IconId>tab_explore</IconId>
+					<ScreenId>AlbumsScreen</ScreenId>
+				</Tab>
+				<Tab>
+					<Id>Photos</Id>
+					<Name>Photos</Name>
+					<IconId>tab_hearthis</IconId>
+					<ScreenId>PhotosScreen</ScreenId>
+				</Tab>
+			</Tabs>
+			<Screens>
+				<!--These three screens are identical except for their Id value.  A more efficient way to do this will be shown later -->
+				<Screen xsi:type="ListScreenType">
+					<Id>UsersScreen</Id>
+					<DataCommand>
+						<!--Command sent by Navigator to the driver to retreive data for this Screen -->
+						<Name>Browse</Name>
+						<Type>PROTOCOL</Type>
+						<Params>
+							<!-- These populate into the args value in the command in the driver -->
+							<!-- Name defines the key in the args table sent to the driver -->
+							<!-- Value defines which of the XML elements that made up the Item that was selected will populate the value of that key-->
+							<Param>
+								<!-- SYSTEM variable auto populated by Navigator with the Id of the current Screen -->
+								<Name>screenId</Name>
+								<Type>SYSTEM</Type>
+								<Value>screenId</Value>
+							</Param>
+							<Param>
+								<!-- SYSTEM variable auto populated by Navigator with the Id of the currently selected Tab -->
+								<Name>tabId</Name>
+								<Type>SYSTEM</Type>
+								<Value>tabId</Value>
+							</Param>
+							<Param>
+								<!-- SYSTEM variable auto populated by Navigator with the depth (starting at 1) into the browse of this Tab -->
+								<Name>screenDepth</Name>
+								<Type>SYSTEM</Type>
+								<Value>screenDepth</Value>
+							</Param>
+							<Param>
+								<Name>id</Name>
+								<Type>FIRST_SELECTED</Type>
+								<Value>id</Value>
+							</Param>
+							<Param>
+								<Name>itemType</Name>
+								<Type>FIRST_SELECTED</Type>
+								<Value>itemType</Value>
+							</Param>
+						</Params>
+					</DataCommand>
+					<RequiresRefresh>true</RequiresRefresh>
+					<PaginationStyle>NONE</PaginationStyle>
+					<List>
+						<!-- List for Screen is defined the same way as the List for NowPlaying; there are some additional options: -->
+						<ItemDefaultActionProperty>default_action</ItemDefaultActionProperty>
+						<ItemActionIdsProperty>actions_list</ItemActionIdsProperty>
+						<TitleProperty>title</TitleProperty>
+						<SubTitleProperty>subtitle</SubTitleProperty>
+						<ImageProperty>image_list</ImageProperty>
+						<LengthProperty>duration</LengthProperty>
+						<!-- IsLink only puts a > at the end of the item.  You still need to define an action for it. -->
+						<IsLink>
+							<Property>isLink</Property>
+							<ValidValues>
+								<Value>true</Value>
+							</ValidValues>
+						</IsLink>
+						<IsHeader>
+							<Property>isHeader</Property>
+							<ValidValues>
+								<Value>true</Value>
+							</ValidValues>
+						</IsHeader>
+						<!-- If true, Navigator will try to translate the Title and SubTitle using the .po files provided by the driver -->
+						<WillTranslate>
+							<Property>translate</Property>
+							<ValidValues>
+								<Value>true</Value>
+							</ValidValues>
+						</WillTranslate>
+					</List>
+				</Screen>
+				<Screen xsi:type="ListScreenType">
+					<Id>AlbumsScreen</Id>
+					<DataCommand>
+						<Name>Browse</Name>
+						<Type>PROTOCOL</Type>
+						<Params>
+							<Param>
+								<Name>screenId</Name>
+								<Type>SYSTEM</Type>
+								<Value>screenId</Value>
+							</Param>
+							<Param>
+								<Name>tabId</Name>
+								<Type>SYSTEM</Type>
+								<Value>tabId</Value>
+							</Param>
+							<Param>
+								<Name>screenDepth</Name>
+								<Type>SYSTEM</Type>
+								<Value>screenDepth</Value>
+							</Param>
+							<Param>
+								<Name>id</Name>
+								<Type>FIRST_SELECTED</Type>
+								<Value>id</Value>
+							</Param>
+							<Param>
+								<Name>itemType</Name>
+								<Type>FIRST_SELECTED</Type>
+								<Value>itemType</Value>
+							</Param>
+						</Params>
+					</DataCommand>
+					<RequiresRefresh>true</RequiresRefresh>
+					<PaginationStyle>NONE</PaginationStyle>
+					<List>
+						<ItemDefaultActionProperty>default_action</ItemDefaultActionProperty>
+						<ItemActionIdsProperty>actions_list</ItemActionIdsProperty>
+						<TitleProperty>title</TitleProperty>
+						<SubTitleProperty>subtitle</SubTitleProperty>
+						<ImageProperty>image_list</ImageProperty>
+						<LengthProperty>duration</LengthProperty>
+						<IsLink>
+							<Property>isLink</Property>
+							<ValidValues>
+								<Value>true</Value>
+							</ValidValues>
+						</IsLink>
+						<IsHeader>
+							<Property>isHeader</Property>
+							<ValidValues>
+								<Value>true</Value>
+							</ValidValues>
+						</IsHeader>
+						<WillTranslate>
+							<Property>translate</Property>
+							<ValidValues>
+								<Value>true</Value>
+							</ValidValues>
+						</WillTranslate>
+					</List>
+				</Screen>
+				<Screen xsi:type="ListScreenType">
+					<Id>PhotosScreen</Id>
+					<DataCommand>
+						<Name>Browse</Name>
+						<Type>PROTOCOL</Type>
+						<Params>
+							<Param>
+								<Name>screenId</Name>
+								<Type>SYSTEM</Type>
+								<Value>screenId</Value>
+							</Param>
+							<Param>
+								<Name>tabId</Name>
+								<Type>SYSTEM</Type>
+								<Value>tabId</Value>
+							</Param>
+							<Param>
+								<Name>screenDepth</Name>
+								<Type>SYSTEM</Type>
+								<Value>screenDepth</Value>
+							</Param>
+							<Param>
+								<Name>id</Name>
+								<Type>FIRST_SELECTED</Type>
+								<Value>id</Value>
+							</Param>
+							<Param>
+								<Name>itemType</Name>
+								<Type>FIRST_SELECTED</Type>
+								<Value>itemType</Value>
+							</Param>
+						</Params>
+					</DataCommand>
+					<RequiresRefresh>true</RequiresRefresh>
+					<PaginationStyle>NONE</PaginationStyle>
+					<List>
+						<ItemDefaultActionProperty>default_action</ItemDefaultActionProperty>
+						<ItemActionIdsProperty>actions_list</ItemActionIdsProperty>
+						<TitleProperty>title</TitleProperty>
+						<SubTitleProperty>subtitle</SubTitleProperty>
+						<ImageProperty>image_list</ImageProperty>
+						<LengthProperty>duration</LengthProperty>
+						<IsLink>
+							<Property>isLink</Property>
+							<ValidValues>
+								<Value>true</Value>
+							</ValidValues>
+						</IsLink>
+						<IsHeader>
+							<Property>isHeader</Property>
+							<ValidValues>
+								<Value>true</Value>
+							</ValidValues>
+						</IsHeader>
+						<WillTranslate>
+							<Property>translate</Property>
+							<ValidValues>
+								<Value>true</Value>
+							</ValidValues>
+						</WillTranslate>
+					</List>
+				</Screen>
+			</Screens>
+			<NowPlaying>
+				<ActionIds>Shuffle Repeat</ActionIds>
+				<!--Id values for Action items that will always be shown on the Now Playing screen -->
+				<List>
+					<!--Each XXXProperty value defines an XML tag that can appear inside each item element of the List-->
+					<ItemDefaultActionProperty>default_action</ItemDefaultActionProperty>
+					<!--id value for the default action (if present, that action will be triggered without a popup on selecting this item)-->
+					<ItemActionIdsProperty>actions_list</ItemActionIdsProperty>
+					<!-- single space separated ordered list of actions (if present and no DefaultAction, each action defined will be added to the popup list of actions)-->
+					<TitleProperty>title</TitleProperty>
+					<!-- main text for this item-->
+					<SubTitleProperty>subtitle</SubTitleProperty>
+					<!-- if present, sub-text for this item -->
+					<ImageProperty>image_list</ImageProperty>
+					<!-- multiple tags allowed -->
+					<!-- URL to image for this item.  Should have attributes of width and height as cues for Navigator -->
+					<LengthProperty>duration</LengthProperty>
+					<!-- text to indicate length/duration/number of tracks etc; appears on right of item -->
+					<IsHeader>
+						<!-- if the Property value exists and and ValidValues are matched marks this item as a header item -->
+						<Property>isHeader</Property>
+						<ValidValues>
+							<Value>true</Value>
+						</ValidValues>
+					</IsHeader>
+				</List>
+			</NowPlaying>
+			<Actions>
+				<Action>
+					<Id>SelectItem</Id>
+					<Name>Select Item</Name>
+					<Command>
+						<Name>SelectItem</Name>
+						<Type>PROTOCOL</Type>
+						<Params>
+							<Param>
+								<Name>screenId</Name>
+								<Type>SYSTEM</Type>
+								<Value>screenId</Value>
+							</Param>
+							<Param>
+								<Name>tabId</Name>
+								<Type>SYSTEM</Type>
+								<Value>tabId</Value>
+							</Param>
+							<Param>
+								<Name>screenDepth</Name>
+								<Type>SYSTEM</Type>
+								<Value>screenDepth</Value>
+							</Param>
+							<Param>
+								<Name>id</Name>
+								<Type>FIRST_SELECTED</Type>
+								<Value>id</Value>
+							</Param>
+							<Param>
+								<Name>itemType</Name>
+								<Type>FIRST_SELECTED</Type>
+								<Value>itemType</Value>
+							</Param>
+						</Params>
+					</Command>
+				</Action>
+				<Action>
+					<Id>Shuffle</Id>
+					<!-- value to include in ActionIds or the content of ItemDefaultActionProperty, etc to include this action-->
+					<Name>Turn Shuffle On</Name>
+					<!-- Name displayed for this action on Navigator-->
+					<IconId>np_shuffle</IconId>
+					<!-- IconGroup id value to use for this action if an icon is required-->
+					<Command>
+						<Name>ToggleShuffle</Name>
+						<!-- Command that will be sent to ReceivedFromProxy for the proxy associated with this UI element-->
+						<Type>PROTOCOL</Type>
+					</Command>
+					<Filters>
+						<!-- Filters allow you to change the behavior of an Action (Change) or stop it from showing (Disable)-->
+						<Filter>
+							<Type>Disable</Type>
+							<Property>can_shuffle</Property>
+							<!-- For actions on an item, if this property is present in that item.
+For actions on Now Playing screen, if this property is present in the NowPlaying element of the QueueChanged event notification-->
+							<ValidValues>
+								<!-- if the property contains any value defined here-->
+								<Value>false</Value>
+							</ValidValues>
+						</Filter>
+						<Filter>
+							<Type>Change</Type>
+							<!-- For Change filters, the Command sent will still be the same but a new icon and name can be provided (most useful for toggle type actions)-->
+							<Property>shufflemode</Property>
+							<Name>Turn Shuffle Off</Name>
+							<IconId>np_shuffle_a</IconId>
+							<ValidValues>
+								<Value>true</Value>
+							</ValidValues>
+						</Filter>
+					</Filters>
+				</Action>
+				<Action>
+					<Id>Repeat</Id>
+					<Name>Turn Repeat On</Name>
+					<IconId>np_repeat</IconId>
+					<Command>
+						<Name>ToggleRepeat</Name>
+						<Type>PROTOCOL</Type>
+					</Command>
+					<Filters>
+						<Filter>
+							<Type>Disable</Type>
+							<Property>can_repeat</Property>
+							<ValidValues>
+								<Value>false</Value>
+							</ValidValues>
+						</Filter>
+						<Filter>
+							<Type>Change</Type>
+							<Property>repeatmode</Property>
+							<Name>Turn Repeat Off</Name>
+							<IconId>np_repeat_a</IconId>
+							<ValidValues>
+								<Value>true</Value>
+							</ValidValues>
+						</Filter>
+					</Filters>
+				</Action>
+			</Actions>
+			<Dashboard>
+				<!-- These are the five available elements that can be displayed on a Navigator transport bar -->
+				<!-- Unless this driver targets Control4 Digital Audio, the Type of these should always be PROTOCOL -->
+				<!-- The ReleaseCommand Name values are in upper case to keep style with other proxy transport commands -->
+				<Transport>
+					<Id>Play</Id>
+					<ButtonType>PLAY</ButtonType>
+					<ReleaseCommand>
+						<Name>PLAY</Name>
+						<Type>PROTOCOL</Type>
+					</ReleaseCommand>
+				</Transport>
+				<Transport>
+					<Id>Pause</Id>
+					<ButtonType>PAUSE</ButtonType>
+					<ReleaseCommand>
+						<Name>PAUSE</Name>
+						<Type>PROTOCOL</Type>
+					</ReleaseCommand>
+				</Transport>
+				<Transport>
+					<Id>Stop</Id>
+					<ButtonType>STOP</ButtonType>
+					<ReleaseCommand>
+						<Name>STOP</Name>
+						<Type>PROTOCOL</Type>
+					</ReleaseCommand>
+				</Transport>
+				<Transport>
+					<Id>SkipRev</Id>
+					<ButtonType>SKIP_REV</ButtonType>
+					<ReleaseCommand>
+						<Name>SKIP_REV</Name>
+						<Type>PROTOCOL</Type>
+					</ReleaseCommand>
+				</Transport>
+				<Transport>
+					<Id>SkipFwd</Id>
+					<ButtonType>SKIP_FWD</ButtonType>
+					<ReleaseCommand>
+						<Name>SKIP_FWD</Name>
+						<Type>PROTOCOL</Type>
+					</ReleaseCommand>
+				</Transport>
+			</Dashboard>
+		</UI>
+	</capabilities>
+	<proxies>
+		<proxy name="MSP By Numbers - 3 - Browsing Lists" image_source="c4z" small_image='composer/device_sm.png' large_image='composer/device_lg.png'>media_service</proxy>
+	</proxies>
+	<connections>
+		<connection>
+			<id>5001</id>
+			<type>2</type>
+			<connectionname>MSP By Numbers</connectionname>
+			<consumer>False</consumer>
+			<linelevel>False</linelevel>
+			<classes>
+				<class>
+					<classname>MediaService</classname>
+				</class>
+			</classes>
+		</connection>
+		<connection proxybindingid="5001">
+			<id>7001</id>
+			<type>7</type>
+			<connectionname>Audio End-Point</connectionname>
+			<consumer>False</consumer>
+			<linelevel>True</linelevel>
+			<classes>
+				<class>
+					<classname>AUDIO_SELECTION</classname>
+					<autobind>False</autobind>
+				</class>
+			</classes>
+		</connection>
+	</connections>
+</devicedata>

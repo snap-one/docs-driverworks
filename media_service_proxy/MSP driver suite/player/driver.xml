@@ -1,0 +1,171 @@
+<devicedata>
+	<copyright>Copyright 2015 Control4 Corporation. All rights reserved.</copyright>
+	<driver>DriverWorks</driver>
+	<config>
+		<properties>
+			<property>
+				<name>Auto Power Rooms</name>
+				<type>DEVICE_SELECTOR</type>
+				<items>
+					<item>roomdevice.c4i</item>
+				</items>
+				<multiselect>True</multiselect>
+			</property>
+			<property>
+				<name>Override Source Selection</name>
+				<type>LIST</type>
+				<items>
+					<item>Enabled</item>
+					<item>Disabled</item>
+				</items>
+				<default>Disabled</default>
+				<readonly>false</readonly>
+			</property>
+		</properties>
+		<actions>
+			<action>
+				<name>Select Next Player</name>
+				<command>Dlna.NextDevice</command>
+			</action>
+		</actions>
+	</config>
+	<proxies>
+		<proxy name="Player">media_service</proxy>
+		<proxy name="Player Endpoint">amplifier</proxy>
+	</proxies>
+	<connections>
+		<connection>
+			<id>5001</id>
+			<type>2</type>
+			<connectionname>Player</connectionname>
+			<consumer>False</consumer>
+			<linelevel>False</linelevel>
+			<classes>
+				<class>
+					<classname>MediaService</classname>
+				</class>
+			</classes>
+		</connection>
+		<connection>
+			<id>5002</id>
+			<type>2</type>
+			<connectionname>AVSWITCH</connectionname>
+			<consumer>False</consumer>
+			<linelevel>False</linelevel>
+			<classes>
+				<class>
+					<classname>AVSWITCH</classname>
+				</class>
+			</classes>
+		</connection>
+		<connection proxybindingid="5001">
+			<id>4002</id>
+			<type>6</type>
+			<connectionname>Local Audio</connectionname>
+			<consumer>False</consumer>
+			<linelevel>False</linelevel>
+			<idautobind>XXYOURNUMHEREXX01</idautobind>
+			<classes>
+				<class>
+					<classname>RF_XXYYZZ_MUSIC</classname>
+					<autobind>True</autobind>
+				</class>
+			</classes>
+		</connection>
+		<connection proxybindingid="5001">
+			<id>4003</id>
+			<type>6</type>
+			<connectionname>Network Audio</connectionname>
+			<consumer>False</consumer>
+			<linelevel>False</linelevel>
+			<idautobind>XXYOURNUMHEREXX02</idautobind>
+			<classes>
+				<class>
+					<classname>RF_XXYYZZNET_ZONE</classname>
+					<autobind>True</autobind>
+				</class>
+			</classes>
+		</connection>
+		<connection proxybindingid="5002">
+			<id>3001</id>
+			<type>6</type>
+			<connectionname>Local Audio</connectionname>
+			<consumer>True</consumer>
+			<linelevel>False</linelevel>
+			<idautobind>XXYOURNUMHEREXX01</idautobind>
+			<classes>
+				<class>
+					<classname>RF_XXYYZZ_MUSIC</classname>
+					<autobind>True</autobind>
+				</class>
+			</classes>
+		</connection>
+		<connection proxybindingid="5002">
+			<id>3002</id>
+			<type>6</type>
+			<connectionname>Network Audio</connectionname>
+			<consumer>True</consumer>
+			<linelevel>False</linelevel>
+			<idautobind>XXYOURNUMHEREXX03</idautobind>
+			<classes>
+				<class>
+					<classname>RF_XXYYZZNET_AUDIO</classname>
+					<autobind>True</autobind>
+				</class>
+			</classes>
+		</connection>
+		<connection proxybindingid="5002">
+			<id>3003</id>
+			<type>6</type>
+			<connectionname>LineIn (This Player Only)</connectionname>
+			<consumer>True</consumer>
+			<linelevel>False</linelevel>
+			<classes>
+				<class>
+					<classname>STEREO</classname>
+				</class>
+				<class>
+					<classname>DIGITAL_COAX</classname>
+				</class>
+				<class>
+					<classname>DIGITAL_OPTICAL</classname>
+				</class>
+			</classes>
+		</connection>
+		<connection proxybindingid="5002">
+			<id>4001</id>
+			<type>6</type>
+			<connectionname>Audio Out</connectionname>
+			<consumer>False</consumer>
+			<linelevel>True</linelevel>
+			<classes>
+				<class>
+					<classname>STEREO</classname>
+				</class>
+				<class>
+					<classname>DIGITAL_OPTICAL</classname>
+				</class>
+				<class>
+					<classname>DIGITAL_COAX</classname>
+				</class>
+			</classes>
+		</connection>
+		<connection proxybindingid="5002">
+			<id>7001</id>
+			<type>7</type>
+			<connectionname>Audio End-Point</connectionname>
+			<consumer>False</consumer>
+			<linelevel>True</linelevel>
+			<classes>
+				<class>
+					<classname>AUDIO_SELECTION</classname>
+					<autobind>False</autobind>
+				</class>
+				<class>
+					<classname>AUDIO_VOLUME</classname>
+					<autobind>False</autobind>
+				</class>
+			</classes>
+		</connection>
+	</connections>
+</devicedata>

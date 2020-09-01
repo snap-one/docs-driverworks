@@ -1,0 +1,74 @@
+<devicedata>
+	<copyright>Copyright 2015 Control4 Corporation. All rights reserved.</copyright>
+	<config>
+		<actions>
+			<action>
+				<name>Select Next Player</name>
+				<command>NextPlayer</command>
+			</action>
+		</actions>
+	</config>
+	<proxies>
+		<proxy name="Line In (Global)">avswitch</proxy>
+	</proxies>
+	<connections>
+		<connection>
+			<id>5001</id>
+			<type>2</type>
+			<connectionname>Global Line In</connectionname>
+			<consumer>False</consumer>
+			<linelevel>False</linelevel>
+			<classes>
+				<class>
+					<classname>AVSWITCH</classname>
+				</class>
+			</classes>
+		</connection>
+		<connection proxybindingid="5001">
+			<id>3001</id>
+			<type>6</type>
+			<connectionname>Line In (All Players)</connectionname>
+			<consumer>True</consumer>
+			<linelevel>True</linelevel>
+			<classes>
+				<class>
+					<classname>STEREO</classname>
+				</class>
+			</classes>
+		</connection>
+		<connection proxybindingid="5001">
+			<id>4001</id>
+			<type>6</type>
+			<connectionname>Network Line Out</connectionname>
+			<consumer>False</consumer>
+			<linelevel>False</linelevel>
+			<idautobind>XXYOURNUMHEREXX04</idautobind>
+			<classes>
+				<class>
+					<classname>RF_XXYYZZNET_LINEIN</classname>
+					<autobind>True</autobind>
+				</class>
+			</classes>
+		</connection>
+	</connections>
+	<capabilities>
+		<has_feedback>True</has_feedback>
+		<has_audio>True</has_audio>
+		<has_discrete_input_select>True</has_discrete_input_select>
+		<audio_consumer_count>1</audio_consumer_count>
+		<audio_provider_count>1</audio_provider_count>
+		<has_toad_input_select>False</has_toad_input_select>
+		<has_discrete_bass_control>False</has_discrete_bass_control>
+		<has_discrete_treble_control>False</has_discrete_treble_control>
+		<has_discrete_volume_control>False</has_discrete_volume_control>
+		<has_up_down_bass_control>False</has_up_down_bass_control>
+		<has_up_down_treble_control>False</has_up_down_treble_control>
+		<has_up_down_volume_control>False</has_up_down_volume_control>
+		<has_discrete_mute_control>False</has_discrete_mute_control>
+		<has_toggle_mute_control>False</has_toggle_mute_control>
+		<has_video>False</has_video>
+		<video_consumer_count>0</video_consumer_count>
+		<video_provider_count>0</video_provider_count>
+		<has_video_signal_sense>False</has_video_signal_sense>
+	</capabilities>
+</devicedata>
