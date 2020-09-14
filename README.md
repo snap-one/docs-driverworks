@@ -6,7 +6,7 @@ The DriverWorks Software Development Kit (SDK) provides dealers and partners wit
 
 This area is focused on the delivery of documentation, code samples and some utlities which will help facilitate the deveopment of a DriverWorks driver. However, this is one piece of a larger driver deveopment platform. Not included in this area are:
 
-- SDDP Documentation and Sample Code: SDDP provides automatic device discovery and device pairing with the Conrol4 O.S. For more information regarding SDDP, please see the ssdp folder at the top of this page.
+- SDDP Documentation and Sample Code: SDDP provides automatic device discovery and device pairing with the Conrol4 O.S. For more information regarding SDDP, please see the [ssdp][12] folder.
 
 - Composer Pro: A licensed version of Composer Pro running on a controller is required for driver modeling and testing.
  
@@ -93,4 +93,5 @@ The Table Logger utility has been provided to assist driver developers in identi
 [9]: https://github.com/control4/docs-driverworks/tree/master/qr_branding
 [10]: https://github.com/control4/docs-driverworks/tree/master/sample_drivers
 [11]: https://github.com/control4/docs-driverworks/tree/master/table_logger_utility
+[12]: https://github.com/control4/docs-driverworks/tree/master/sddp
 
