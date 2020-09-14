@@ -94,4 +94,5 @@ The Table Logger utility has been provided to assist driver developers in identi
 [10]: https://github.com/control4/docs-driverworks/tree/master/sample_drivers
 [11]: https://github.com/control4/docs-driverworks/tree/master/table_logger_utility
 [12]: https://github.com/control4/docs-driverworks/tree/master/sddp
+[13]: https://github.com/control4/docs-driverworks/tree/master/driver_certification
 
