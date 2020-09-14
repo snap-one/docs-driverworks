@@ -2,9 +2,23 @@
 
 ![Logo][logo]
 
-The DriverWorks Software Development Kit (SDK) provides dealers and partners with the ability to independently develop custom two-way (Serial & Network) drivers to incorporate new devices into the Control4 environment or to customize existing drivers. DriverWorks uses the Lua programming language, which is delivered within the Composer software application and within the Control4 OS. Completed drivers do not require platform or version-specific compiling. The development kit consists of the Lua Development Environment (included within Composer and the OS), several documentation resources as well sample drivers and code example.
+The DriverWorks Software Development Kit (SDK) provides dealers and partners with the ability to independently develop custom two-way (Serial & Network) drivers to incorporate new devices into the Control4 environment or to customize existing drivers. DriverWorks uses the Lua programming language, which is delivered within the Composer software application and within the Control4 OS. Completed drivers do not require platform or version-specific compiling. The development kit consists of the Lua Development Environment (included within Composer and the OS), several documentation resources as well sample drivers and code examples.
 
-If you are new to the SDK you will find [An Introduction to DriverWorks][1] to be useful reading.
+This area is focused on the delivery of documentation, code samples and some utlities which will help facilitate the deveopment of a DriverWorks driver. However, this is one piece of a larger driver deveopment platform. Not included in this area are:
+
+- SDDP Documentation and sample code
+
+ -Composer Pro (Control4’s Installation software)
+ 
+- Online Training
+
+- Dealer Portal Access
+
+- Driver Certification
+
+The above components are imporatant to ensure that your driver has complete integration within the Control4 O.S. 
+
+If you are new to the DriverWorks SDK you will find [An Introduction to DriverWorks][1] to be useful reading.
 
 
 **The latest version of the DriverWorks SDK is 3.2.0. Currently, 3.2.0 is in a beta state. While use of the beta version of the SDK is encouraged and feedback welcome, changes will continue to be made to the contents of the SDK until an official release is delivered. Anticipation of these changes should be considered in your development efforts when using this version of the SDK.**
