@@ -59,7 +59,7 @@ The SDK includes numerous Driver Development Templates to help jump start your d
 
 #### Icon Templates
 
-The DriverWorks SDK provides templates and instructions on how to create icons that will blend in with the default icons inside Control4 interfaces. Conforming to these guidelines insures that custom icons feel like part of the system. For more information, please see the README file in the icon_templates folder at the top of the page.
+The DriverWorks SDK provides templates and instructions on how to create icons that will blend in with the default icons inside Control4 interfaces. Conforming to these guidelines insures that custom icons feel like part of the system. For more information, please see the [README][6] file in the icon_templates folder at the top of the page.
 
 
 #### Media Service Proxy
@@ -87,3 +87,4 @@ The Table Logger utility has been provided to assist driver developers in identi
 [4]:	https://control4.github.io/docs-driverworks-api/#introduction
 [5]:  https://control4.github.io/docs-driverworks-knx/#knx-and-control4
 [logo]: https://github.com/control4/docs-driverworks/blob/media/images/logo.png?raw=true
+[6]: https://github.com/control4/docs-driverworks/blob/master/icon_templates/README
