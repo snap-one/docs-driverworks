@@ -52,30 +52,19 @@ An entire guide can be saved as a Web Archive file from the Safari toolbar under
 
 The directories at the top of this page contain various resources to support your driver development efforts. They include:
 
-#### Driver Development Templates
-The SDK includes numerous Driver Development Templates to help jump start your development efforts. Currently, the following Proxies are supported with a Template:
 
-- AV Switch
-- Blind
-- Doorstation
-- DVD
-- Generic Proxy
-- IP Camera
-- Lock
-- Pool
-- Projector
-- Receiver
-- Security Controller
-- Thermostat
-- TV
+#### Driver Development Templates
+The SDK includes numerous Driver Development Templates to help jump start your development efforts. Please see the directory above for the current list of supported templates.
+
 
 #### Icon Templates
 
 The DriverWorks SDK provides templates and instructions on how to create icons that will blend in with the default icons inside Control4 interfaces. Conforming to these guidelines insures that custom icons feel like part of the system. For more information, please see the README file in the icon_templates folder at the top of the page.
 
+
 #### Media Service Proxy
 
-Control4’s Media Service Proxy (MSP) provides a layer of commands, notifications, events and other data handling elements that will support the development of drivers for media-based services and devices. For more information, please see the README file in the media_service_proxyfolder at the top of the page.
+Control4’s Media Service Proxy (MSP) provides a layer of commands, notifications, events and other data handling elements that will support the development of drivers for media-based services and devices. For more information, please see the README file in the media_service_proxy folder at the top of the page.
 
 
 #### QR Branding
