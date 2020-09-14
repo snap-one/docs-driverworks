@@ -1,7 +1,9 @@
-The purpose of this directory is to provide information reagrding the implementation of Control4's "Connects with Control4" branding platform. Curently, implimentatin resources include:
+The purpose of this directory is to provide information reagrding the implementation of Control4's "Connects with Control4" branding platform. 
+
+Curently, implimentation resources include:
 
 documentation: The Connects with Control4 Logo Guide provides instructions on usage and placememt of the logo.
 
 connects with control4: This directory contains sample logos.
 
-connects with control4 certified: This directory contains sample logos which also contain the "certified" designation.
+connects with control4 certified: This directory contains sample logos which also include the "certified" designation.
