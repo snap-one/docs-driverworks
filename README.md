@@ -48,7 +48,7 @@ _From Safari:_
 An entire guide can be saved as a Web Archive file from the Safari toolbar under: File --> Save As.. and selecting Web Archive as the format.
 
 
-## DriverWorks Development Resources
+## Additional DriverWorks Development Resources
 
 The directories at the top of this page contain various resources to support your driver development efforts. They include:
 
@@ -69,12 +69,13 @@ Control4’s Media Service Proxy (MSP) provides a layer of commands, notificatio
 
 #### QR Branding
 
-Composer Express supports the ability for a device driver to be downloaded by way of scanning a Quick Response code (QR code). QR codes are useful as they can be placed on a product, product packaging, within documentation or embedded on a product webpage.  When scanned within the Composer Express (CE) environment, they not only provide a way to download the correct driver, but also offer a convenient way to build a project at an offsite location.
+Composer Express supports the ability for a device driver to be downloaded by way of scanning a Quick Response code (QR code). QR codes are useful as they can be placed on a product, product packaging, within documentation or embedded on a product webpage. For more information, please see the README file in the qr_branding folder at the top of the page.
 
 
 #### Sample Drivers
 
 The DriverWorks SDK provides code examples as well as sample drivers which are useful in understanding some of the more complex areas of device driver development. The examples found here is referred to throughout the SDK documentation. This directory serves a collection area for that code. 
+
 
 #### Table Logger Utility
 
