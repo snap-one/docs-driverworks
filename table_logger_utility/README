@@ -1,0 +1,9 @@
+The Table Logger utility has been provided to assist driver developers in identifying areas within their driver that may be using a growing amount of memory. The utility is executed from within ComposerPro at the driver level on the Lua tab. The utility code is copied into the driver's Lua Command window. Once executed, the Lua output contains an iterated list of all Lua tables found within the driver at the time of execution. This list of tables can then be reviewed for suspect table entries or tables with anonymously added entries (using table.insert) that may be growing over time without any checks.
+
+Currentresources include:
+
+documentation: Using the Table Logger Utility.pdf provides instruction on how to execute the utility against a driver.
+
+code: This directory contains example code used with utilty.
+
+tables:  This directory includes example return tables from the utility
