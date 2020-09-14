@@ -6,7 +6,7 @@ The DriverWorks Software Development Kit (SDK) provides dealers and partners wit
 
 This area is focused on the delivery of documentation, code samples and some utlities which will help facilitate the deveopment of a DriverWorks driver. However, this is one piece of a larger driver deveopment platform. Not included in this area are:
 
-- SDDP Documentation and Sample Code: Provides automatic device discovery and device pairing with the Conrol4 O.S.
+- SDDP Documentation and Sample Code: SDDP provides automatic device discovery and device pairing with the Conrol4 O.S. For more information regarding SDDP, please see the ssdp folder at the top of this page.
 
 - Composer Pro: A licensed version of Composer Pro running on a controller is required for driver modeling and testing.
  
@@ -71,13 +71,11 @@ The SDK includes numerous Driver Development Templates to help jump start your d
 
 #### Icon Templates
 
-The DriverWorks SDK provides templates and instructions on how to create icons that will blend in with the default icons inside Control4 interfaces. Conforming to these guidelines insures that custom icons feel like part of the system. 
+The DriverWorks SDK provides templates and instructions on how to create icons that will blend in with the default icons inside Control4 interfaces. Conforming to these guidelines insures that custom icons feel like part of the system. For more information, please see the README file in the icon_templates folder at the top of the page.
 
 #### Media Service Proxy
 
-Control4’s Media Service Proxy (MSP) provides a layer of commands, notifications, events and other data handling elements that will support the development of drivers for media-based services and devices. This iteration of a media-focused proxy represents a new direction in driver development as it uses Control4’s .c4z driver architecture and offers the ability to support XML-based user interfaces.
-
-From an end user perspective, drivers written against the Media Service Proxy will be able to provide a user interface that can browse cloud based media services consistently across numerous navigator devices. The proxy is designed to be platform independent with regard to devices displaying its user interface while maintaining the ability to easily integrate with new clouds or devices introduced to the Control4 system.
+Control4’s Media Service Proxy (MSP) provides a layer of commands, notifications, events and other data handling elements that will support the development of drivers for media-based services and devices. For more information, please see the README file in the media_service_proxyfolder at the top of the page.
 
 
 #### QR Branding
