@@ -16,7 +16,7 @@ This area is focused on the delivery of documentation, code samples and some utl
 
 - Driver Certification: Offers a no-cost opportunity for your products to be formally tested in Control4’s certification lab. Once we certify your product drivers interoperate seamlessly with the Control4 platform, then we can collaborate with your company on numerous, benefitial marketing activities.
 
-The above components play an important role in ensuring that your driver has complete integration within the Control4 O.S. Use of them requires signing Cpntrol4's SDK License Agreement. Please see.....
+The above components play an important role in ensuring that your driver has complete integration within the Control4 O.S. Use of them requires signing Control4's SDK License Agreement. Please see.....
 
 
 ## Getting Started
