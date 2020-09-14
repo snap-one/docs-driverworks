@@ -54,12 +54,12 @@ The directories at the top of this page contain various resources to support you
 
 
 #### Driver Development Templates
-The SDK includes numerous Driver Development Templates to help jump start your development efforts. Please see the [driver_deveopment_templates][7] directory for the current list of supported templates.
+The SDK includes numerous Driver Development Templates to help jump start your development efforts. Please see the [driver_development_templates][7] directory for the current list of supported templates.
 
 
 #### Icon Templates
 
-The DriverWorks SDK provides templates and instructions on how to create icons that will blend in with the default icons inside Control4 interfaces. Conforming to these guidelines insures that custom icons feel like part of the system. For more information, please see the [icon_templates][6] folder.
+The DriverWorks SDK provides templates and instructions on how to create icons that will blend in with the default icons inside Control4 interfaces. Conforming to these guidelines ensures that custom icons feel like part of the system. For more information, please see the [icon_templates][6] folder.
 
 
 #### Media Service Proxy
