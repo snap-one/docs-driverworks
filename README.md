@@ -8,7 +8,7 @@ This area is focused on the delivery of documentation, code samples and some utl
 
 - SDDP Documentation and sample code
 
- -Composer Pro (Control4’s Installation software)
+- Composer Pro (Control4’s Installation software)
  
 - Online Training
 
