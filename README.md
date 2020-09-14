@@ -6,17 +6,28 @@ The DriverWorks Software Development Kit (SDK) provides dealers and partners wit
 
 This area is focused on the delivery of documentation, code samples and some utlities which will help facilitate the deveopment of a DriverWorks driver. However, this is one piece of a larger driver deveopment platform. Not included in this area are:
 
-- SDDP Documentation and sample code
+- _SDDP Documentation and Sample Code_
 
-- Composer Pro (Control4’s Installation software)
+Provides automatic device discovery and device pairing with the Conrol4 O.S.
+
+
+- _Composer Pro (Control4’s Installation software)_
  
-- Online Training
+ A licensed version of Composer Pro running on a controller is required for driver modeling and testing.
+ 
+ 
+- _Online Training_
 
-- Dealer Portal Access
 
-- Driver Certification
+- _Dealer Portal Access_
 
-The above components play an important role in ensuring that your driver has complete integration within the Control4 O.S. Please see.....
+
+- _Driver Certification_
+
+Offers a no-cost opportunity for your products to be formally tested in Control4’s certification lab. Once we certify your product drivers interoperate seamlessly with the Control4 platform, then we can collaborate with your company on numerous, benefitial marketing activities.
+
+The above components play an important role in ensuring that your driver has complete integration within the Control4 O.S. Use of them requires signing Cpntrol4's SDK License Agreement. Please see.....
+
 
 ## Getting Started
 
