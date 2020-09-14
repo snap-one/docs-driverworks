@@ -16,7 +16,7 @@ This area is focused on the delivery of documentation, code samples and some utl
 
 - Driver Certification: Offers a no-cost opportunity for your products to be formally tested in Control4’s certification lab. Once we certify your product drivers interoperate seamlessly with the Control4 platform, then we can collaborate with your company on numerous, benefitial marketing activities. For more information, please see the [driver_certification][13] folder.
 
-The above components play an important role in ensuring that your driver has complete integration within the Control4 O.S. Use of them requires signing Control4's SDK License Agreement. Please see.....
+The above components play an important role in ensuring that your driver has complete integration within the Control4 O.S. Use of them requires signing Control4's SDK License Agreement. For more information reagrding the licensing agreement, please see the [sdk_licensing_agreement][14] folder.
 
 
 ## Getting Started
@@ -95,4 +95,5 @@ The Table Logger utility has been provided to assist driver developers in identi
 [11]: https://github.com/control4/docs-driverworks/tree/master/table_logger_utility
 [12]: https://github.com/control4/docs-driverworks/tree/master/sddp
 [13]: https://github.com/control4/docs-driverworks/tree/master/driver_certification
+[14]: https://github.com/control4/docs-driverworks/tree/master/sdk_licensing_agreement
 
