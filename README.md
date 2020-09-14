@@ -16,7 +16,7 @@ This area is focused on the delivery of documentation, code samples and some utl
 
 - Driver Certification
 
-The above components are imporatant to ensure that your driver has complete integration within the Control4 O.S. 
+The above components play an important role in ensuring that your driver has complete integration within the Control4 O.S. Please see.....
 
 If you are new to the DriverWorks SDK you will find [An Introduction to DriverWorks][1] to be useful reading.
 
