@@ -54,32 +54,32 @@ The directories at the top of this page contain various resources to support you
 
 
 #### Driver Development Templates
-The SDK includes numerous Driver Development Templates to help jump start your development efforts. Please see the directory above for the current list of supported templates.
+The SDK includes numerous Driver Development Templates to help jump start your development efforts. Please see the [driver_deveopment_templates][7] directory for the current list of supported templates.
 
 
 #### Icon Templates
 
-The DriverWorks SDK provides templates and instructions on how to create icons that will blend in with the default icons inside Control4 interfaces. Conforming to these guidelines insures that custom icons feel like part of the system. For more information, please see the [icon_templates][6] folder at the top of the page.
+The DriverWorks SDK provides templates and instructions on how to create icons that will blend in with the default icons inside Control4 interfaces. Conforming to these guidelines insures that custom icons feel like part of the system. For more information, please see the [icon_templates][6] folder.
 
 
 #### Media Service Proxy
 
-Control4’s Media Service Proxy (MSP) provides a layer of commands, notifications, events and other data handling elements that will support the development of drivers for media-based services and devices. For more information, please see the README file in the media_service_proxy folder at the top of the page.
+Control4’s Media Service Proxy (MSP) provides a layer of commands, notifications, events and other data handling elements that will support the development of drivers for media-based services and devices. For more information, please see the [media_service_proxy folder][8].
 
 
 #### QR Branding
 
-Composer Express supports the ability for a device driver to be downloaded by way of scanning a Quick Response code (QR code). QR codes are useful as they can be placed on a product, product packaging, within documentation or embedded on a product webpage. For more information, please see the README file in the qr_branding folder at the top of the page.
+Composer Express supports the ability for a device driver to be downloaded by way of scanning a Quick Response code (QR code). QR codes are useful as they can be placed on a product, product packaging, within documentation or embedded on a product webpage. For more information, please see the [qr_branding][9] folder. 
 
 
 #### Sample Drivers
 
-The DriverWorks SDK provides code examples as well as sample drivers which are useful in understanding some of the more complex areas of device driver development. The examples found here are referred to throughout the SDK documentation. This directory serves a collection area for that code. 
+The DriverWorks SDK provides code examples as well as sample drivers which are useful in understanding some of the more complex areas of device driver development. The examples found here are referred to throughout the SDK documentation. The [Sample Drivers][10] directory serves a collection area for that code. 
 
 
 #### Table Logger Utility
 
-The Table Logger utility has been provided to assist driver developers in identifying areas within their driver that may be using a growing amount of memory. The utility is executed from within ComposerPro at the driver level on the Lua tab. For more information, please see the README file in the table_logger_utility folder at the top of the page.
+The Table Logger utility has been provided to assist driver developers in identifying areas within their driver that may be using a growing amount of memory. The utility is executed from within ComposerPro at the driver level on the Lua tab. For more information, please see the [table_logger_utility][11] folder.
 
 [1]:	https://control4.github.io/docs-driverworks-introduction/#introduction
 [2]:	https://control4.github.io/docs-driverworks-fundamentals/#introduction
@@ -88,3 +88,9 @@ The Table Logger utility has been provided to assist driver developers in identi
 [5]:  https://control4.github.io/docs-driverworks-knx/#knx-and-control4
 [logo]: https://github.com/control4/docs-driverworks/blob/media/images/logo.png?raw=true
 [6]: https://github.com/control4/docs-driverworks/tree/master/icon_templates
+[7]: https://github.com/control4/docs-driverworks/tree/master/driver_development_templates
+[8]: https://github.com/control4/docs-driverworks/tree/master/media_service_proxy
+[9]: https://github.com/control4/docs-driverworks/tree/master/qr_branding
+[10]: https://github.com/control4/docs-driverworks/tree/master/sample_drivers
+[11]: https://github.com/control4/docs-driverworks/tree/master/table_logger_utility
+
