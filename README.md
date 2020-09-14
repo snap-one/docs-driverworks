@@ -74,7 +74,7 @@ Composer Express supports the ability for a device driver to be downloaded by wa
 
 #### Sample Drivers
 
-The DriverWorks SDK provides code examples as well as sample drivers which are useful in understanding some of the more complex areas of device driver development. The examples found here is referred to throughout the SDK documentation. This directory serves a collection area for that code. 
+The DriverWorks SDK provides code examples as well as sample drivers which are useful in understanding some of the more complex areas of device driver development. The examples found here are referred to throughout the SDK documentation. This directory serves a collection area for that code. 
 
 
 #### Table Logger Utility
