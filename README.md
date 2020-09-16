@@ -15,7 +15,7 @@ This area is focused on the delivery of documentation, code samples and some utl
 The above components play an important role in ensuring that your driver has complete integration within the Control4 O.S. Use of them requires signing Control4's SDK License Agreement. For more information reagrding the licensing agreement, please contact us at: busdev@contol4.com
 
 
-## Getting Started
+## Getting Started with DriverWorks
 
 If you are new to the DriverWorks SDK you will find [An Introduction to DriverWorks][1] to be useful reading.
 
