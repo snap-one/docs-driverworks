@@ -10,13 +10,9 @@ This area is focused on the delivery of documentation, code samples and some utl
 
 - Composer Pro: A licensed version of Composer Pro running on a controller is required for driver modeling and testing.
  
-- Online Training:
-
-- Dealer Portal Access:
-
 - Driver Certification: Offers a no-cost opportunity for your products to be formally tested in Control4’s certification lab. Once we certify your product drivers interoperate seamlessly with the Control4 platform, then we can collaborate with your company on numerous, benefitial marketing activities. For more information, please see the [driver_certification][13] folder.
 
-The above components play an important role in ensuring that your driver has complete integration within the Control4 O.S. Use of them requires signing Control4's SDK License Agreement. For more information reagrding the licensing agreement, please see the [sdk_licensing_agreement][14] folder.
+The above components play an important role in ensuring that your driver has complete integration within the Control4 O.S. Use of them requires signing Control4's SDK License Agreement. For more information reagrding the licensing agreement, please contact us at: [busdev@contol4.com]
 
 
 ## Getting Started
