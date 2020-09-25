@@ -77,6 +77,11 @@ The DriverWorks SDK provides code examples as well as sample drivers which are u
 
 The Table Logger utility has been provided to assist driver developers in identifying areas within their driver that may be using a growing amount of memory. The utility is executed from within ComposerPro at the driver level on the Lua tab. For more information, please see the [table_logger_utility][11] folder.
 
+
+#### Control4 Logo Usage
+
+Use of the Control4 logo requires review of the logo Style Guide. In addition to the Style Guide, several asset folders are provided in the control4-logo.zip file. These include logo samples in.png, jpg and .eps formats. Please see the [control4_logo_usage][15] folder for more information.
+
 [1]:	https://control4.github.io/docs-driverworks-introduction/#introduction
 [2]:	https://control4.github.io/docs-driverworks-fundamentals/#introduction
 [3]:	https://control4.github.io/docs-driverworks-proxyprotocol/#introduction
@@ -92,4 +97,5 @@ The Table Logger utility has been provided to assist driver developers in identi
 [12]: https://github.com/control4/docs-driverworks/tree/master/sddp
 [13]: https://github.com/control4/docs-driverworks/tree/master/driver_certification
 [14]: https://github.com/control4/docs-driverworks/tree/master/sdk_licensing_agreement
+[15]: https://github.com/control4/docs-driverworks/tree/master/control4_logo_usage
 
