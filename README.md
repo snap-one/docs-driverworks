@@ -32,6 +32,8 @@ If you are new to the DriverWorks SDK you will find [An Introduction to DriverWo
 
 - The 3.2.0 DriverWorks KNX Implementation Guide can be found [here][5].
 
+- The 3.2.0 Zigbee Implementation content can be found [here] [16].
+
 Note that the intention is to update the SDK documentation on a more frequent basis. Previously, updates coincided with O.S. releases. You are encouraged to review the documentation through the links provided above. This will ensure that you have the latest driver development content possible. However, if needed the DriverWorks documentation content can be downloaded and reviewed offline. Please keep in mind that working from previously downloaded content may not always reflect the latest SDK content.
 
 _From Chrome:_
@@ -98,4 +100,4 @@ Use of the Control4 logo requires review of the logo Style Guide. In addition to
 [13]: https://github.com/control4/docs-driverworks/tree/master/driver_certification
 [14]: https://github.com/control4/docs-driverworks/tree/master/sdk_licensing_agreement
 [15]: https://github.com/control4/docs-driverworks/tree/master/control4_logo_usage
-
+[16]: https://control4.github.io/docs-zigbee/#overview
