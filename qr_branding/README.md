@@ -1,3 +1,5 @@
+[copyright]: # (Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.)
+
 #  QR Code Implementation Guide
 
 
@@ -11,7 +13,7 @@ The use of QR codes to download drivers is recommended for any device except tho
 
 
 #### Creating QR Codes
-Numerous QR Code generation utilities are available and acceptable for creating a QR code to support driver downloads.  Most support the ability to create a code for numerous items such as URLs, images or any number of file types. 
+Numerous QR Code generation utilities are available and acceptable for creating a QR code to support driver downloads.  Most support the ability to create a code for numerous items such as URLs, images or any number of file types.
 
 For the purposes of a creating a QR code for driver download, the utility needs to support text to QR creation. The text that comprises the QR code includes three parameters: the manufacturer name, the device model number and the driver name.
 
@@ -28,7 +30,7 @@ Driver names with either .c4z or .c4i extensions can be included in the QR code.
 
 Once the QR code is created, it needs to be scaled and branded. The guidelines for scaling and branding the QR code can be found within the DriverWorks SDK in the following directory:
 
-`DriverWorks SDK\Documentation\QR Branding` 
+`DriverWorks SDK\Documentation\QR Branding`
 
 For example, the code created for the example in this document would look like this:
 
@@ -48,7 +50,7 @@ The mobile device is held approximately 8" from the QR code to initiate the scan
 
 ![qr_5]
 
-When the code is scanned, the Add Device page is displayed. At this point, the installer can select the room where the device will reside and rename the driver if desired. 
+When the code is scanned, the Add Device page is displayed. At this point, the installer can select the room where the device will reside and rename the driver if desired.
 
 ![qr_6]
 

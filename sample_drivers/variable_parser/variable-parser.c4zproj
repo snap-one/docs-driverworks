@@ -1,3 +1,5 @@
+<!--Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.-->
+
 <Driver type="c4z" name="variable-parser" squishLua="false">
 <Items>
 	<Item type="dir" name="www" recurse="true"/>

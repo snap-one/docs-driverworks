@@ -1,9 +1,12 @@
-Note the addition of include_if and exclude_if and auto_setpoints_[f|c] in the example below. These will be delivered in a future release which will occur after 2.7.0. 
-In this subsequent release,  the enforcement of deadbands will be accomplished with a field type of "doublenumber" which will allow for specifying ranges for two values, 
-resolution, and a deadband.  The standard heat_setpoint and cool_setpoint setpoints will not support deadband enforcement in releases after 2.7.0. 
-This may require drivers to be modified post 2.7.0. If deadband enforcement is not needed at the time of the 2.7.0 release, third party developer can still add the 
-fields targeted for post-2.7.0 without the new features causing.
+<!-- Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.-->
 
+<!--
+Note the addition of include_if and exclude_if and auto_setpoints_[f|c] in the example below. These will be delivered in a future release which will occur after 2.7.0.
+In this subsequent release,  the enforcement of deadbands will be accomplished with a field type of "doublenumber" which will allow for specifying ranges for two values,
+resolution, and a deadband.  The standard heat_setpoint and cool_setpoint setpoints will not support deadband enforcement in releases after 2.7.0.
+This may require drivers to be modified post 2.7.0. If deadband enforcement is not needed at the time of the 2.7.0 release, third party developer can still add the
+fields targeted for post-2.7.0 without the new features causing.
+-->
 
 <preset_fields>
   <field id="hvac_mode" type="list" label="HVAC Mode">
@@ -12,14 +15,14 @@ fields targeted for post-2.7.0 without the new features causing.
    <item text="Cool" value="Cool" />
    <item text="Auto" value="Auto" />
   </list>
-  <field id="heat_setpoint_f" type="number" label="Heat Setpoint" min="40" max="90" res="1" exclude_if="hvac_mode=Auto"/>  -- Note, this exclude_if causes heat_setpoint_f to 
+  <field id="heat_setpoint_f" type="number" label="Heat Setpoint" min="40" max="90" res="1" exclude_if="hvac_mode=Auto"/>  -- Note, this exclude_if causes heat_setpoint_f to
 	be available if No hvac_mode is set or if set and set to heat or cool as well.
   <field id="heat_setpoint_c" type="number" label="Heat Setpoint" min="4" max="32" res=".5" exclude_if="hvac_mode=Auto"/>
   <field id="cool_setpoint_f" type="number" label="Cool Setpoint" min="50" max="99" res="1" exclude_if="hvac_mode=Auto"/>
   <field id="cool_setpoint_c" type="number" label="Cool Setpoint" min="10" max="37" res=".5" exclude_if="hvac_mode=Auto"/>
   <field id="auto_setpoints_f" type="doublenumber" label="Heat Setpoint" min="40" max="90" res="1" label2="Cool Setpoint" min2="50" max2="99" res2="1" deadband="3"
 	 exclude_if="hvac_mode=Heat,Cool"/> -- Don't include if the preset is specifically set to heat or cool which makes this setting useless for the preset.
-  <field id="auto_setpoints_c" type="doublenumber" label="Heat Setpoint" min="4" max="32" res=".5" label2="Cool Setpoint" min2="10" max2="37" res2=".5" deadband="1.5" 
+  <field id="auto_setpoints_c" type="doublenumber" label="Heat Setpoint" min="4" max="32" res=".5" label2="Cool Setpoint" min2="10" max2="37" res2=".5" deadband="1.5"
 	exclude_if="hvac_mode=Heat,Cool"/>
   <field id="humidify_setpoint" type="number" label="Humidify Setpoint" min="40" max="90" res="1" include_if="humidity_mode=Humidify"/>
   <field id="dehumidify_setpoint" type="number" label="Dehumidify Setpoint" min="40" max="90" res="1" include_if="humidity_mode="Dehumidify"/>

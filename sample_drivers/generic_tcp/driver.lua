@@ -1,3 +1,5 @@
+-- Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.
+
 function Print (data)
 	if (type (data) == 'table') then
 		for k, v in pairs (data) do print (k, v) end
@@ -19,7 +21,7 @@ function OnPropertyChanged (strProperty)
 	if (value == nil) then
 		value = ''
 	end
-	
+
 	if (strProperty == 'Server Address') then
 		SERVER_ADDRESS = value
 
@@ -122,7 +124,7 @@ function ReceivedFromNetwork (idBinding, nPort, strData)
 	if (idBinding == 6001) then
 		if (nPort == SERVER_PORT) then
 			C4:UpdateProperty ('Server Response', strData)
-			
+
 		end
 	end
 end

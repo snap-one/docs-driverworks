@@ -1,3 +1,5 @@
+-- Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.
+
 function CancelTimer (timerId)
 	if (type (timerId) == 'userdata' and timerId.Cancel) then
 		timerId:Cancel ()

@@ -1,3 +1,5 @@
+<!--Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.-->
+
 <Driver type="c4z" name="websocket" squishLua="false">
 <Items>
 	<Item type="file" name="driver.xml" c4zDir = ""/>

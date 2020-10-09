@@ -1,3 +1,5 @@
+-- Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.
+
 function OnDriverInit (dit)
 	C4:UpdateProperty ('OnDriverInit DIT Value', dit)
 end

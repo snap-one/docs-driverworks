@@ -1,3 +1,5 @@
+[copyright]: # (Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.)
+
 # Generic HTTP Sender
 
 ## System requirements

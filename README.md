@@ -1,3 +1,5 @@
+[copyright]: # (Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.)
+
 # **Welcome to the DriverWorks Software Development Kit!**
 
 ![Logo][logo]
@@ -9,7 +11,7 @@ This area is focused on the delivery of documentation, code samples and some utl
 - SDDP Documentation and Sample Code: SDDP provides automatic device discovery and device pairing with the Conrol4 O.S. For more information regarding SDDP, please see the [sddp][12] folder.
 
 - Composer Pro: A licensed version of Composer Pro running on a controller is required for driver modeling and testing.
- 
+
 - Driver Certification: Offers a no-cost opportunity for your products to be formally tested in Control4’s certification lab. Once we certify your product drivers interoperate seamlessly with the Control4 platform, then we can collaborate with your company on numerous, benefitial marketing activities. For more information, please see the [driver_certification][13] folder.
 
 The above components play an important role in ensuring that your driver has complete integration within the Control4 O.S. Use of them requires signing Control4's SDK License Agreement. For more information regarding the licensing agreement, please contact us at: busdev@control4.com.
@@ -67,12 +69,12 @@ Control4’s Media Service Proxy (MSP) provides a layer of commands, notificatio
 
 #### QR Branding
 
-Composer Express supports the ability for a device driver to be downloaded by way of scanning a Quick Response code (QR code). QR codes are useful as they can be placed on a product, product packaging, within documentation or embedded on a product webpage. For more information, please see the [qr_branding][9] folder. 
+Composer Express supports the ability for a device driver to be downloaded by way of scanning a Quick Response code (QR code). QR codes are useful as they can be placed on a product, product packaging, within documentation or embedded on a product webpage. For more information, please see the [qr_branding][9] folder.
 
 
 #### Sample Drivers
 
-The DriverWorks SDK provides code examples as well as sample drivers which are useful in understanding some of the more complex areas of device driver development. The examples found here are referred to throughout the SDK documentation. The [sample_drivers][10] directory serves a collection area for that code. 
+The DriverWorks SDK provides code examples as well as sample drivers which are useful in understanding some of the more complex areas of device driver development. The examples found here are referred to throughout the SDK documentation. The [sample_drivers][10] directory serves a collection area for that code.
 
 
 #### Table Logger Utility

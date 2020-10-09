@@ -1,3 +1,5 @@
+<!--Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.-->
+
 <Driver type="c4z" name="idc_client" squishLua="false">
 <PrepackageCommands>
 	<PrepackageCommand>cp ./driver.lua ./lua/squished.lua</PrepackageCommand>

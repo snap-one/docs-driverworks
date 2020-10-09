@@ -1,3 +1,5 @@
+[copyright]: # (Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.)
+
 # Table Logger Utility
 
 
@@ -74,7 +76,7 @@ This table is composed entirely of subtables, and each of those subtables is key
 
 Table: {62} also looks suspect as a series of indexed entries. To verify what the purpose of this table is, search through the output for {62}.
 
-The search locates the following: 
+The search locates the following:
 
 `["tInputConnMapByID"]={62},`
 
