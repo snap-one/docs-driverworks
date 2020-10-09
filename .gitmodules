@@ -1,3 +1,0 @@
-[submodule "sample_drivers/common_msp"]
-	path = sample_drivers/common_msp
-	url = git@gitlab.control4.com:driver-development/common_msp.git
