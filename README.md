@@ -21,7 +21,7 @@ The above components play an important role in ensuring that your driver has com
 
 If you are new to the DriverWorks SDK you will find [An Introduction to DriverWorks][1] to be useful reading.
 
-**The latest version of the DriverWorks SDK is 3.2.0. Currently, 3.2.0 is in a beta state. While use of the beta version of the SDK is encouraged and feedback welcome, changes will continue to be made to the contents of the SDK until an official release is delivered. Anticipation of these changes should be considered in your development efforts when using this version of the SDK.**
+**The latest version of the DriverWorks SDK is 3.2.0.**
 
 
 ## DriverWorks Documentation
