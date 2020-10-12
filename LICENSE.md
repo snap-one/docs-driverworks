@@ -35,3 +35,30 @@ Wirepath Home Systems, LLC dba Control4
 Salt Lake City, UT 84020 USA
 
 http://www.control4.com
+
+## Third Party Copyright Included In This Repository
+
+### JSON.lua
+
+[Source](http://regex.info/blog/lua/json)
+
+#### JSON.lua License Statement
+
+Copyright 2010-2017 Jeffrey Friedl
+
+http://regex.info/blog/
+
+Latest version: http://regex.info/blog/lua/json
+
+This code is released under a Creative Commons CC-BY "Attribution" License:
+http://creativecommons.org/licenses/by/3.0/deed.en_US
+
+It can be used for any purpose so long as:
+
+   1) the copyright notice above is maintained
+   2) the web-page links above are maintained
+   3) the 'AUTHOR_NOTE' string below is maintained
+
+local VERSION = '20170927.26' -- version history at end of file
+
+local AUTHOR_NOTE = "-[ JSON.lua package by Jeffrey Friedl (http://regex.info/blog/lua/json) version 20170927.26 ]-"
