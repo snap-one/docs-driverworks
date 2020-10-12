@@ -19,9 +19,9 @@ The above components play an important role in ensuring that your driver has com
 
 ## Getting Started with DriverWorks
 
-If you are new to the DriverWorks SDK you will find [An Introduction to DriverWorks][1] to be useful reading.
-
 **The latest version of the DriverWorks SDK is 3.2.0.**
+
+If you are new to the DriverWorks SDK you will find [An Introduction to DriverWorks][1] to be useful reading.
 
 
 ## DriverWorks Documentation
