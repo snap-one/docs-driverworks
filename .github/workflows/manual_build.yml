@@ -23,7 +23,7 @@ jobs:
         id: build
         uses: control4/drivers-driverpackager@v1
         with:
-          projectDir: '${{ github.event.inputs.sample_driver }}'
+          projectDir: 'sample_drivers/${{ github.event.inputs.sample_driver }}'
           c4zproj: '${{ github.event.inputs.sample_driver }}.c4zproj'
           outputDir: './../'
 
