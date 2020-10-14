@@ -19,16 +19,13 @@ jobs:
         with:
           submodules: true
 
-      - name: Change to sample_drivers directory
-        run: |
-          cd sample_drivers
-
       - name: Build c4z from manifest
         id: build
         uses: control4/drivers-driverpackager@v1
         with:
           projectDir: '${{ github.event.inputs.sample_driver }}'
           c4zproj: '${{ github.event.inputs.sample_driver }}.c4zproj'
+          outputDir: './../'
 
       - name: Commit and push updated sample driver.c4z
         run: |
