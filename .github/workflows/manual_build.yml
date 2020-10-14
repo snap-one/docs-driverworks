@@ -1,0 +1,34 @@
+name: Manually build a sample driver
+
+on:
+  workflow_dispatch:
+    inputs:
+      sample_driver:
+        description: 'Directory name of sample driver'
+        required: true
+        default: generic_tcp
+
+jobs:
+  build_sample_driver:
+    runs-on: ubuntu-latest
+    name: Build selected sample driver
+    steps:
+      - name: Checkout local repo
+        id: checkout_local_repo
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - name: Build c4z from manifest
+        id: build
+        uses: control4/drivers-driverpackager@v1
+        with:
+          projectDir: './sample_drivers/${{ github.event.inputs.sample_driver }}'
+          c4zproj: '${{ github.event.inputs.sample_driver }}.c4zproj'
+
+      - name: Commit and push updated sample driver.c4z
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Update dev c4z" -a
+          git push
