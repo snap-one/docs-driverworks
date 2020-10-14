@@ -1,9 +1,10 @@
 -- Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.
 
-JSON = require ('common.json')
-common_lib = require ('common.common_lib')
-common_timer = require ('common.common_timer')
-common_url = require ('common.common_url')
+require ('drivers-common-public.global.lib')
+require ('drivers-common-public.global.timer')
+require ('drivers-common-public.global.url')
+
+JSON = require ('drivers-common-public.module.json')
 
 function OnDriverLateInit ()
 	if (not (Variables and Variables.HTTP_RESPONSE_DATA)) then

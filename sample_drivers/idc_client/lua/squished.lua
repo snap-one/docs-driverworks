@@ -1,10 +1,10 @@
 -- Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.
 
-JSON = require ('common.json')
+JSON = require ('drivers-common-public.module.json')
 
-common_lib = require ('common.common_lib')
-common_timer = require ('common.common_timer')
-common_handlers = require ('common.common_handlers')
+require ('drivers-common-public.global.lib')
+require ('drivers-common-public.global.timer')
+require ('drivers-common-public.global.handlers')
 
 pcall (require, 'production.production')
 

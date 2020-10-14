@@ -9,10 +9,10 @@
 	<Item type="file" name="driver.xml" c4zDir = ""/>
 	<Item type="file" name="driver.lua" c4zDir = ""/>
 
-	<Item type="file" name="./../common_msp/common/json.lua" c4zDir="common"/>
-	<Item type="file" name="./../common_msp/common/common_lib.lua" c4zDir="common"/>
-	<Item type="file" name="./../common_msp/common/common_timer.lua" c4zDir="common"/>
-	<Item type="file" name="./../common_msp/common/common_url.lua" c4zDir="common"/>
+	<Item type="file" name="./../drivers-common-public/global/lib.lua" c4zDir="drivers-common-public/global"/>
+	<Item type="file" name="./../drivers-common-public/global/timer.lua" c4zDir="drivers-common-public/global"/>
+	<Item type="file" name="./../drivers-common-public/global/url.lua" c4zDir="drivers-common-public/global"/>
 
+	<Item type="file" name="./../drivers-common-public/module/json.lua" c4zDir="drivers-common-public/module"/>
 </Items>
 </Driver>

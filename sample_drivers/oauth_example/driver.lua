@@ -1,9 +1,9 @@
 -- Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.
 
-common_lib = require ('common.common_lib')
-common_url = require ('common.common_url')
-common_timer = require ('common.common_timer')
-common_handlers = require ('common.common_handlers')
+require ('drivers-common-public.global.lib')
+require ('drivers-common-public.global.url')
+require ('drivers-common-public.global.timer')
+require ('drivers-common-public.global.handlers')
 
 OAuth = require ('oauth.auth_code_grant')
 Link = require ('link.make_short_link')

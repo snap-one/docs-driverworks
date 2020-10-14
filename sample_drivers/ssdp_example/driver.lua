@@ -1,6 +1,6 @@
 -- Copyright 2020 Control4 Corporation. All rights reserved.
 
-common_ssdp = require ('common.common_ssdp')
+SSDP = require ('drivers-common-public.module.ssdp')
 
 function OnDriverDestroyed ()
 	KillAllTimers ()
