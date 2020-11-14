@@ -13,6 +13,7 @@
 	<Item type="file" name="./../drivers-common-public/global/timer.lua" c4zDir="drivers-common-public/global"/>
 	<Item type="file" name="./../drivers-common-public/global/url.lua" c4zDir="drivers-common-public/global"/>
 
+	<Item type="file" name="./../drivers-common-public/module/metrics.lua" c4zDir="drivers-common-public/module"/>
 	<Item type="file" name="./../drivers-common-public/module/json.lua" c4zDir="drivers-common-public/module"/>
 </Items>
 </Driver>
