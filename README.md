@@ -19,22 +19,22 @@ The above components play an important role in ensuring that your driver has com
 
 ## Getting Started with DriverWorks
 
-**The latest version of the DriverWorks SDK is 3.2.0.**
+**The latest version of the DriverWorks SDK is 3.2.1.**
 
 If you are new to the DriverWorks SDK you will find [An Introduction to DriverWorks][1] to be useful reading.
 
 
 ## DriverWorks Documentation
 
-- The 3.2.0 DriverWorks Fundamentals Guide can be found [here][2].
+- The 3.2.1 DriverWorks Fundamentals Guide can be found [here][2].
 
-- The 3.2.0 DriverWorks Proxy and Protocol Guide can be found [here][3].
+- The 3.2.1 DriverWorks Proxy and Protocol Guide can be found [here][3].
 
-- The 3.2.0 DriverWorks API Reference Guide can be found [here][4].
+- The 3.2.1 DriverWorks API Reference Guide can be found [here][4].
 
-- The 3.2.0 DriverWorks KNX Implementation Guide can be found [here][5].
+- The 3.2.1 DriverWorks KNX Implementation Guide can be found [here][5].
 
-- The 3.2.0 Zigbee Implementation content can be found [here][16].
+- The 3.2.1 Zigbee Implementation content can be found [here][16].
 
 Note that the intention is to update the SDK documentation on a more frequent basis. Previously, updates coincided with O.S. releases. You are encouraged to review the documentation through the links provided above. This will ensure that you have the latest driver development content possible. However, if needed the DriverWorks documentation content can be downloaded and reviewed offline. Please keep in mind that working from previously downloaded content may not always reflect the latest SDK content.
 
