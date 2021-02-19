@@ -69,15 +69,17 @@ class CreatePO(object):
 
 		luaFiles.extend(luaIncludedFiles)
 
-		exp = re.compile (r'gettext\s+?\(([\'"])(.*?)\1', re.IGNORECASE)
+		exp = re.compile (r'(?s)get[Tt]ext\s*?\(s*?([\'"])(.*?)\1')
+		expBrace = re.compile (r'(?s)get[Tt]ext\s*?\(s*?\[\[(.*?)\]\]s*?\)')
 
 		for filename in luaFiles:
 			self.log("Processing:", filename)
 			with codecs.open(filename, "r", 'utf-8') as luaFile:
-				for i, line in enumerate(luaFile.readlines()):
-					for m in re.finditer(exp, line):
-						self.log("line:", i, m.group(2))
-						msgStrings.add(m.group(2))
+				luaFileSource = (luaFile.read())
+				for m in re.finditer(exp, luaFileSource):
+					msgStrings.add(m.group(2))
+				for m in re.finditer(expBrace, luaFileSource):
+					msgStrings.add(m.group(1))
 
 		#self.log("Strings:", msgStrings)
 
