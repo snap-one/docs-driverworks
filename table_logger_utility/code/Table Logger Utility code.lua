@@ -88,4 +88,4 @@ function table.c4save(tbl, filename)
 	print('closed file ' .. filename .. ' to save table')
 end
 
-table.c4save(_G, os.time() .. '.txt')
+table.c4save(_G, os.date('%Y%m%d%H%M%S') .. '.lua')
