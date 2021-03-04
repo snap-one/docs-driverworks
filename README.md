@@ -88,7 +88,7 @@ Use of the Control4 logo requires review of the logo Style Guide. In addition to
 
 #### DriverPackager
 
-Driver Packager is a Python utility used to create individual .c4z files from source code. driverpackager.exe is contained in the DriverEditor development environment but can also be executed from a command line. For more inforamtion please see: https://github.com/control4/drivers-driverpackager
+Driver Packager is a Python utility used to create individual .c4z files from source code. For more inforamtion please see: https://github.com/control4/drivers-driverpackager
 
 [1]:	https://control4.github.io/docs-driverworks-introduction/#introduction
 [2]:	https://control4.github.io/docs-driverworks-fundamentals/#introduction
