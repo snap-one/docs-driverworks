@@ -86,6 +86,10 @@ The Table Logger utility has been provided to assist driver developers in identi
 
 Use of the Control4 logo requires review of the logo Style Guide. In addition to the Style Guide, several asset folders are provided in the control4-logo.zip file. These include logo samples in.png, jpg and .eps formats. Please see the [control4_logo_usage][15] folder for more information.
 
+#### DriverPackager
+
+Driver Packager is a DriverWorks SDK compiled Python utility used to create individual .c4z files from source code. driverpackager.exe is contained in the DriverEditor development environment but can also be executed from a command line. For more inforamtion please see: https://github.com/control4/drivers-driverpackager
+
 [1]:	https://control4.github.io/docs-driverworks-introduction/#introduction
 [2]:	https://control4.github.io/docs-driverworks-fundamentals/#introduction
 [3]:	https://control4.github.io/docs-driverworks-proxyprotocol/#introduction
