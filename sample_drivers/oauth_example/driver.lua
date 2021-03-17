@@ -8,8 +8,8 @@ require ('drivers-common-public.global.handlers')
 OAuth = require ('oauth.auth_code_grant')
 Link = require ('link.make_short_link')
 
-REDIRECT_URI_PROD = 'https://apps.control4.com/'
-REDIRECT_URI_DEV = 'https://apps.control4dev.com/'
+REDIRECT_URI_PROD = 'https://apps.control4drivers.com/'
+REDIRECT_URI_DEV = 'https://apps.control4driversdev.com/'
 
 function OnDriverLateInit ()
 	for property, _ in pairs (Properties) do
