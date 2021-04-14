@@ -1,4 +1,4 @@
--- Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.
+-- Copyright 2021 Wirepath Home Systems, LLC. All rights reserved.
 
 require ('drivers-common-public.global.lib')
 require ('drivers-common-public.global.url')
@@ -78,18 +78,21 @@ function EC.SetupOAuth (tParams)
 	end
 
 	local tParams = {
+		NAME = 'OAuth Demonstrator',
 		AUTHORIZATION = authForOAuth,
 
-		REDIRECT_URI = redirectURI,
-
-		AUTH_ENDPOINT_URI = authEndpoint,
-		TOKEN_ENDPOINT_URI = tokenEndpoint,
+		SHORT_LINK_AUTHORIZATION = authForLink,
+		LINK_CHANGE_CALLBACK = UpdateAuthLink,
 
 		API_CLIENT_ID = clientId,
 		API_SECRET = clientSecret,
 
+		AUTH_ENDPOINT_URI = authEndpoint,
+		TOKEN_ENDPOINT_URI = tokenEndpoint,
+
 		SCOPES = scope,
 
+		REDIRECT_URI = redirectURI,
 		REDIRECT_DURATION = 5 * 60,
 	}
 
@@ -112,53 +115,10 @@ function CreateAPIOAuthHandler (tParams)
 
 	APIAuth = OAuth:new (tParams)
 
-	APIAuth.notifyHandler.ActivationTimeOut = function (contextInfo)
-		UpdateAuthLink ('', contextInfo)
-	end
-
-	APIAuth.notifyHandler.LinkCodeReceived = function (contextInfo, link)
-		if (authForLink) then
-			local _linkCallback = function (link)
-				UpdateAuthLink (link, contextInfo)
-			end
-			MakeShortLink (link, _linkCallback, authForLink)
-		else
-			UpdateAuthLink (link, contextInfo)
-		end
-	end
-
-	APIAuth.notifyHandler.LinkCodeConfirmed = function (contextInfo)
-	end
-
-	APIAuth.notifyHandler.LinkCodeWaiting = function (contextInfo)
-	end
-
-	APIAuth.notifyHandler.LinkCodeError = function (contextInfo)
-		UpdateAuthLink ('', contextInfo)
-	end
-
-	APIAuth.notifyHandler.LinkCodeDenied = function (contextInfo, err, err_description, err_uri)
-		UpdateAuthLink ('', contextInfo)
-	end
-
-	APIAuth.notifyHandler.LinkCodeExpired = function (contextInfo)
-		UpdateAuthLink ('', contextInfo)
-	end
-
 	APIAuth.notifyHandler.AccessTokenGranted = function (contextInfo, accessToken, refreshToken)
-		print ('Access Token received, accessToken:' .. tostring (accessToken ~= nil) .. ', refreshToken:' .. tostring (refreshToken ~= nil))
-
-		UpdateAuthLink ('', contextInfo)
-
 		if (accessToken) then
 			HEADERS = HEADERS or {}
 			HEADERS ['Authorization'] = 'Bearer ' .. accessToken
-		end
-
-		if (refreshToken) then
-			C4:PersistSetValue ('API Refresh Token', refreshToken, true)
-		else
-			C4:PersistDeleteValue ('API Refresh Token')
 		end
 
 		if (contextInfo.callback) then
@@ -169,12 +129,8 @@ function CreateAPIOAuthHandler (tParams)
 	end
 
 	APIAuth.notifyHandler.AccessTokenDenied = function (contextInfo, err, err_description, err_uri)
-		print ('Access Token denied', err, err_description, err_uri)
-
 		HEADERS = HEADERS or {}
 		HEADERS ['Authorization'] = nil
-
-		C4:PersistDeleteValue ('API Refresh Token')
 	end
 end
 

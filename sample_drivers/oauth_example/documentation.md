@@ -61,3 +61,13 @@ Whether to send the client ID and secret as an HTTP Basic Authorization header o
 #### Choose C4 OAuth Redirect Server [*Develop* | Production]
 
 Which instance of the Control4 OAuth lambda to send the state request to.  Note that each lambda will have different API keys.
+
+## Changelog
+
+2
+
+- Update to use new features of the auth_code_grant.lua library to build in automatic persistent key storage and short linking with automatic callbacks.
+
+1
+
+- Initial release

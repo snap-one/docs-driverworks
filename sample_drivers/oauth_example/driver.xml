@@ -1,12 +1,12 @@
 <devicedata>
-	<copyright>Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.</copyright>
+	<copyright>Copyright 2021 Wirepath Home Systems, LLC. All rights reserved.</copyright>
 	<manufacturer>Control4</manufacturer>
 	<name>OAuth Example</name>
 	<model>OAuth Example</model>
 	<creator>Control4</creator>
 	<created>08/04/2020 12:00</created>
-	<modified>08/04/2020 12:00</modified>
-	<version>1</version>
+	<modified>04/14/2021 16:45</modified>
+	<version>2</version>
 	<control>lua_gen</control>
 	<driver>DriverWorks</driver>
 	<auto_update>true</auto_update>
