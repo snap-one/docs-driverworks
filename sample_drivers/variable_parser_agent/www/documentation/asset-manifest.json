@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/c4z/FireTV/www/documentation/static/css/main.3052b4c9.chunk.css",
-    "main.js": "/c4z/FireTV/www/documentation/static/js/main.546f76ed.chunk.js",
-    "main.js.map": "/c4z/FireTV/www/documentation/static/js/main.546f76ed.chunk.js.map",
-    "runtime-main.js": "/c4z/FireTV/www/documentation/static/js/runtime-main.10ebe9a3.js",
-    "runtime-main.js.map": "/c4z/FireTV/www/documentation/static/js/runtime-main.10ebe9a3.js.map",
-    "static/js/2.1e3209b2.chunk.js": "/c4z/FireTV/www/documentation/static/js/2.1e3209b2.chunk.js",
-    "static/js/2.1e3209b2.chunk.js.map": "/c4z/FireTV/www/documentation/static/js/2.1e3209b2.chunk.js.map",
-    "index.html": "/c4z/FireTV/www/documentation/index.html",
-    "static/css/main.3052b4c9.chunk.css.map": "/c4z/FireTV/www/documentation/static/css/main.3052b4c9.chunk.css.map",
-    "static/js/2.1e3209b2.chunk.js.LICENSE.txt": "/c4z/FireTV/www/documentation/static/js/2.1e3209b2.chunk.js.LICENSE.txt"
+    "main.css": "/c4z/variable_parser_agent/www/documentation/static/css/main.3052b4c9.chunk.css",
+    "main.js": "/c4z/variable_parser_agent/www/documentation/static/js/main.546f76ed.chunk.js",
+    "main.js.map": "/c4z/variable_parser_agent/www/documentation/static/js/main.546f76ed.chunk.js.map",
+    "runtime-main.js": "/c4z/variable_parser_agent/www/documentation/static/js/runtime-main.10ebe9a3.js",
+    "runtime-main.js.map": "/c4z/variable_parser_agent/www/documentation/static/js/runtime-main.10ebe9a3.js.map",
+    "static/js/2.1e3209b2.chunk.js": "/c4z/variable_parser_agent/www/documentation/static/js/2.1e3209b2.chunk.js",
+    "static/js/2.1e3209b2.chunk.js.map": "/c4z/variable_parser_agent/www/documentation/static/js/2.1e3209b2.chunk.js.map",
+    "index.html": "/c4z/variable_parser_agent/www/documentation/index.html",
+    "static/css/main.3052b4c9.chunk.css.map": "/c4z/variable_parser_agent/www/documentation/static/css/main.3052b4c9.chunk.css.map",
+    "static/js/2.1e3209b2.chunk.js.LICENSE.txt": "/c4z/variable_parser_agent/www/documentation/static/js/2.1e3209b2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.10ebe9a3.js",
