@@ -34,7 +34,7 @@ If you are new to the DriverWorks SDK you will find [An Introduction to DriverWo
 
 - The Zigbee Implementation content can be found [here][16].
 
-Note that the intention is to update the SDK documentation on a more frequent basis. Previously, updates coincided with O.S. releases. You are encouraged to review the documentation through the links provided above. This will ensure that you have the latest driver development content possible. However, if needed the DriverWorks documentation content can be downloaded and reviewed offline. Please keep in mind that working from previously downloaded content may not always reflect the latest SDK content.
+You are encouraged to review the SDK documentation through the links provided above. This will ensure that you have the latest driver development content possible. Significant enhancements and deprecations to the documentation will be listed in the What's New sections of the repositories. However, if needed the DriverWorks documentation content can be downloaded and reviewed offline. Please keep in mind that working from previously downloaded content may not always reflect the latest SDK content.
 
 _From Chrome:_
 
