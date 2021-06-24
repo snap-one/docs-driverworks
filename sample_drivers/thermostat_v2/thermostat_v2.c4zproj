@@ -1,0 +1,9 @@
+<!--Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.-->
+
+<Driver type="c4z" name="thermostat_v2" squishLua="false">
+<Items>
+	<Item type="dir" name="www" recurse="true"/>
+	<Item type="file" name="driver.xml" c4zDir = ""/>
+	<Item type="file" name="driver.lua" c4zDir = ""/>
+</Items>
+</Driver>
