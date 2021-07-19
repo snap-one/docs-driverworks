@@ -2,7 +2,7 @@
 
 # **Welcome to the DriverWorks Software Development Kit!**
 
-![Logo][logo]
+![Logo][logo1]
 
 The DriverWorks Software Development Kit (SDK) provides dealers and partners with the ability to independently develop custom two-way (Serial & Network) drivers to incorporate new devices into the Control4 environment or to customize existing drivers. DriverWorks uses the Lua programming language, which is delivered within the Composer software application and within the Control4 OS. Completed drivers do not require platform or version-specific compiling. The development kit consists of the Lua Development Environment (included within Composer and the OS), several documentation resources as well sample drivers and code examples.
 
@@ -93,7 +93,7 @@ Driver Packager is a Python utility used to create individual .c4z files from so
 [3]:	https://control4.github.io/docs-driverworks-proxyprotocol/#introduction
 [4]:	https://control4.github.io/docs-driverworks-api/#introduction
 [5]:  https://control4.github.io/docs-driverworks-knx/#knx-and-control4
-[logo]: https://github.com/control4/docs-driverworks/blob/media/images/logo.png?raw=true
+[logo]: https://github.com/control4/docs-driverworks/blob/media/images/logo1.png?raw=true
 [6]: https://github.com/control4/docs-driverworks/tree/master/icon_templates
 [7]: https://github.com/control4/docs-driverworks/tree/master/driver_development_templates
 [8]: https://github.com/control4/docs-driverworks/tree/master/media_service_proxy
