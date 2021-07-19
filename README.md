@@ -93,7 +93,7 @@ Driver Packager is a Python utility used to create individual .c4z files from so
 [3]:	https://control4.github.io/docs-driverworks-proxyprotocol/#introduction
 [4]:	https://control4.github.io/docs-driverworks-api/#introduction
 [5]:  https://control4.github.io/docs-driverworks-knx/#knx-and-control4
-[logo1]: https://github.com/control4/docs-driverworks/blob/media/images/logo.png?raw=true
+[logo]: https://github.com/control4/docs-driverworks/blob/media/images/logo.png?raw=true
 [6]: https://github.com/control4/docs-driverworks/tree/master/icon_templates
 [7]: https://github.com/control4/docs-driverworks/tree/master/driver_development_templates
 [8]: https://github.com/control4/docs-driverworks/tree/master/media_service_proxy
