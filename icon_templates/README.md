@@ -130,7 +130,7 @@ Please see sample icons that are included on the layers in the templates. These 
 ![it_8]
 
 ## Copyright
-Wirepath Home Systems, LLC. All rights reserved. Control4 and Snap AV and their respective logos are registered trademarks or trademarks of Wirepath Home Systems, LLC, dba “Control4” and/or dba “SnapAV” in the United States and/or other countries. Other names and brands may be claimed as the property of their respective owners. All specifications subject to change without notice.
+Copyright 2021 Snap One, LLC. All Rights Reserved.
 
 
 [it_1]:https://github.com/control4/docs-driverworks/raw/media/images/it_1.png
