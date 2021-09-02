@@ -1,12 +1,12 @@
 <devicedata>
-	<copyright>Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.</copyright>
+	<copyright>Copyright 2021 Snap One, LLC. All rights reserved.</copyright>
 	<manufacturer>Control4</manufacturer>
 	<name>Generic HTTP Sender</name>
 	<model>Generic HTTP Sender</model>
 	<creator>Control4</creator>
 	<created>01/26/2018 11:00</created>
 	<modified>11/12/2020 12:30</modified>
-	<version>6</version>
+	<version>7</version>
 	<control>lua_gen</control>
 	<driver>DriverWorks</driver>
 	<auto_update>true</auto_update>
@@ -14,7 +14,7 @@
 	<minimum_os_version>2.9.0</minimum_os_version>
 	<config>
 		<script file="driver.lua"></script>
-		<documentation file="www/documentation.html"/>
+		<documentation file="www/documentation/index.html"/>
 		<properties>
 			<property>
 				<name>Debug Mode</name>
@@ -61,6 +61,26 @@
 				<name>Preset URL 5</name>
 				<default></default>
 				<type>STRING</type>
+				<readonly>false</readonly>
+			</property>
+			<property>
+				<name>SSL Verify Peer</name>
+				<type>LIST</type>
+				<items>
+					<item>True</item>
+					<item>False</item>
+				</items>
+				<default>True</default>
+				<readonly>false</readonly>
+			</property>
+			<property>
+				<name>SSL Verify Host</name>
+				<type>LIST</type>
+				<items>
+					<item>True</item>
+					<item>False</item>
+				</items>
+				<default>True</default>
 				<readonly>false</readonly>
 			</property>
 		</properties>

@@ -1,4 +1,4 @@
--- Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.
+-- Copyright 2021 Snap One, LLC. All rights reserved.
 
 require ('drivers-common-public.global.lib')
 require ('drivers-common-public.global.timer')
@@ -24,6 +24,9 @@ function OnDriverLateInit ()
 
 	Presets = {}
 
+	DEFAULT_URL_OPTIONS = DEFAULT_URL_OPTIONS or {
+	}
+
 	for property, _ in pairs (Properties) do
 		OnPropertyChanged (property)
 	end
@@ -46,6 +49,12 @@ function OnPropertyChanged (strProperty)
 
 	elseif (strProperty == 'URL Timeout') then
 		C4:urlSetTimeout (tonumber (value))
+
+	elseif (strProperty == 'SSL Verify Peer') then
+		DEFAULT_URL_OPTIONS.ssl_verify_peer = (value == 'True')
+
+	elseif (strProperty == 'SSL Verify Host') then
+		DEFAULT_URL_OPTIONS.ssl_verify_host = (value == 'True')
 
 	elseif (presetNum) then
 		Presets [presetNum] = value
@@ -80,12 +89,12 @@ function ExecuteCommand (strCommand, tParams)
 	if (url and url ~= '') then
 		if (string.find (strCommand, 'GET')) then
 			dbg ('Sending GET to ' .. url)
-			urlGet (url, data, CheckResponse, contextInfo)
+			urlGet (url, data, CheckResponse, contextInfo, DEFAULT_URL_OPTIONS)
 
 		elseif (string.find (strCommand, 'POST')) then
 			local data = tParams.DATA or ''
 			dbg ('Sending POST to ' .. url .. ' with data:/r/n' .. data)
-			urlPost (url, data, headers, CheckResponse, contextInfo)
+			urlPost (url, data, headers, CheckResponse, contextInfo, DEFAULT_URL_OPTIONS)
 		end
 	end
 end
