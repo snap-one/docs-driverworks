@@ -1,4 +1,4 @@
--- Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.
+-- Copyright 2021 Snap One, LLC. All rights reserved.
 
 require ('drivers-common-public.global.lib')
 require ('drivers-common-public.global.timer')
@@ -311,31 +311,32 @@ function AddNextClient (devicesToAdd)
 			SetTimer (nil, 100, _addNextDevice)
 
 		else
-			local _onAdded = function (deviceId)
+			local _onAdded = function (deviceId, tParams)
 				if (deviceId == 0) then
 					print ('Could not install driver!')
-					return
-				end
+				else
+					C4:Bind (DEVICE_ID, 1, deviceId, 1, 'IDC')
 
-				local _setupClient = function (timer)
-					local contextInfo = {
-						clientInfo = Serialize (client)
-					}
-					C4:SendToDevice (deviceId, 'AddClient', contextInfo)
+					local _setupClient = function (timer)
+						local contextInfo = {
+							clientInfo = Serialize (client),
+						}
+						C4:SendToDevice (deviceId, 'AddClient', contextInfo)
+					end
+					SetTimer (nil, 10 * ONE_SECOND, _setupClient)
 				end
-				SetTimer (nil, 10 * ONE_SECOND, _setupClient)
+				SetTimer (nil, 5 * ONE_SECOND, _addNextDevice)
 			end
 
 			local unconfiguredClient = table.remove (UnconfiguredClientDrivers)
 
 			if (unconfiguredClient) then
-				_onAdded (unconfiguredClient)
+				C4:RenameDevice (unconfiguredClient, deviceName)
+				_onAdded (unconfiguredClient, {})
 
 			else
 				C4:AddDevice ('idc_client.c4z', C4:RoomGetId (), deviceName, _onAdded)
 			end
-
-			SetTimer (nil, 3 * ONE_SECOND, _addNextDevice)
 		end
 		return
 	end

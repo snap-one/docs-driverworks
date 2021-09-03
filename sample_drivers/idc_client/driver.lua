@@ -1,4 +1,4 @@
--- Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.
+-- Copyright 2021 Snap One, LLC. All rights reserved.
 
 JSON = require ('drivers-common-public.module.json')
 
