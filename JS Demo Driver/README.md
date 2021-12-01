@@ -1,4 +1,4 @@
-The purpose of this directory is to house the JavascriptDemo.c4z driver which is referneced in the DriverWorks Proxy and Protocol Guide's UI Button Proxy section.
+The purpose of this directory is to house the JavascriptDemo.c4z driver which is referenced in the DriverWorks Proxy and Protocol Guide's UI Button Proxy section.
 
 To use this driver:
 1. Download the Javascript API driver and add it to your project.
