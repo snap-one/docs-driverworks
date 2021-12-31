@@ -201,9 +201,6 @@ function TrackCurrentAudioPath (idDevice, idVariable, strValue)
 	local outputBinding = sourceController.provider
 
 	for outputName, bindings in pairs (AUDIO_OUTPUTS [controllerType]) do
-		print (outputBinding)
-		Print (bindings)
-
 		if (bindings [outputBinding]) then
 			print ('Digital Media playing on ' .. controllerName .. ' (' .. controllerTypeName .. '), output ' .. outputName .. ' in room ' .. roomName)
 			return
