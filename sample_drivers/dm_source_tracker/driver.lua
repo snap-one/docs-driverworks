@@ -103,14 +103,36 @@ do
 end
 
 function OnDriverLateInit (reason)
+	for property, _ in pairs (Properties) do
+		OnPropertyChanged (property)
+	end
+
 	C4:RegisterSystemEvent (C4SystemEvents.OnPIP, 0)
-	RegisterRooms ()
 	RegisterControllers ()
+	RegisterRooms ()
+end
+
+function OPC.Debug_Mode (value)
+	CancelTimer ('DEBUGPRINT')
+	DEBUGPRINT = (value == 'On')
+
+	if (DEBUGPRINT) then
+		local _timer = function (timer)
+			C4:UpdateProperty ('Debug Mode', 'Off')
+			OnPropertyChanged ('Debug Mode')
+		end
+		SetTimer ('DEBUGPRINT', 36000000, _timer)
+	end
+end
+
+function OPC.Driver_Version (value)
+	local version = C4:GetDriverConfigInfo ('version')
+	C4:UpdateProperty ('Driver Version', version)
 end
 
 function OSE.OnPIP (event)
-	RegisterRooms ()
 	RegisterControllers ()
+	RegisterRooms ()
 end
 
 function RegisterControllers ()
