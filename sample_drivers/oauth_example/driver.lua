@@ -94,6 +94,8 @@ function EC.SetupOAuth (tParams)
 
 		REDIRECT_URI = redirectURI,
 		REDIRECT_DURATION = 5 * 60,
+
+		USE_BASIC_AUTH_HEADER = sendBasicAuth,
 	}
 
 	PersistData.APIAuthSetup = tParams
