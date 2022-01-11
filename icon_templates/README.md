@@ -130,7 +130,7 @@ Please see sample icons that are included on the layers in the templates. These 
 ![it_8]
 
 ## Copyright
-Copyright 2021 Snap One, LLC. All Rights Reserved.
+Copyright 2022 Snap One, LLC. All Rights Reserved.
 
 
 [it_1]:https://github.com/control4/docs-driverworks/raw/media/images/it_1.png
