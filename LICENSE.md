@@ -12,7 +12,7 @@ Control4 retains the right to make changes to this repository or related product
 
 ## Copyright
 
-Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.
+Copyright 2022 Snap One, LLC. All rights reserved.
 
 The above copyright notice applies to all content in this repository unless otherwise stated explicitly herein that a third-party’s copyright applies.
 
