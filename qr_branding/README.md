@@ -59,7 +59,7 @@ When the Add Device button is selected, the driver is downloaded to the controll
 
 
 ## Copyright
-Wirepath Home Systems, LLC. All rights reserved. Control4 and Snap AV and their respective logos are registered trademarks or trademarks of Wirepath Home Systems, LLC, dba “Control4” and/or dba “SnapAV” in the United States and/or other countries. Other names and brands may be claimed as the property of their respective owners. All specifications subject to change without notice.
+Copyright 2022 Snap One, LLC. All rights reserved. Control4 and Snap AV and their respective logos are registered trademarks or trademarks of Wirepath Home Systems, LLC, dba “Control4” and/or dba “SnapAV” in the United States and/or other countries. Other names and brands may be claimed as the property of their respective owners. All specifications subject to change without notice.
 
 
 [qr_1]:https://github.com/control4/docs-driverworks/raw/media/images/qr_1.png
