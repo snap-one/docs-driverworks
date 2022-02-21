@@ -82,7 +82,7 @@ function EC.SetupOAuth (tParams)
 		AUTHORIZATION = authForOAuth,
 
 		SHORT_LINK_AUTHORIZATION = authForLink,
-		LINK_CHANGE_CALLBACK = UpdateAuthLink,
+		LINK_CHANGE_CALLBACK = UpdateAPIAuthLink,
 
 		API_CLIENT_ID = clientId,
 		API_SECRET = clientSecret,
@@ -136,6 +136,6 @@ function CreateAPIOAuthHandler (tParams)
 	end
 end
 
-function UpdateAuthLink (link, context)
+function UpdateAPIAuthLink (link, context)
 	UpdateProperty ('Authentication URL', link)
 end
