@@ -55,6 +55,11 @@ The directories at the top of this page contain various resources to support you
 The SDK includes numerous Driver Development Templates to help jump start your development efforts. Please see the [driver_development_templates][7] directory for the current list of supported templates.
 
 
+#### DriverPackager
+
+Driver Packager is a Python utility used to create individual .c4z files from source code. For more information please see: https://github.com/control4/drivers-driverpackager
+
+
 #### Icon Templates
 
 The DriverWorks SDK provides templates and instructions on how to create icons that will blend in with the default icons inside Control4 interfaces. Conforming to these guidelines ensures that custom icons feel like part of the system. For more information, please see the [icon_templates][6] folder.
@@ -84,9 +89,6 @@ The Table Logger utility has been provided to assist driver developers in identi
 
 Use of the Control4 logo requires review of the logo Style Guide. In addition to the Style Guide, several asset folders are provided in the control4-logo.zip file. These include logo samples in.png, jpg and .eps formats. Please see the [control4_logo_usage][15] folder for more information.
 
-#### DriverPackager
-
-Driver Packager is a Python utility used to create individual .c4z files from source code. For more information please see: https://github.com/control4/drivers-driverpackager
 
 [1]:	https://control4.github.io/docs-driverworks-introduction/#introduction
 [2]:	https://control4.github.io/docs-driverworks-fundamentals/#introduction
