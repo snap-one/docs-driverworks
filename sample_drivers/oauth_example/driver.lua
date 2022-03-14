@@ -1,12 +1,12 @@
--- Copyright 2021 Wirepath Home Systems, LLC. All rights reserved.
+-- Copyright 2022 Snap One, LLC. All rights reserved.
 
+require ('drivers-common-public.global.handlers')
 require ('drivers-common-public.global.lib')
+require ('drivers-common-public.global.make_short_link')
 require ('drivers-common-public.global.url')
 require ('drivers-common-public.global.timer')
-require ('drivers-common-public.global.handlers')
 
-OAuth = require ('oauth.auth_code_grant')
-Link = require ('link.make_short_link')
+OAuth = require ('drivers-common-public.module.auth_code_grant')
 
 REDIRECT_URI_PROD = 'https://apps.control4drivers.com/'
 REDIRECT_URI_DEV = 'https://apps.control4driversdev.com/'
@@ -16,24 +16,13 @@ function OnDriverLateInit ()
 		OnPropertyChanged (property)
 	end
 
-	if (PersistData.APIAuthSetup) then
-		CreateAPIOAuthHandler (PersistData.APIAuthSetup)
-
-		local refreshToken = C4:PersistGetValue ('API Refresh Token', true)
-
-		if (refreshToken) then
-
-			local _callback = function ()
-				print ('Token refreshed automatically on startup')
-			end
-
-			local contextInfo = {
-				from_startup = true,
-				callback = _callback,
-			}
-			APIAuth:RefreshToken (contextInfo, refreshToken)
+	local _timer = function (timer)
+		if (PersistData.APIAuthSetup) then
+			CreateAPIOAuthHandler (PersistData.APIAuthSetup)
 		end
 	end
+
+	SetTimer (nil, 6 * ONE_SECOND, _timer)
 end
 
 function OPC.Debug_Mode (value)
