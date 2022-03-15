@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Common / Unchecked</title>
+    <g id="Common-/-Unchecked" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M24,8 C32.83656,8 40,15.1615 40,24 C40,32.83656 32.8385,40 24,40 C15.16344,40 8,32.8385 8,24 C8,15.16344 15.1615,8 24,8 Z M24,9.5 C15.9906253,9.5 9.5,15.9911689 9.5,24 C9.5,32.0093747 15.9911689,38.5 24,38.5 C32.0093747,38.5 38.5,32.0088311 38.5,24 C38.5,15.9906253 32.0088311,9.5 24,9.5 Z" id="Icon" fill="#FFFFFF" fill-rule="nonzero"></path>
+    </g>
+</svg>

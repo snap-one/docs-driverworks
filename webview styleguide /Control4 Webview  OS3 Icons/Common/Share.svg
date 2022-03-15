@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Common / Share</title>
+    <g id="Common-/-Share" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M9.17811027,17.955274 L22.9281103,7.30078496 C23.5590754,6.81186778 24.4409246,6.81186778 25.0718897,7.30078496 L38.8218897,17.955274 C39.2496475,18.2867315 39.5,18.7974384 39.5,19.3385861 L39.5,38.75 C39.5,39.7164983 38.7164983,40.5 37.75,40.5 L10.25,40.5 C9.28350169,40.5 8.5,39.7164983 8.5,38.75 L8.5,19.3385861 C8.5,18.7974384 8.75035247,18.2867315 9.17811027,17.955274 Z M17,26.5 L30.5,26.5 M24,19.5 L24,32.9094906" id="Icon" stroke="#DCDEE0" stroke-width="1.5"></path>
+    </g>
+</svg>
