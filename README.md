@@ -87,7 +87,7 @@ The Table Logger utility has been provided to assist driver developers in identi
 
 #### Webview Styleguide
 
-A comprehensive guide of elements used in the Control4 OS3 to assist 3rd party webview developers to achieve a seamless experience in their contribution to extend the system for the end user.
+A comprehensive guide of elements used in the Control4 OS3 to assist 3rd party webview developers to achieve a seamless experience in their contribution to extend the system for the end user. For more information, please see the [webview_styleguide][17] folder.
 
 
 #### Control4 Logo Usage
@@ -112,3 +112,4 @@ Use of the Control4 logo requires review of the logo Style Guide. In addition to
 [14]: https://github.com/control4/docs-driverworks/tree/master/sdk_licensing_agreement
 [15]: https://github.com/control4/docs-driverworks/tree/master/control4_logo_usage
 [16]: https://control4.github.io/docs-zigbee/#overview
+[17]: https://github.com/control4/docs-driverworks/tree/master/webview%20styleguide%20
