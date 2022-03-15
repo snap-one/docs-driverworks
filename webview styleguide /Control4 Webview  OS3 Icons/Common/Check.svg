@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Common / Check</title>
+    <defs>
+        <path d="M8,24 C8,15.16344 15.1615,8 24,8 C32.83656,8 40,15.1615 40,24 C40,32.83656 32.8385,40 24,40 C15.16344,40 8,32.8385 8,24 Z M17.70711,23.29289 C17.31658,22.90237 16.68342,22.90237 16.29289,23.29289 C15.90237,23.68342 15.90237,24.31658 16.29289,24.70711 L21.29289,29.70711 C21.66897,30.08319 22.27364,30.09909 22.66896,29.74329 L32.66896,20.74329 C33.07947,20.37384 33.11275,19.74155 32.74329,19.33104 C32.37384,18.92053 31.74155,18.88725 31.33104,19.25671 L22.03624,27.62202 L17.70711,23.29289 Z" id="path-1"></path>
+    </defs>
+    <g id="Common-/-Check" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Icon" fill="#DCDEE0" xlink:href="#path-1"></use>
+    </g>
+</svg>

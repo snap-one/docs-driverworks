@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Common / Ellipsis</title>
+    <defs>
+        <radialGradient cx="50.2665274%" cy="51.958878%" fx="50.2665274%" fy="51.958878%" r="312.276038%" gradientTransform="translate(0.502665,0.519589),scale(1.000000,0.142857),rotate(88.886464),translate(-0.502665,-0.519589)" id="radialGradient-1">
+            <stop stop-color="#DCDEE0" offset="0%"></stop>
+            <stop stop-color="#DCDEE0" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Common-/-Ellipsis" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M38,34.5 C38.8284271,34.5 39.5,33.8284271 39.5,33 C39.5,32.1715729 38.8284271,31.5 38,31.5 C37.1715729,31.5 36.5,32.1715729 36.5,33 C36.5,33.8284271 37.1715729,34.5 38,34.5 Z M38,25.5 C38.8284271,25.5 39.5,24.8284271 39.5,24 C39.5,23.1715729 38.8284271,22.5 38,22.5 C37.1715729,22.5 36.5,23.1715729 36.5,24 C36.5,24.8284271 37.1715729,25.5 38,25.5 Z M38,16.5 C38.8284271,16.5 39.5,15.8284271 39.5,15 C39.5,14.1715729 38.8284271,13.5 38,13.5 C37.1715729,13.5 36.5,14.1715729 36.5,15 C36.5,15.8284271 37.1715729,16.5 38,16.5 Z" id="Shape" fill="url(#radialGradient-1)"></path>
+    </g>
+</svg>
