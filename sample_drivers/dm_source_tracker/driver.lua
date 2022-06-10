@@ -1,4 +1,4 @@
---Copyright 2021 Snap One, LLC. All rights reserved.
+--Copyright 2022 Snap One, LLC. All rights reserved.
 
 require ('drivers-common-public.global.lib')
 require ('drivers-common-public.global.handlers')
@@ -28,8 +28,12 @@ do
 		'control4_ea1.c4i', -- controller is first proxy
 		'control4_ea3.c4i', -- controller is first proxy
 		'control4_ea5.c4i', -- controller is first proxy
+		'control4_hc250.c4i', -- no proxy, so just device ID
 		'control4_hc800.c4i', -- no proxy, so just device ID
 		'control4_tr1.c4i', -- controller is first proxy
+		'control4_core1.c4i', -- controller is first proxy
+		'control4_core3.c4i', -- controller is first proxy
+		'control4_core5.c4i', -- controller is first proxy
 	}
 
 	AUDIO_OUTPUTS = {
@@ -37,6 +41,16 @@ do
 			['HDMI'] = {
 				[7000] = true, -- HDMI Audio Out Room Endpoint
 				[4072] = true, -- HDMI
+			},
+		},
+		['control4_core1.c4i'] = {
+			['DIGITAL_COAX'] = {
+				[7001] = true, -- Digital Audio Out Room Endpoint
+				[4001] = true, -- Digital Coax
+			},
+			['HDMI'] = {
+				[7000] = true, -- HDMI Audio Out Room Endpoint
+				[4071] = true, -- HDMI
 			},
 		},
 		['control4_ea3.c4i'] = {
@@ -50,6 +64,24 @@ do
 			},
 			['HDMI'] = {
 				[7002] = true, -- HDMI Audio Out Room Endpoint
+				[4072] = true, -- HDMI
+			},
+		},
+		['control4_core3.c4i'] = {
+			['STEREO-1'] = {
+				[7000] = true, -- Analog Audio Out 1 Room Endpoint
+				[4000] = true, -- Analog 1
+			},
+			['STEREO-2'] = {
+				[7001] = true, -- Analog Audio Out 2 Room Endpoint
+				[4001] = true, -- Analog 2
+			},
+			['DIGITAL_COAX'] = {
+				[7002] = true, -- Digital Audio Out Room Endpoint
+				[4002] = true, -- Digital Coax
+			},
+			['HDMI'] = {
+				[7003] = true, -- HDMI Audio Out Room Endpoint
 				[4072] = true, -- HDMI
 			},
 		},
@@ -73,6 +105,46 @@ do
 			['HDMI'] = {
 				[7072] = true, -- HDMI Audio Out Room Endpoint
 				[4070] = true, -- HDMI
+			},
+		},
+		['control4_core5.c4i'] = {
+			['STEREO-1'] = {
+				[7000] = true, -- Analog Audio Out 1 Room Endpoint
+				[4000] = true, -- Analog 1
+			},
+			['STEREO-2'] = {
+				[7001] = true, -- Analog Audio Out 2 Room Endpoint
+				[4001] = true, -- Analog 2
+			},
+			['STEREO-3'] = {
+				[7002] = true, -- Analog Audio Out 3 Room Endpoint
+				[4001] = true, -- Analog 3
+			},
+			['DIGITAL_COAX-1'] = {
+				[7003] = true, -- Digital 1 Audio Out Room Endpoint
+				[4003] = true, -- Digital 1 Coax
+			},
+			['DIGITAL_COAX-2'] = {
+				[7004] = true, -- Digital 2 Audio Out Room Endpoint
+				[4004] = true, -- Digital 2 Coax
+			},
+			['DIGITAL_COAX-3'] = {
+				[7005] = true, -- Digital 3 Audio Out Room Endpoint
+				[4005] = true, -- Digital 3 Coax
+			},
+			['HDMI'] = {
+				[7076] = true, -- HDMI Audio Out Room Endpoint
+				[4070] = true, -- HDMI
+			},
+		},
+		['control4_hc250.c4i'] = {
+			['STEREO'] = {
+				[7000] = true, -- Analog Audio Out Room Endpoint
+				[4000] = true, -- Analog
+			},
+			['HDMI'] = {
+				[7002] = true, -- HDMI Audio Out Room Endpoint
+				[4072] = true, -- HDMI
 			},
 		},
 		['control4_hc800.c4i'] = {

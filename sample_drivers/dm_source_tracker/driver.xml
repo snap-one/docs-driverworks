@@ -1,12 +1,12 @@
 <devicedata>
-	<copyright>Copyright 2021 Snap One, LLC. All rights reserved.</copyright>
+	<copyright>Copyright 2022 Snap One, LLC. All rights reserved.</copyright>
 	<creator>Control4</creator>
 	<manufacturer>Control4</manufacturer>
 	<name>Digital Media Source Tracker</name>
 	<model>Digital Media Source Tracker</model>
 	<created>12/31/2021 16:30</created>
-	<modified>10/28/2021 16:30</modified>
-	<version>1</version>
+	<modified>04/20/2022 14:30</modified>
+	<version>2</version>
 	<control>lua_gen</control>
 	<driver>DriverWorks</driver>
 	<composer_categories>
