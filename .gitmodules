@@ -1,3 +1,3 @@
 [submodule "sample_drivers/drivers-common-public"]
 	path = sample_drivers/drivers-common-public
-	url = git@github.com:control4/drivers-common-public.git
+	url = git@github.com:snap-one/drivers-common-public.git
