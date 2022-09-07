@@ -623,29 +623,33 @@ function URLEncode (s, spaceAsPercent)
 end
 
 function XMLDecode (s)
-	if (s == nil) then return end
+	if (type (s) ~= 'string') then
+		return (s)
+	end
 
 	s = string.gsub (s, '%<%!%[CDATA%[(.-)%]%]%>', function (a) return (a) end)
-	s = string.gsub (s, '\&quot\;'	, '"')
-	s = string.gsub (s, '\&lt\;'	, '<')
-	s = string.gsub (s, '\&gt\;'	, '>')
-	s = string.gsub (s, '\&apos\;'	, '\'')
+
+	s = string.gsub (s, '&quot;'	, '"')
+	s = string.gsub (s, '&lt;'		, '<')
+	s = string.gsub (s, '&gt;'		, '>')
+	s = string.gsub (s, '&apos;'	, '\'')
 	s = string.gsub (s, '&#x(.-);', function (a) return string.char (tonumber (a, 16) % 256) end )
-	s = string.gsub (s, '&#(.-);', function (a) return string.char (tonumber (a) % 256) end )
-	s = string.gsub (s, '\&amp\;'	, '&')
+	s = string.gsub (s, '&#(.-);',	function (a) return string.char (tonumber (a) % 256) end )
+	s = string.gsub (s, '&amp;'	, 	'&')
 
 	return s
 end
 
 function XMLEncode (s)
-	if (s == nil) then return end
+	if (type (s) ~= 'string') then
+		return (s)
+	end
 
-	s = string.gsub (s, '&', '\&amp\;')
-	s = string.gsub (s, '"', '\&quot\;')
-	s = string.gsub (s, '<', '\&lt\;')
-	s = string.gsub (s, '>', '\&gt\;')
-	s = string.gsub (s, "'", '\&apos\;')
-
+	s = string.gsub (s, '&',	'&amp;')
+	s = string.gsub (s, '"',	'&quot;')
+	s = string.gsub (s, '<',	'&lt;')
+	s = string.gsub (s, '>',	'&gt;')
+	s = string.gsub (s, '\'',	'&apos;')
 	return s
 end
 
