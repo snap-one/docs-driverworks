@@ -122,3 +122,25 @@ function CheckResponse (strError, responseCode, tHeaders, data, context, url)
 		C4:FireEvent ('Success')
 	end
 end
+
+function SendMultipart (url, filename, filedata)
+
+	local boundary = GetRandomString (20)
+
+	local headers = {
+		['Content-Type'] = 'multipart/form-data; boundary=' .. boundary
+	}
+
+	local body = {
+		'--' .. boundary,
+		'Content-Disposition: form-data; name="file"; filename="' .. filename .. '"',
+		'Content-Type: image/jpeg',
+		'',
+		filedata,
+		'--' .. boundary .. '--',
+	}
+
+	body = table.concat (body, '\r\n')
+
+	urlPost (url, body, headers)
+end
