@@ -1,0 +1,119 @@
+<devicedata>
+	<copyright>Copyright 2022 Snap One, LLC. All rights reserved.</copyright>
+	<creator>Control4</creator>
+	<manufacturer>Control4</manufacturer>
+	<name>Sample Light Driver</name>
+	<model>Sample Light Driver</model>
+	<created>08/16/2022 12:00</created>
+	<modified>08/16/2022 12:00</modified>
+	<version>1</version>
+	<control>lua_gen</control>
+	<controlmethod>IP</controlmethod>
+	<driver>DriverWorks</driver>
+	<config>
+		<script jit="1" file="driver.lua"/>
+		<properties>
+			<property>
+				<name>Driver Version</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>true</readonly>
+			</property>
+			<property>
+				<name>Debug Mode</name>
+				<type>LIST</type>
+				<items>
+					<item>Off</item>
+					<item>On</item>
+				</items>
+				<default>On</default>
+				<readonly>false</readonly>
+			</property>
+			<property>
+				<name>On Level</name>
+				<type>RANGED_INTEGER</type>
+				<minimum>0</minimum>
+				<maximum>100</maximum>
+				<default>0</default>
+				<readonly>false</readonly>
+			</property>
+			<property>
+				<name>Off Level</name>
+				<type>RANGED_INTEGER</type>
+				<minimum>0</minimum>
+				<maximum>100</maximum>
+				<default>0</default>
+				<readonly>false</readonly>
+			</property>
+		</properties>
+		<actions>
+            <action>
+                <name>Print Level</name>
+                <command>PrintLevel</command>
+                <params>
+                </params>
+            </action>
+            <action>
+                <name>Set Online</name>
+                <command>SetOnline</command>
+                <params>
+					<param>
+						<name>Type</name>
+						<type>LIST</type>
+						<items>
+							<item>Online</item>
+							<item>Offline</item>
+						</items>
+					</param>
+                </params>
+            </action>
+		</actions>
+		<commands/>
+	</config>
+	<!-- This tells the controller which proxy drivers to load for us; in this case, light_v2 -->
+	<proxies>
+		<!-- The proxybindingid attribute gives the "binding" (connection) ID to match this with-->
+		<proxy proxybindingid="5001" name="Sample Light Driver">light_v2</proxy>
+	</proxies>
+	<capabilities>
+		<dimmer>True</dimmer>
+		<set_level>True</set_level>
+		<ramp_level>True</ramp_level>
+		<on_off>True</on_off>
+		<min_max>True</min_max>
+		<click_rates>False</click_rates>
+		<hold_rates>False</hold_rates>
+		<cold_start>False</cold_start>
+		<has_leds>False</has_leds>
+		<supports_color_correlated_temperature>False</supports_color_correlated_temperature>
+		<supports_target>True</supports_target>
+		<supports_broadcast_scenes>False</supports_broadcast_scenes>
+		<supports_multichannel_scenes>False</supports_multichannel_scenes>
+		<hide_proxy_properties>true</hide_proxy_properties>
+		<hide_proxy_events>false</hide_proxy_events>
+		<reduced_als_support>False</reduced_als_support>
+		<advanced_scene_support>False</advanced_scene_support>
+		<load_group_support>False</load_group_support>
+		<buttons_are_virtual>True</buttons_are_virtual>
+	</capabilities>
+	<events/>
+	<connections>
+		<connection>
+			<!-- This is where the 5001 "binding" (connection) is defined - in this case, a LIGHT_V2-->
+			<id>5001</id>
+			<facing>6</facing>
+			<connectionname>LIGHT</connectionname>
+			<type>2</type>
+			<consumer>false</consumer>
+			<audiosource>false</audiosource>
+			<videosource>false</videosource>
+			<linelevel>false</linelevel>
+			<classes>
+				<class>
+					<!-- this classname is the matching classname for the proxy definition above-->
+					<classname>LIGHT_V2</classname>
+				</class>
+			</classes>
+		</connection>
+	</connections>
+</devicedata>
