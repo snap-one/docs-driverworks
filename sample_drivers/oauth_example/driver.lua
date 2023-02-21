@@ -61,6 +61,10 @@ function EC.SetupOAuth (tParams)
 
 	local redirectURI = (tParams ['Choose C4 OAuth Redirect Server'] == 'Production' and REDIRECT_URI_PROD) or REDIRECT_URI_DEV
 
+	if (tParams ['Choose C4 OAuth Redirect Server'] == 'Production') then
+		IN_PRODUCTION = true	-- required for choosing correct short code link server
+	end
+
 	if (not (authForOAuth and authEndpoint and tokenEndpoint and clientId and clientSecret)) then
 		print ('missing info')
 		return
