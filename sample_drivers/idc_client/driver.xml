@@ -1,12 +1,12 @@
 <devicedata>
-	<copyright>Copyright 2021 Snap One, LLC. All rights reserved.</copyright>
+	<copyright>Copyright 2023 Snap One, LLC. All rights reserved.</copyright>
 	<creator>Control4</creator>
 	<manufacturer>Control4</manufacturer>
 	<name>InterDriver Comms Client</name>
 	<model>InterDriver Comms Client</model>
 	<created>11/27/2019 10:00</created>
-	<modified>09/04/2021 12:00</modified>
-	<version>3</version>
+	<modified>03/31/2023 12:00</modified>
+	<version>4</version>
 	<control>lua_gen</control>
 	<driver>DriverWorks</driver>
 	<config>
@@ -32,6 +32,17 @@
 				<name>ID</name>
 				<default></default>
 				<type>STRING</type>
+				<readonly>false</readonly>
+			</property>
+			<property>
+				<name>Send Command Using</name>
+				<type>LIST</type>
+				<items>
+					<item>Random</item>
+					<item>Binding</item>
+					<item>DriverId</item>
+				</items>
+				<default>Random</default>
 				<readonly>false</readonly>
 			</property>
 		</properties>

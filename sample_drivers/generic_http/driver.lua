@@ -105,7 +105,13 @@ function CheckResponse (strError, responseCode, tHeaders, data, context, url)
 		table.insert (output, strError)
 	else
 		table.insert (output, 'Response Code: ' .. tostring (responseCode))
-		table.insert (output, 'Returned data: ' .. (data or ''))
+		if (type (data) == 'string') then
+			table.insert (output, 'Returned data: ' .. (data or ''))
+			C4:SetVariable ('HTTP_RESPONSE_DATA', data)
+		elseif (type (data) == 'table') then
+			table.insert (output, 'Returned data (**JSON, parsed and re-encoded**): ' .. JSON:encode_pretty(data))
+			C4:SetVariable ('HTTP_RESPONSE_DATA', JSON:encode_pretty(data))
+		end
 	end
 	output = table.concat (output, '\r\n')
 	dbg (output)
@@ -117,7 +123,6 @@ function CheckResponse (strError, responseCode, tHeaders, data, context, url)
 		C4:FireEvent ('Error')
 	else
 		C4:SetVariable ('HTTP_ERROR', '')
-		C4:SetVariable ('HTTP_RESPONSE_DATA', data)
 		C4:SetVariable ('HTTP_RESPONSE_CODE', responseCode)
 		C4:FireEvent ('Success')
 	end

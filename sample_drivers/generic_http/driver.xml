@@ -1,12 +1,12 @@
 <devicedata>
-	<copyright>Copyright 2021 Snap One, LLC. All rights reserved.</copyright>
+	<copyright>Copyright 2023 Snap One, LLC. All rights reserved.</copyright>
 	<manufacturer>Control4</manufacturer>
 	<name>Generic HTTP Sender</name>
 	<model>Generic HTTP Sender</model>
 	<creator>Control4</creator>
 	<created>01/26/2018 11:00</created>
-	<modified>11/12/2020 12:30</modified>
-	<version>7</version>
+	<modified>04/18/2023 15:30</modified>
+	<version>8</version>
 	<control>lua_gen</control>
 	<driver>DriverWorks</driver>
 	<auto_update>true</auto_update>

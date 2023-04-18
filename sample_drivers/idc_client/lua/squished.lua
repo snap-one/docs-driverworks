@@ -1,4 +1,4 @@
--- Copyright 2021 Snap One, LLC. All rights reserved.
+-- Copyright 2023 Snap One, LLC. All rights reserved.
 
 JSON = require ('drivers-common-public.module.json')
 
@@ -113,6 +113,10 @@ function OPC.ID (value)
 	C4:SendToProxy (IDC_BINDING, 'RESYNC_DATA', {deviceId = PersistData.API_DEVICE_ID})
 end
 
+function OPC.Send_Command_Using (value)
+	SEND_COMMAND = value
+end
+
 -- RFP by strCommand
 
 function SendToIDCAsProxy (payload)
@@ -135,9 +139,9 @@ RFP [5001] = function (idBinding, strCommand, tParams, args)
 	}
 
 	local r = math.random (0, 1)
-	if (r == 0) then
+	if (SEND_COMMAND == 'DeviceId' or (SEND_COMMAND == 'Random' and r == 0)) then
 		SendToIDCAsDevice (payload)
-	elseif (r == 1) then
+	elseif (SEND_COMMAND == 'Binding' or (SEND_COMMAND == 'Random' and r == 1)) then
 		SendToIDCAsProxy (payload)
 	end
 
