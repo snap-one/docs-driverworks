@@ -11,11 +11,11 @@ The module will cover using the Lua tab in Composer to run new code and get outp
 - [Download the Generic HTTP Sender driver](https://github.com/snap-one/docs-driverworks/blob/master/sample_drivers/generic_http.c4z) if you have not done so already. Ensure that the filename saved is `generic_http.c4z` and does not contain any additional characters (for example, Windows will often append a `(1)` to the first part of a filename if you already have the file downloaded).
 - Open Composer Pro, and connect to your controller.
 - Click the `Driver` menu item, the select `Add or Update Driver or Agent`
-- Navigate to the download `generic_http.c4z` file, and click `Open`
+- Navigate to the downloaded `generic_http.c4z` file, and click `Open`
   - If you already have the latest version of this driver on your system, you will see a dialog titled `Overwrite Driver or Agent` - click `Yes` to ensure that you have the latest downloaded version.
 - You should now see a dialog titled `Update Succeeded`
 - Create a new room in your project, and rename it `Lua Testing`
-- On the `Search` tab in the `System Design` view in Composer, search for `Generic HTTP Sender`
+- On the `Search` tab in the `System Design` view in Composer, make sure that `Local` is checked, and then search for `Generic HTTP Sender`
 - Add one copy of the `Generic HTTP Sender` driver to your project into the `Lua Testing` room.
 
 ## Executing Lua code and seeing live output
@@ -44,7 +44,7 @@ You can also copy the text in this textbox for pasting elsewhere if you would li
 
 ## Prototyping
 
-### Hello, Lua World!
+### Hello, Lua World
 
 To start, we're going to do the standard "Hello World". In Lua, this is just one line:
 
@@ -84,7 +84,6 @@ First, clear the Lua Command and Lua Output textboxes by clicking their respecti
 
 Then, copy paste this code and click Execute.
 
-
 ```Lua
 print ('Hello, World!')
 printError ('Hello, Error!')
@@ -92,12 +91,12 @@ printError ('Hello, Error!')
 
 It generates this error:
 
-```
+```Text
 Hello, World!
 LUA_ERROR [id: 450][name: Generic HTTP Sender][file: generic_http.c4z]: [string "C4Commands"]:2: attempt to call global 'printError' (a nil value)
 stack traceback:
-	[C]: in function 'printError'
-	[string "C4Commands"]:2: in main chunk
+  [C]: in function 'printError'
+  [string "C4Commands"]:2: in main chunk
 
 ```
 
@@ -107,7 +106,7 @@ The second and further lines give information about the Lua error that was gener
 
 The first component (`LUA_ERROR [id: 450][name: Generic HTTP Sender][file: generic_http.c4z]:`) is useful for the logging of this error in the system log, as it generates information about which driver (the `id` indicates the driver ID in the project, the `name` is the displayed name of the driver in the project, and the `file` indicates the filename of the driver that was loaded), but is always going to be "this" driver when looking at the Lua Output textbox.
 
-The second component gives us some important information: ` [string "C4Commands"]:2: attempt to call global 'printError' (a nil value)` indicates that the error was in the commands that had been loaded from the Lua Command textbox (this is shown by `string "C4Commands"`). The number (in this case, `2`), shows the line number where the error was found.  Finally, we get what the error was (trying to call a function that did not exist).
+The second component gives us some important information: `[string "C4Commands"]:2: attempt to call global 'printError' (a nil value)` indicates that the error was in the commands that had been loaded from the Lua Command textbox (this is shown by `string "C4Commands"`). The number (in this case, `2`), shows the line number where the error was found.  Finally, we get what the error was (trying to call a function that did not exist).
 
 If the error was in some code that was loaded with the driver from a `.lua` file, this would instead show the name of the file that the error was in.  We can generate this by calling a pre-loaded function from the Generic HTTP Sender driver with some missing information (in a production driver, this *would* have better error handling to prevent a Lua error from being thrown):
 
@@ -117,12 +116,12 @@ SendMultipart ()
 
 gives
 
-```
+```Text
 LUA_ERROR [id: 450][name: Generic HTTP Sender][file: generic_http.c4z]: driver.lua:136: attempt to concatenate local 'filename' (a nil value)
 stack traceback:
-	[C]: in ?
-	driver.lua:136: in function 'SendMultipart'
-	[string "C4Commands"]:1: in main chunk
+  [C]: in ?
+  driver.lua:136: in function 'SendMultipart'
+  [string "C4Commands"]:1: in main chunk
 
 ```
 
@@ -134,4 +133,4 @@ Each individual copy of a driver loaded into a project has a unique Lua sandboxe
 
 We can interact directly with that environment using the Lua Command and Lua Output textboxes.
 
-Before moving on to the next module, try writing some simple programs directly into the Lua Command textbox.  If you are looking for something simple but non trivial, try solving the first couple days of any year of (Advent Of Code)[https://adventofcode.com/] directly in the Lua Output window without using any IDE.  Tip for managing the input: don't forget that variables loaded without a `local` keyword will stay resident in the Lua environment until the driver is loaded on startup or driver update.
+Before moving on to the next module, try writing some simple programs directly into the Lua Command textbox.  If you are looking for something simple but non trivial, try solving the first couple days of any year of [Advent Of Code](https://adventofcode.com/) directly in the Lua Output window without using any IDE.  Tip for managing the input: don't forget that variables loaded without a `local` keyword will stay resident in the Lua environment until the driver is loaded on startup or driver update.
