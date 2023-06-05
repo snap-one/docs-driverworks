@@ -1,4 +1,4 @@
--- Copyright 2022 Snap One, LLC. All rights reserved.
+-- Copyright 2023 Snap One, LLC. All rights reserved.
 
 require ('drivers-common-public.global.handlers')
 require ('drivers-common-public.global.lib')
@@ -59,6 +59,8 @@ function EC.SetupOAuth (tParams)
 
 	local sendBasicAuth = (tParams ['Send Authorization In'] == 'Header')
 
+	local usePKCE = true or (tParams ['Use PKCE'] == 'On')
+
 	local redirectURI = (tParams ['Choose C4 OAuth Redirect Server'] == 'Production' and REDIRECT_URI_PROD) or REDIRECT_URI_DEV
 
 	if (tParams ['Choose C4 OAuth Redirect Server'] == 'Production') then
@@ -89,6 +91,8 @@ function EC.SetupOAuth (tParams)
 		REDIRECT_DURATION = 5 * 60,
 
 		USE_BASIC_AUTH_HEADER = sendBasicAuth,
+
+		USE_PKCE = usePKCE,
 	}
 
 	PersistData.APIAuthSetup = tParams

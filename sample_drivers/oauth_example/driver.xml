@@ -1,12 +1,12 @@
 <devicedata>
-	<copyright>Copyright 2022 Snap One, LLC. All rights reserved.</copyright>
+	<copyright>Copyright 2023 Snap One, LLC. All rights reserved.</copyright>
 	<manufacturer>Control4</manufacturer>
 	<name>OAuth Example</name>
 	<model>OAuth Example</model>
 	<creator>Control4</creator>
 	<created>08/04/2020 12:00</created>
-	<modified>03/14/2022 20:00</modified>
-	<version>3</version>
+	<modified>06/05/2023 18:30</modified>
+	<version>4</version>
 	<control>lua_gen</control>
 	<driver>DriverWorks</driver>
 	<auto_update>true</auto_update>
@@ -14,7 +14,7 @@
 	<minimum_os_version>2.9.0</minimum_os_version>
 	<config>
 		<script file="driver.lua"></script>
-		<documentation file="www/documentation.html"/>
+		<documentation file="www/documentation/index.html"/>
 		<properties>
 			<property>
 				<name>Debug Mode</name>
@@ -74,6 +74,14 @@
 						<items>
 							<item>Payload</item>
 							<item>Header</item>
+						</items>
+					</param>
+					<param>
+						<name>Use PKCE</name>
+						<type>LIST</type>
+						<items>
+							<item>On</item>
+							<item>Off</item>
 						</items>
 					</param>
 					<param>
