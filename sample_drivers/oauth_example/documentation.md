@@ -1,4 +1,4 @@
-[copyright]: # (Copyright 2020 Wirepath Home Systems, LLC. All rights reserved.)
+[copyright]: # (Copyright 2023 Snap One, LLC. All rights reserved.)
 
 # OAuth Example
 
@@ -58,11 +58,19 @@ Any scope(s) (comma separated, no spaces) required for this OAuth integration
 
 Whether to send the client ID and secret as an HTTP Basic Authorization header or include in the payload of the POST request.
 
+#### Use PKCE [*On* | Off]
+
+Whether to include the PKCE code_challenge and code_verifier values when requesting a code and exchanging it for a token (always uses S256 if enabled).
+
 #### Choose C4 OAuth Redirect Server [*Develop* | Production]
 
 Which instance of the Control4 OAuth lambda to send the state request to.  Note that each lambda will have different API keys.
 
 ## Changelog
+
+3
+
+- Add PKCE setting support
 
 2
 
