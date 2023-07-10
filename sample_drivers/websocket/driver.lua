@@ -34,6 +34,12 @@ function OPC.WebSocket_URL (value)
 
 	DemoSocket:SetClosedByRemoteFunction (closed)
 
+	local offline = function (self)
+		print ('ws connection went offline')
+	end
+
+	DemoSocket:SetOfflineFunction (offline)
+
 	DemoSocket:Start ()
 end
 
