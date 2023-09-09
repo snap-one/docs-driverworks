@@ -48,7 +48,7 @@ The directories at the top of this page contain various resources to support you
 
 ### Driver Development Templates
 
-The SDK includes numerous Driver Development Templates to help jump start your development efforts. Please see the [driver_development_templates][7] directory for the current list of supported templates.
+The SDK includes Driver Development Templates and a utility called JumpStart to accelerate your driver development efforts. Please see the [driver template repository][7] for more information on how to leverage these templates.
 
 ### DriverPackager
 
@@ -89,7 +89,7 @@ Use of the Control4 logo requires review of the logo Style Guide. In addition to
 [5]:  https://snap-one.github.io/docs-driverworks-knx/#knx-and-control4
 [logo]: https://github.com/snap-one/docs-driverworks/blob/media/images/logo.png?raw=true
 [6]: https://github.com/snap-one/docs-driverworks/tree/master/icon_templates
-[7]: https://github.com/snap-one/docs-driverworks/tree/master/driver_development_templates
+[7]: https://github.com/snap-one/drivers-template-code-public
 [8]: https://github.com/snap-one/docs-driverworks/tree/master/media_service_proxy
 [9]: https://github.com/snap-one/docs-driverworks/tree/master/qr_branding
 [10]: https://github.com/snap-one/docs-driverworks/tree/master/sample_drivers
