@@ -46,6 +46,11 @@ An entire guide can be saved as a Web Archive file from the Safari toolbar under
 
 The directories at the top of this page contain various resources to support your driver development efforts. They include:
 
+### **Driver Development Training**
+
+The SDK includes an online, Micro-Certification featuring three courses that help a developer learn the concepts required to begin creating drivers for use in Control4 systems. To access the videos, plese see the [Education Portal] [14].
+
+
 ### Driver Development Templates
 
 The SDK includes Driver Development Templates and a utility called JumpStart to accelerate your driver development efforts. Please see the [driver template repository][7] for more information on how to leverage these templates.
@@ -96,6 +101,7 @@ Use of the Control4 logo requires review of the logo Style Guide. In addition to
 [11]: https://github.com/snap-one/docs-driverworks/tree/master/table_logger_utility
 [12]: https://github.com/snap-one/docs-driverworks/tree/master/sddp
 [13]: https://github.com/snap-one/docs-driverworks/tree/master/driver_certification
+[14]: https://education.control4.com/catalog/courses/3347283
 [14]: https://github.com/snap-one/docs-driverworks/tree/master/sdk_licensing_agreement
 [15]: https://github.com/snap-one/docs-driverworks/tree/master/control4_logo_usage
 [16]: https://snap-one.github.io/docs-zigbee/#overview
