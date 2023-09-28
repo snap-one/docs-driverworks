@@ -48,7 +48,7 @@ The directories at the top of this page contain various resources to support you
 
 ### **Driver Development Training**
 
-The SDK includes an online, Micro-Certification featuring three courses that help a developer learn the concepts required to begin creating drivers for use in Control4 systems. To access the videos, plese see the [Education Portal][18].
+The SDK includes an online, Micro-Certification featuring three courses that help a developer learn the concepts required to begin creating drivers for use in Control4 systems. To access the videos, please see the [Education Portal][18].
 
 
 ### Driver Development Templates
