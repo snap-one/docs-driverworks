@@ -10,7 +10,7 @@ MSP Driver Suite: Example drivers written based on the Media Service Proxy.
 
 MSP Driver Deveopment Documentation: The latest implemetaion guide for the MSP.
 
-Note that several resource detailed in teh MSP Driver Deveopment Documentation are outdayed or no longer supported. These include: 
+Note that several resource detailed in the MSP Driver Deveopment Documentation are outdated or no longer supported. These include: 
 
 Hello World Sample Driver - This driver is outdated and no longer exists. While not complete, the MSP by Numbers sample is the best simple reference currently available.
 
