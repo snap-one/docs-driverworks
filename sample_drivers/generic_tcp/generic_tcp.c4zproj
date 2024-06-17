@@ -2,7 +2,15 @@
 
 <Driver type="c4z" name="generic_tcp" squishLua="false">
 <Items>
+	<Item type="dir" name="cert" recurse="true"/>
 	<Item type="file" name="driver.xml" c4zDir = ""/>
 	<Item type="file" name="driver.lua" c4zDir = ""/>
+
+	<Item type="file" name="./../drivers-common-public/global/handlers.lua" c4zDir="drivers-common-public/global"/>
+	<Item type="file" name="./../drivers-common-public/global/lib.lua" c4zDir="drivers-common-public/global"/>
+	<Item type="file" name="./../drivers-common-public/global/timer.lua" c4zDir="drivers-common-public/global"/>
+
+	<Item type="file" name="./../drivers-common-public/module/json.lua" c4zDir="drivers-common-public/module"/>
+	<Item type="file" name="./../drivers-common-public/module/metrics.lua" c4zDir="drivers-common-public/module"/>
 </Items>
 </Driver>
