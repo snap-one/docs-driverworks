@@ -153,4 +153,4 @@ _From Safari:_ An entire guide can be saved as a Web Archive file from the Safar
 [pp_tv]: https://snap-one.github.io/docs-driverworks-proxyprotocol-tv
 [pp_uibutton]: https://snap-one.github.io/docs-driverworks-proxyprotocol-uibutton
 [pp_xm]: https://snap-one.github.io/docs-driverworks-proxyprotocol-xm
-[fundamentals_proxy_specific]: https://musical-potato-93lyp9g.pages.github.io/#proxy-specific-information
+[fundamentals_proxy_specific]: https://snap-one.github.io/docs-driverworks-fundamentals/#proxy-specific-information
