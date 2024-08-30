@@ -46,6 +46,10 @@ Documentation for each of the supported Control4 Proxies can be found using the 
 
 The DriverWorks API Reference Guide can be found [here][api]. The API Reference Guide details each of the Interfaces supported through the DriverWorks SDK. These Interfaces include numerous APIs that can be leveraged by your driver to facilitate communication between the driver and the Control4 O.S.
 
+### DriverWorks XML beta
+
+The DriverWorks XML Reference Guide provides definitions for the XML elements supported in DriverWorks drivers. This documentation is currently in a beta state and will change frequently including the addition of new content as well as removal and/or modification of existing content. The guide can be found [here][xml]. 
+
 ### DriverWorks KNX
 
 Control4 supports integration with devices through standardized KNX control network topology. The DriverWorks KNX Implementation Guide can be found [here][knx]. The KNX protocol supports a wide variety of home automation applications including:
@@ -154,3 +158,4 @@ _From Safari:_ An entire guide can be saved as a Web Archive file from the Safar
 [pp_uibutton]: https://snap-one.github.io/docs-driverworks-proxyprotocol-uibutton
 [pp_xm]: https://snap-one.github.io/docs-driverworks-proxyprotocol-xm
 [fundamentals_proxy_specific]: https://snap-one.github.io/docs-driverworks-fundamentals/#proxy-specific-information
+[xml]: https://snap-one.github.io/docs-driverworks-xml/#beta-xml-documentation
