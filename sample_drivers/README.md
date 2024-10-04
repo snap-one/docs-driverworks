@@ -13,4 +13,4 @@ This directory contains several fully-working example drivers to demonstrate mor
 - `thermostat_v2`: Sample XML files for the Extras and Preset features of the Thermsotat v2 proxy.
 - `variable_parser`: Listens to a specific variable on a specific device. When that variable changes, provides `NUMBER`, `STRING` and `BOOL` variables to match , allowing for conversion from a `NUMBER` to a `STRING` (and possibly vice-versa). Also includes capabilities for matching a Lua pattern to a `STRING` variable and providing captured output on additional variables.
 - `websocket`: Demonstrator driver for the `websocket.lua` library.
-- `sample_custom_select` - This driver is intended to support the Custom Select implementation documentation found here: 
+- `sample_custom_select` - This driver is intended to support the Custom Select implementation documentation found here: https://snap-one.github.io/docs-driverworks-fundamentals/#custom-select-implementation
