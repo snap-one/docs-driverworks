@@ -46,9 +46,9 @@ Documentation for each of the supported Control4 Proxies can be found using the 
 
 The DriverWorks API Reference Guide can be found [here][api]. The API Reference Guide details each of the Interfaces supported through the DriverWorks SDK. These Interfaces include numerous APIs that can be leveraged by your driver to facilitate communication between the driver and the Control4 O.S.
 
-### DriverWorks XML beta
+### DriverWorks XML
 
-The DriverWorks XML Reference Guide provides definitions for the XML elements supported in DriverWorks drivers. This documentation is currently in a beta state and will change frequently including the addition of new content as well as removal and/or modification of existing content. The guide can be found [here][xml]. 
+The DriverWorks XML Reference Guide provides definitions for the XML elements supported in DriverWorks drivers. The guide can be found [here][xml]. 
 
 ### DriverWorks KNX
 
