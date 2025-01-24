@@ -36,7 +36,7 @@ Documentation for each of the supported Control4 Proxies can be found using the 
 | [Amplifier][pp_amplifier] | [Disc Changer][pp_disc]  | [Pool][pp_pool] |  [TV][pp_tv] |
 | [Amplifier Nav EQ][pp_amplifier-nav-eq] | [DVD Player][pp_dvd]  | [Projector][pp_projector]| [UI Button][pp_uibutton] |
 | [Audio Switch][pp_audioswitch] | [Fan][pp_fan] | [Receiver][pp_receiver] | [XM Tuner][pp_xm]|
-| [Audio Video Switch][pp_avswitch]  | [Generic Media Player][pp_genericmedia]| [Relay][pp_relay] | |
+| [Audio Video Switch][pp_avswitch]  | [Media Player][pp_mediaplayer]| [Relay][pp_relay] | |
 | [Blind][pp_blind] | [Intercom][pp_intercom] | [Satellite Receiver][pp_satellite] | |
 | [Camera][pp_camera] | [Keypad][pp_keypad]  | [Security][pp_security]  | |
 | [CD Player][pp_cd] | [Light V2][pp_lightv2]  | [Thermostat][pp_tstat] | |
@@ -48,7 +48,7 @@ The DriverWorks API Reference Guide can be found [here][api]. The API Reference 
 
 ### DriverWorks XML
 
-The DriverWorks XML Reference Guide provides definitions for the XML elements supported in DriverWorks drivers. The guide can be found [here][xml]. 
+The DriverWorks XML Reference Guide provides definitions for the XML elements supported in DriverWorks drivers. The guide can be found [here][xml].
 
 ### DriverWorks KNX
 
@@ -141,7 +141,7 @@ _From Safari:_ An entire guide can be saved as a Web Archive file from the Safar
 [pp_contact]: https://snap-one.github.io/docs-driverworks-proxyprotocol-contact
 [pp_disc]: https://snap-one.github.io/docs-driverworks-proxyprotocol-disc
 [pp_dvd]: https://snap-one.github.io/docs-driverworks-proxyprotocol-dvd
-[pp_genericmedia]: https://snap-one.github.io/docs-driverworks-proxyprotocol-genericmedia
+[pp_mediaplayer]: https://snap-one.github.io/docs-driverworks-proxyprotocol-mediaplayer
 [pp_intercom]: https://snap-one.github.io/docs-driverworks-proxyprotocol-intercom
 [pp_keypad]: https://snap-one.github.io/docs-driverworks-proxyprotocol-keypad
 [pp_lightv2]: https://snap-one.github.io/docs-driverworks-proxyprotocol-lightv2
