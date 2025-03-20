@@ -1,0 +1,99 @@
+<devicedata>
+	<name>Experience Button with Remote Icons</name>
+	<model>Experience Button with Remote Icons</model>
+	<creator>Control4</creator>
+	<created>03/20/2025 11:00</created>
+	<modified>03/20/2025 11:00</modified>
+	<version>1</version>
+	<capabilities>
+		<navigator_display_option proxybindingid="5001">
+			<display_icons>
+				<Icon height="90" width="90">https://raw.githubusercontent.com/snap-one/docs-driverworks/refs/heads/master/sample_drivers/uibutton_remote_icons/remote/default_90.png</Icon>
+				<Icon height="70" width="70">https://raw.githubusercontent.com/snap-one/docs-driverworks/refs/heads/master/sample_drivers/uibutton_remote_icons/remote/default_70.png</Icon>
+				<Icon height="300" width="300">https://raw.githubusercontent.com/snap-one/docs-driverworks/refs/heads/master/sample_drivers/uibutton_remote_icons/remote/default_300.png</Icon>
+				<Icon height="512" width="512">https://raw.githubusercontent.com/snap-one/docs-driverworks/refs/heads/master/sample_drivers/uibutton_remote_icons/remote/default_512.png</Icon>
+				<Icon height="1024" width="1024">https://raw.githubusercontent.com/snap-one/docs-driverworks/refs/heads/master/sample_drivers/uibutton_remote_icons/remote/default_1024.png</Icon>
+				<state id="Default">
+					<Icon width="70" height="70">https://raw.githubusercontent.com/snap-one/docs-driverworks/refs/heads/master/sample_drivers/uibutton_remote_icons/remote/default_70.png</Icon>
+					<Icon width="90" height="90">https://raw.githubusercontent.com/snap-one/docs-driverworks/refs/heads/master/sample_drivers/uibutton_remote_icons/remote/default_90.png</Icon>
+					<Icon width="300" height="300">https://raw.githubusercontent.com/snap-one/docs-driverworks/refs/heads/master/sample_drivers/uibutton_remote_icons/remote/default_300.png</Icon>
+					<Icon width="512" height="512">https://raw.githubusercontent.com/snap-one/docs-driverworks/refs/heads/master/sample_drivers/uibutton_remote_icons/remote/default_512.png</Icon>
+					<Icon width="1024" height="1024">https://raw.githubusercontent.com/snap-one/docs-driverworks/refs/heads/master/sample_drivers/uibutton_remote_icons/remote/default_1024.png</Icon>
+				</state>
+				<state id="Selected">
+					<Icon width="70" height="70">https://raw.githubusercontent.com/snap-one/docs-driverworks/refs/heads/master/sample_drivers/uibutton_remote_icons/remote/selected_70.png</Icon>
+					<Icon width="90" height="90">https://raw.githubusercontent.com/snap-one/docs-driverworks/refs/heads/master/sample_drivers/uibutton_remote_icons/remote/selected_90.png</Icon>
+					<Icon width="300" height="300">https://raw.githubusercontent.com/snap-one/docs-driverworks/refs/heads/master/sample_drivers/uibutton_remote_icons/remote/selected_300.png</Icon>
+					<Icon width="512" height="512">https://raw.githubusercontent.com/snap-one/docs-driverworks/refs/heads/master/sample_drivers/uibutton_remote_icons/remote/selected_512.png</Icon>
+					<Icon width="1024" height="1024">https://raw.githubusercontent.com/snap-one/docs-driverworks/refs/heads/master/sample_drivers/uibutton_remote_icons/remote/selected_1024.png</Icon>
+				</state>
+			</display_icons>
+		</navigator_display_option>
+	</capabilities>
+	<small image_source="c4z">icons/device_sm.png</small>
+	<large image_source="c4z">icons/device_lg.png</large>
+	<control>lua_gen</control>
+	<driver>DriverWorks</driver>
+	<copyright>Copyright 2025 Snap One, LLC. All Rights Reserved.</copyright>
+	<manufacturer>Control4</manufacturer>
+	<config>
+		<script file="driver.lua"/>
+		<properties>
+			<property>
+				<name>Driver Version</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>true</readonly>
+			</property>
+			<property>
+				<name>Current State</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>true</readonly>
+			</property>
+		</properties>
+		<commands>
+			<command>
+				<name>SetState</name>
+				<description>Set State to PARAM1 in NAME</description>
+				<params>
+					<param>
+						<name>State</name>
+						<type>LIST</type>
+						<items>
+							<item>Off</item>
+							<item>On</item>
+						</items>
+					</param>
+				</params>
+			</command>
+			<command>
+				<name>ToggleState</name>
+				<description>Toggle State of NAME</description>
+				<params/>
+			</command>
+		</commands>
+	</config>
+	<proxies>
+		<proxy proxybindingid="5001" name="Scenario" primary="True" image_source="c4z" large_image="icons/device_lg.png" small_image="icons/device_sm.png">uibutton</proxy>
+	</proxies>
+	<events>
+	</events>
+	<connections>
+		<connection>
+			<id>5001</id>
+			<facing>6</facing>
+			<connectionname>UIBUTTON</connectionname>
+			<type>2</type>
+			<consumer>False</consumer>
+			<audiosource>True</audiosource>
+			<videosource>True</videosource>
+			<linelevel>True</linelevel>
+			<classes>
+				<class>
+					<classname>UIBUTTON</classname>
+				</class>
+			</classes>
+		</connection>
+	</connections>
+</devicedata>
