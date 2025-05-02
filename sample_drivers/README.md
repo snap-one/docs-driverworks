@@ -2,7 +2,7 @@
 
 This directory contains several fully-working example drivers to demonstrate more advanced Driverworks functionality. Each driver is presented both as an immediate .c4z file to use in Composer, as well as the source Lua, XML and .c4zproj files to test creation of the driver with your own toolchain.
 
-- `drivers-common-public`: This is a Git submodule of the Driverworks libraries [available on GitHub](https://github.com/control4/drivers-common-public). It is included here to make the .c4zproj build files for several of these drivers work.
+- `drivers-common-public`: This is a Git submodule of the Driverworks libraries [available on GitHub](https://github.com/snap-one/drivers-common-public). It is included here to make the .c4zproj build files for several of these drivers work.
 - `dlna-example`: Based on a limited, early prototype of the My Music (DLNA) driver (which is also available unencrypted in the Composer online database), this driver shows how to create a listening server on a dynamic port that can then be used for callbacks on DLNA/SSDP subscribes.
 - `driver-init`: Demonstrates the new-in-OS3.2 features on the `OnDriverInit`, `OnDriverLateInit` and `OnDriverDestroyed` Driverworks functions to indicate *why* the function is being called.
 - `generic_http`: Demonstrator driver for the `url.lua` library.
