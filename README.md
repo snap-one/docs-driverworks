@@ -11,7 +11,7 @@ This area is focused on the delivery of documentation, code samples and some uti
 
 - Composer Pro: A licensed version of Composer Pro running on a controller is required for driver modeling and testing.
 
-- Driver Certification: Offers a no-cost opportunity for your products to be formally tested in Control4’s certification lab. Once we certify your product drivers interoperate seamlessly with the Control4 platform, then we can collaborate with your company on numerous, beneficial marketing activities. For more information, please see the [driver_certification][driver_certification] folder.
+- Driver Certification: Offers a no-cost opportunity for your products to be formally tested in Control4's certification lab. Once we certify your product drivers interoperate seamlessly with the Control4 platform, then we can collaborate with your company on numerous, beneficial marketing activities. For more information, please see the [driver_certification][driver_certification] folder.
 
 The above components play an important role in ensuring that your driver has complete integration within the Control4 O.S. Use of them requires signing Control4's SDK License Agreement. For more information regarding the licensing agreement, please contact us at: <busdev@control4.com>.
 
@@ -25,7 +25,7 @@ You are encouraged to review the SDK development documentation through the links
 
 ### DriverWorks Fundamentals
 
-The DriverWorks Fundamentals Guide can be found [here][fundamentals]. This guide is intended to provide an overview of the fundamental components that make up a device driver as well as the architectural layers that a device driver interacts with. Additionally, The Fundamentals Guide contains Proxy-specific information that falls outside of the functions defined in the proxy documentation.
+The [DriverWorks Fundamentals Guide][fundamentals] is intended to provide an overview of the fundamental components that make up a device driver as well as the architectural layers that a device driver interacts with. Additionally, The Fundamentals Guide contains Proxy-specific information that falls outside of the functions defined in the proxy documentation.
 
 ### DriverWorks Proxy Documentation
 
@@ -44,15 +44,15 @@ Documentation for each of the supported Control4 Proxies can be found using the 
 
 ### DriverWorks APIs
 
-The DriverWorks API Reference Guide can be found [here][api]. The API Reference Guide details each of the Interfaces supported through the DriverWorks SDK. These Interfaces include numerous APIs that can be leveraged by your driver to facilitate communication between the driver and the Control4 O.S.
+The [DriverWorks API Reference Guide][api] details each of the Interfaces supported through the DriverWorks SDK. These Interfaces include numerous APIs that can be leveraged by your driver to facilitate communication between the driver and the Control4 O.S.
 
 ### DriverWorks XML
 
-The DriverWorks XML Reference Guide provides definitions for the XML elements supported in DriverWorks drivers. The guide can be found [here][xml].
+The [DriverWorks XML Reference Guide][xml] provides definitions for the XML elements supported in DriverWorks drivers.
 
 ### DriverWorks KNX
 
-Control4 supports integration with devices through standardized KNX control network topology. The DriverWorks KNX Implementation Guide can be found [here][knx]. The KNX protocol supports a wide variety of home automation applications including:
+Control4 supports integration with devices through standardized KNX control network topology. The [DriverWorks KNX Implementation Guide][knx] provides instruction on how to do this. The KNX protocol supports a wide variety of home automation applications including:
 
 - Lighting control
 - Heating/ventilation & Air Conditioning control
@@ -63,7 +63,7 @@ Control4 supports integration with devices through standardized KNX control netw
 
 ### DriverWorks and Zigbee
 
-Control4 supports integration with Zigbee devices and DriverWorks includes a Zigbee Implementation Guide which can be found [here][zigbee].
+Control4 supports integration with Zigbee devices and DriverWorks includes a [Zigbee Implementation Guide][zigbee].
 
 ## Additional DriverWorks Development Resources
 
@@ -83,7 +83,7 @@ The DriverWorks SDK provides templates and instructions on how to create icons t
 
 ### Media Service Proxy
 
-Control4’s Media Service Proxy (MSP) provides a layer of commands, notifications, events and other data handling elements that will support the development of drivers for media-based services and devices. For more information, please see the [media_service_proxy folder][msp].
+Control4's Media Service Proxy (MSP) provides a layer of commands, notifications, events and other data handling elements that will support the development of drivers for media-based services and devices. For more information, please see the [media_service_proxy folder][msp].
 
 ### QR Branding
 
