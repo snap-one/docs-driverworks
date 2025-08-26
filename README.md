@@ -36,7 +36,7 @@ Documentation for each of the supported Control4 Proxies can be found using the 
 | [Amplifier][pp_amplifier] | [Disc Changer][pp_disc]  | [Pool][pp_pool] |  [TV][pp_tv] |
 | [Amplifier Nav EQ][pp_amplifier-nav-eq] | [DVD Player][pp_dvd]  | [Projector][pp_projector]| [UI Button][pp_uibutton] |
 | [Audio Switch][pp_audioswitch] | [Fan][pp_fan] | [Receiver][pp_receiver] | [XM Tuner][pp_xm]|
-| [Audio Video Switch][pp_avswitch]  | [Media Player][pp_mediaplayer]| [Relay][pp_relay] |[Mixer][pp mixer] |
+| [Audio Video Switch][pp_avswitch]  | [Media Player][pp_mediaplayer]| [Relay][pp_relay] |[Mixer][pp_mixer] |
 | [Blind][pp_blind] | [Intercom][pp_intercom] | [Satellite Receiver][pp_satellite] | |
 | [Camera][pp_camera] | [Keypad][pp_keypad]  | [Security][pp_security]  | |
 | [CD Player][pp_cd] | [Light V2][pp_lightv2]  | [Thermostat][pp_tstat] | |
