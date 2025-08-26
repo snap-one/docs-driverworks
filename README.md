@@ -142,6 +142,7 @@ _From Safari:_ An entire guide can be saved as a Web Archive file from the Safar
 [pp_disc]: https://snap-one.github.io/docs-driverworks-proxyprotocol-disc
 [pp_dvd]: https://snap-one.github.io/docs-driverworks-proxyprotocol-dvd
 [pp_mediaplayer]: https://snap-one.github.io/docs-driverworks-proxyprotocol-mediaplayer
+[pp_mixer]: https://snap-one.github.io/docs-driverworks-proxyprotocol-mixer/#what-s-new
 [pp_intercom]: https://snap-one.github.io/docs-driverworks-proxyprotocol-intercom
 [pp_keypad]: https://snap-one.github.io/docs-driverworks-proxyprotocol-keypad
 [pp_lightv2]: https://snap-one.github.io/docs-driverworks-proxyprotocol-lightv2
