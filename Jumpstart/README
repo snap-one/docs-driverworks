@@ -7,5 +7,5 @@ JumpRefresh is a program that is a companion tool to JumpStart. While JumpStart 
 intended to be changed by the driver developer into the driver’s source code. The allows the driver developer to update their driver to use the latest template code without 
 overwriting any changes or additions made to the driver code after its initial creation.
 
-For further information regarding Jumpstart and JumpRefresh, please see the Jumpstart documentation here: (https://snap-one.github.io/docs-driverworks-fundamentals/#getting-started-with-jumpstart)
+For further information regarding Jumpstart and JumpRefresh, please see the documentation found here: (https://snap-one.github.io/docs-driverworks-fundamentals/#getting-started-with-jumpstart)
 
