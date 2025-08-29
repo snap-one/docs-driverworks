@@ -73,6 +73,10 @@ The directories at the top of this page contain various resources to support you
 
 The SDK includes Driver Development Templates and a utility called JumpStart to accelerate your driver development efforts. Please see the [driver template repository][templates] for more information on how to leverage these templates.
 
+### Jumpstart
+
+Jumpstart is a driver development utility that is compatible with Linux and Windows environments. Jumpstart works in conjunction with Driver Development Templates to fast track driver creation by receiving device specific information from the driver developer to quickly assemble a viable driver that can then further enhanced with functionality that is unique to a device. For more information, please see the [Jumstart directory](https://github.com/snap-one/docs-driverworks/tree/master/Jumpstart)
+
 ### DriverPackager
 
 Driver Packager is a Python utility used to create individual .c4z files from source code. For more information, please see the [GitHub repository for Driver Packager](https://github.com/snap-one/drivers-driverpackager)
