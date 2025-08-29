@@ -1,5 +1,5 @@
-Jumpstart info here
+Jumpstart is a driver development utility that is compatible with Linux and Windows environments. Jumpstart works in conjunction with Driver Development Templates 
+to fast track driver creation by receiving device specific information from the driver developer to quickly assemble a viable driver that can then further enhanced with 
+functionality that is unique to a device.
 
-
-To create an executable from a Python script
-pyinstaller -F <rootfile.py>
+For further information, please see the Jumpstart documentation here: https://snap-one.github.io/docs-driverworks-fundamentals/#getting-started-with-jumpstart
