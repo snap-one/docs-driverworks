@@ -1,1 +1,5 @@
 Jumpstart info here
+
+
+To create an executable from a Python script
+pyinstaller -F <rootfile.py>
