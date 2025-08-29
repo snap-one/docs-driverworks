@@ -75,7 +75,7 @@ The SDK includes Driver Development Templates and a utility called JumpStart to 
 
 ### Jumpstart
 
-Jumpstart is a driver development utility that is compatible with Linux and Windows environments. Jumpstart works in conjunction with Driver Development Templates to fast track driver creation by receiving device specific information from the driver developer to quickly assemble a viable driver that can then further enhanced with functionality that is unique to a device. For more information, please see the [Jumstart directory](https://github.com/snap-one/docs-driverworks/tree/master/Jumpstart)
+Jumpstart is a driver development utility that is compatible with Linux and Windows environments. Jumpstart works in conjunction with Driver Development Templates to fast track driver creation by receiving device specific information from the driver developer to quickly assemble a viable driver that can then further enhanced with functionality that is unique to a device. For more information, please see the [Jumpstart directory](https://github.com/snap-one/docs-driverworks/tree/master/Jumpstart)
 
 ### DriverPackager
 
