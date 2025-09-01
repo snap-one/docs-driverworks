@@ -113,7 +113,7 @@ class CreatePO(object):
 						msgStr = m.group(2)
 						if (not msgStr in msgStrings):
 							msgStrings [msgStr] = []
-						msgStrings [msgStr].append ((filename, line_number))
+						msgStrings [msgStr].append ((filename, line_number + 1))
 
 		#self.log("Strings:", msgStrings)
 
