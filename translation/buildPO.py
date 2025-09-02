@@ -152,7 +152,8 @@ class CreatePO(object):
 
 		for filename in xmlIncludedFiles:
 			driverPath = os.path.join(self.directory, filename)
-			self.processXmlFile(driverPath, msgStrings)
+			if os.path.exists (driverPath):
+				self.processXmlFile(driverPath, msgStrings)
 
 		self.log(msgStrings)
 
