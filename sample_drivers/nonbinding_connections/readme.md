@@ -1,1 +1,1 @@
-The sample drivers included here are intented to be used with the non-binding connectin documentation found in the DriverWorks Fundamentals Guide found here: https://snap-one.github.io/docs-driverworks-fundamentals/#connections-non-binding-connection.
+The sample drivers included here are intented to be used with the non-binding connection documentation found in the DriverWorks Fundamentals Guide found here: https://snap-one.github.io/docs-driverworks-fundamentals/#connections-non-binding-connection.
