@@ -7,7 +7,6 @@ In X4, we have simplified the creation of driver icons.
 1. 1024 x 1024 Vector-based artwork.
 2. Solid background color is recommended.
 3. SVG format for export.
-4. X4 will handle the UI treatments and use the new Driver parameters to provide information to the User—e.g., badging, battery, and timers.
 
 ### Where do I get a Vector-based artwork?
 
