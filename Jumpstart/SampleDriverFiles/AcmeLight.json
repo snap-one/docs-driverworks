@@ -1,0 +1,25 @@
+{
+	"DriverName": "light-ACME",
+	"Copyright": "Snap One LLC.",
+	"Manufacturer": "Control4",
+	"Creator": "Control4",
+	"Name": "ACME Pretend Light",
+	"Model": "Lumen-3000",
+	"Proxies": [
+		{
+			"Proxy": "Light",
+			"Name": "AcmeLight"
+		}
+	],
+	"Button Links": [
+		"Top Button Link",
+		"Bottom Button Link",
+		"Toggle Button Link"
+	],
+	"Communications": [
+		{
+			"ComType": "Zigbee",
+			"ComSettings": {}
+		}
+	]
+}

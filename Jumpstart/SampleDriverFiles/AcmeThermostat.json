@@ -1,0 +1,30 @@
+{
+	"DriverName": "thermostat-ACME",
+	"Copyright": "Snap One LLC.",
+	"Manufacturer": "Control4",
+	"Creator": "Control4",
+	"Name": "ACME Pretend Thermostat",
+	"Model": "MayAire 6000",
+	"Proxies": [
+		{
+			"Proxy": "Thermostat",
+			"Name": "AcmeThermostat"
+		}
+	],
+	"Communications": [
+		{
+			"ComType": "Serial",
+			"ComSettings": {}
+		}
+	],
+	"Capabilities":  {
+		"scheduling": "True",
+		"has_outdoor_temperature": "False",
+		"has_vacation_mode": "False"
+	},
+
+	"Actions": [
+		"The First Action",
+		"Equal and Opposite Reaction"
+	]
+}

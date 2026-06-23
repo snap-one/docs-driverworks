@@ -1,0 +1,113 @@
+{
+	"DriverName": "tv-ACME",
+	"Copyright": "ACME Electronics LLC.",
+	"Manufacturer": "ACME",
+	"Creator": "Control4",
+	"Name": "ACME Pretend TV",
+	"Model": "VAST-WASTELAND 64",
+	"Encrypt": "True",
+	"Proxies": [
+		{
+			"Proxy": "TV",
+			"Name": "AcmeTV",
+			
+			"AVConnections": {
+				"AudioVideoInputs": [
+					{
+						"Name": "AV",
+						"Attributes": {
+							"VideoClasses": [
+								"COMPOSITE"
+							],
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "INPUT CBL/SAT",
+						"Attributes": {}
+					},
+					{
+						"Name": "INPUT PC",
+						"Attributes": {}
+					},
+					{
+						"Name": "INPUT STRM BOX",
+						"Attributes": {}
+					}
+				],
+				"AudioOnlyInputs": [],
+				"VideoOnlyInputs": [
+					{
+						"Name": "Antenna TV (ATV)",
+						"Attributes": {
+							"VideoClasses": [
+								"RF_UHF_VHF"
+							]
+						}
+					},
+					{
+						"Name": "CABLE TV (CATV)",
+						"Attributes": {
+							"VideoClasses": [
+								"RF_CABLE"
+							]
+						}
+					},
+					{
+						"Name": "HDMI 1",
+						"Attributes": {
+							"VideoClasses": [
+								"HDMI"
+							]
+						}
+					},
+					{
+						"Name": "HDMI 2",
+						"Attributes": {
+							"VideoClasses": [
+								"HDMI"
+							]
+						}
+					}
+				],
+				"AudioVideoOutputs": [],
+				"AudioOnlyOutputs": [
+					{
+						"Name": "Output",
+						"Attributes": {
+							"AudioClasses": [
+								"DIGITAL_OPTICAL"
+							]
+						}
+					},
+					{
+						"Name": "Audio Out 2",
+						"Attributes": {}
+					}
+				],
+				"VideoOnlyOutputs": []
+			}
+		}
+	],
+	"MiniApps": [
+		"MiniApp 1",
+		"MiniApp 2",
+		"MiniApp 3"
+	],
+	"Communications": [
+		{
+			"ComType": "Network",
+			"ComSettings": {}
+		},
+		{
+			"ComType": "Serial",
+			"ComSettings": {}
+		},
+		{
+			"ComType": "IR",
+			"ComSettings": {}
+		}
+	]
+}

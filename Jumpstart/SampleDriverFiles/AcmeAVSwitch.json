@@ -1,0 +1,221 @@
+{
+	"DriverName": "avswitch-ACME",
+	"Copyright": "Snap One LLC.",
+	"Manufacturer": "Control4",
+	"Creator": "Control4",
+	"Name": "ACME Pretend AVSwitch",
+	"Model": "9876-8x",
+	"Encrypt": "True",
+	"UseCommandQueue": "True",
+	"Proxies": [
+		{
+			"Proxy": "AV Switch",
+			"Name": "ACME AVSwitch",
+			"AVConnections": {
+				"AudioVideoInputs": [
+					{
+						"Name": "INPUT 1",
+						"Attributes": {
+							"VideoClasses": [
+								"HDMI"
+							],
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "INPUT 2",
+						"Attributes": {
+							"VideoClasses": [
+								"HDMI"
+							],
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "INPUT 3",
+						"Attributes": {
+							"VideoClasses": [
+								"HDMI"
+							],
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "INPUT 4",
+						"Attributes": {
+							"VideoClasses": [
+								"HDMI"
+							],
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "INPUT 5",
+						"Attributes": {
+							"VideoClasses": [
+								"HDMI"
+							],
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "INPUT 6",
+						"Attributes": {
+							"VideoClasses": [
+								"HDMI"
+							],
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "INPUT 7",
+						"Attributes": {
+							"VideoClasses": [
+								"HDMI"
+							],
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "INPUT 8",
+						"Attributes": {
+							"VideoClasses": [
+								"HDMI"
+							],
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					}
+				],
+				"AudioVideoOutputs": [
+					{
+						"Name": "Output 1",
+						"Attributes": {
+							"VideoClasses": [
+								"HDMI"
+							],
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "Output 2",
+						"Attributes": {
+							"VideoClasses": [
+								"HDMI"
+							],
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "Output 3",
+						"Attributes": {
+							"VideoClasses": [
+								"HDMI"
+							],
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "Output 4",
+						"Attributes": {
+							"VideoClasses": [
+								"HDMI"
+							],
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "Output 5",
+						"Attributes": {
+							"VideoClasses": [
+								"HDMI"
+							],
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "Output 6",
+						"Attributes": {
+							"VideoClasses": [
+								"HDMI"
+							],
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "Output 7",
+						"Attributes": {
+							"VideoClasses": [
+								"HDMI"
+							],
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "Output 8",
+						"Attributes": {
+							"VideoClasses": [
+								"HDMI"
+							],
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"MiniApps": [
+		"MiniApp 1",
+		"MiniApp 2",
+		"MiniApp 3"
+	],
+	"Communications": [
+		{
+			"ComType": "Network",
+			"ComSettings": {}
+		},
+		{
+			"ComType": "Serial",
+			"ComSettings": {}
+		},
+		{
+			"ComType": "IR",
+			"ComSettings": {}
+		}
+	],
+	"Actions": [
+		"Action 1",
+		"Action 2"
+	]
+}

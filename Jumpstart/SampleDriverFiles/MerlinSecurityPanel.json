@@ -1,0 +1,53 @@
+{
+     "DriverName": "security-Merlin",
+     "Copyright": "Snap One LLC.",
+     "Manufacturer": "Control4",
+     "Creator": "Control4",
+     "Name": "Merlin",
+     "Model": "Merlin Virtual Security Panel",
+     "Encrypt": "False",
+     "UseCommandQueue": "True",     
+     "Proxies":  [ 
+         { "Proxy": "Security Panel", "Name": "Merlin" },
+         { "Proxy": "Security Partition", "Name": "Partition 1" }
+     ],
+
+     "Actions":  [
+         "Toggle Zone",
+         "Toggle Bypass Zone",
+         "Disarm Partition",
+         "Arm Partition",
+         "Set Zone Info"
+     ],
+
+     "Properties": [
+        { "Name": "Lab1", "Type":"LABEL", "Default":"--- A Nice Label Divider ---" },
+        { "Name": "PropInt1", "Type":"RANGED_INTEGER", "ReadOnly": "True", "Default":"3", "Min":"1", "Max":"15"  },
+        { "Name": "PropFloat1", "Type":"RANGED_FLOAT", "ReadOnly": "False", "Default":"10.1", "Min":"9.0", "Max":"100.3"  },
+        { "Name": "PropList2", "Type":"LIST", "ReadOnly": "False", "Default":"Craig", "ListMembers": ["Craig", "Dan", "Jon", "Phil", "James"], "Tooltip": "Brothers"  },
+        { "Name": "Str1", "Type":"STRING", "ReadOnly": "False", "Default":"Abandon hope..", "Tooltip": "First String"  },
+        { "Name": "Str2", "Type":"STRING", "ReadOnly": "True", "Default":"Stuck on you", "Tooltip": "Second String"  },
+        { "Name": "ColorSel1", "Type":"COLOR_SELECTOR", "Default":"255, 0, 0", "Tooltip": "Test Color Select"  },
+        { "Name": "DynList1", "Type":"DYNAMIC_LIST", "ReadOnly": "False", "Tooltip": "Test Dynamic List"  },
+        { "Name": "VarSel1", "Type":"VARIABLE_SELECTOR", "ReadOnly": "False", "VariableType": "boolean", "Tooltip": "Test Var Select b"  },
+        { "Name": "VarSel2", "Type":"VARIABLE_SELECTOR", "ReadOnly": "False", "VariableType": "string", "Tooltip": "Test Var Select s"  },
+        { "Name": "VarSel3", "Type":"VARIABLE_SELECTOR", "ReadOnly": "False", "VariableType": "number", "Tooltip": "Test Var Select n"  },
+        { "Name": "VarSel4", "Type":"VARIABLE_SELECTOR", "ReadOnly": "False", "VariableType": "float", "Tooltip": "Test Var Select f"  },
+        { "Name": "VarSel5", "Type":"VARIABLE_SELECTOR", "ReadOnly": "False", "VariableType": "device", "Tooltip": "Test Var Select d"  },
+        { "Name": "VarSel6", "Type":"VARIABLE_SELECTOR", "ReadOnly": "False", "VariableType": "media", "Tooltip": "Test Var Select m"  },
+        { "Name": "VarSel7", "Type":"VARIABLE_SELECTOR", "ReadOnly": "False", "VariableType": "user", "Tooltip": "Test Var Select u"  },
+        { "Name": "VarSel8", "Type":"VARIABLE_SELECTOR", "ReadOnly": "False", "VariableType": "all", "Tooltip": "Test Var Select a"  },
+        { "Name": "DevSel1", "Type":"DEVICE_SELECTOR", "ReadOnly": "False", "MultiSelect": "True", "Items":["light.c4i", "lock.c4i"], "Tooltip": "Test Dev Select 1"  },
+        { "Name": "DevSel2", "Type":"DEVICE_SELECTOR", "ReadOnly": "False", "MultiSelect": "False", "Items":["tv.c4i", "appletv.c4i"], "Tooltip": "Test Dev Select 2"  },
+        { "Name": "DevSel3", "Type":"DEVICE_SELECTOR", "ReadOnly": "False", "Items":["tv.c4i", "appletv.c4i"], "Tooltip": "Test Dev Select 3"  }
+    
+     ],
+
+
+     "Communications": [
+		{
+			"ComType": "Custom",
+			"ComSettings": {}
+		}
+     ]
+}

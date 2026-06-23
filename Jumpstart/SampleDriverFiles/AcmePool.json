@@ -1,0 +1,33 @@
+{
+	"DriverName": "pool-ACME",
+	"Copyright": "Snap One LLC.",
+	"Manufacturer": "Control4",
+	"Creator": "Control4",
+	"Name": "ACME Pretend Pool",
+	"Model": "Splash Shark",
+	"Encrypt": "True",
+	"UseCommandQueue": "True",
+	"Proxies": [
+		{
+			"Proxy": "Pool",
+			"Name": "AcmePool"
+		}
+	],
+	"Communications": [
+		{
+			"ComType": "Serial",
+			"ComSettings": {}
+		}
+	],
+	"Capabilities": {
+		"temp_min": 50,
+		"temp_max": 110,
+		"pool_heat_modes": {
+			"mode": [
+				{ "id": "1", "text": "Heater" },
+				{ "id": "2", "text": "Solar Heater"},
+				{ "id": "3", "text": "Solar Heater Prefered"}
+			]
+		}
+	}
+}

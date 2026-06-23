@@ -1,0 +1,139 @@
+{
+	"DriverName": "receiver-master_sony",
+	"Copyright": "Snap One LLC.",
+	"Manufacturer": "Sony",
+	"Creator": "Sony (installsupport@am.sony.com)",
+	"Name": "Sony Master Receiver",
+	"Model": "Master",
+	"Proxies": [
+		{
+			"Proxy": "Receiver",
+			"Name": "Sony Receiver",
+			"AVConnections": {
+				"AudioVideoInputs": [
+					{
+						"Name": "BD/DVD",
+						"Attributes": {}
+					},
+					{
+						"Name": "GAME",
+						"Attributes": {}
+					},
+					{
+						"Name": "SAT/CATV",
+						"Attributes": {}
+					},
+					{
+						"Name": "VIDEO1",
+						"Attributes": {}
+					},
+					{
+						"Name": "TV",
+						"Attributes": {}
+					},
+					{
+						"Name": "SA-CD/CD",
+						"Attributes": {}
+					}
+				],
+				"AudioOnlyInputs": [
+					{
+						"Name": "AUX",
+						"Attributes": {}
+					},
+					{
+						"Name": "STB",
+						"Attributes": {}
+					}
+				],
+				"VideoOnlyInputs": [
+					{
+						"Name": "VIDEO2",
+						"Attributes": {}
+					}
+				],
+				"AudioVideoOutputs": [
+					{
+						"Name": "Output",
+						"Attributes": {}
+					},
+					{
+						"Name": "Zone2 Output",
+						"Attributes": {}
+					}
+				],
+				"AudioOnlyOutputs": [
+					{
+						"Name": "Zone3 Output",
+						"Attributes": {}
+					}
+				],
+				"VideoOnlyOutputs": [
+					{
+						"Name": "ZoneHDMI Output",
+						"Attributes": {}
+					}
+				]
+			}
+		},
+		{
+			"Proxy": "Tuner",
+			"Name": "AM/FM Tuner",
+			"AudioOnlyInputs": [
+				{
+					"Name": "AM Antenna",
+					"Attributes": {}
+				},
+				{
+					"Name": "FM Antenna",
+					"Attributes": {}
+				}
+			]
+		}
+	],
+	"MiniApps": [
+		"MiniApp 1",
+		"MiniApp 2",
+		"MiniApp 3",
+		"MiniApp 4",
+		"MiniApp 5",
+		"MiniApp 6",
+		"MiniApp 7",
+		"MiniApp 8",
+		"MiniApp 9",
+		"MiniApp 10",
+		"MiniApp 11",
+		"MiniApp 12",
+		"MiniApp 13",
+		"MiniApp 14",
+		"MiniApp 15",
+		"MiniApp 16",
+		"MiniApp 17",
+		"MiniApp 18",
+		"MiniApp 19",
+		"MiniApp 20",
+		"MiniApp 21",
+		"MiniApp 22",
+		"MiniApp 23",
+		"MiniApp 24",
+		"MiniApp 25"
+	],
+	"Communications": [
+		{
+			"ComType": "Network",
+			"ComSettings": {}
+		},
+		{
+			"ComType": "Serial",
+			"ComSettings": {}
+		},
+		{
+			"ComType": "IR",
+			"ComSettings": {}
+		}
+	],
+	"Actions": [
+		"Action 1",
+		"Action 2"
+	]
+}

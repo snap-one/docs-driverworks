@@ -1,0 +1,158 @@
+{
+	"DriverName": "amplifier-ACME",
+	"Copyright": "Snap One LLC.",
+	"Manufacturer": "Control4",
+	"Creator": "Control4",
+	"Name": "ACME Pretend Amplifier",
+	"Model": "BigBoom 999",
+	"Proxies": [
+		{
+			"Proxy": "Amplifier",
+			"Name": "ACME Amplifier",
+			"AVConnections": {
+				"AudioOnlyInputs": [
+					{
+						"Name": "INPUT 1",
+						"Attributes": {
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "INPUT 2",
+						"Attributes": {
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "INPUT 3",
+						"Attributes": {
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "INPUT 4",
+						"Attributes": {
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "INPUT 5",
+						"Attributes": {
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "INPUT 6",
+						"Attributes": {
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "INPUT 7",
+						"Attributes": {
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "INPUT 8",
+						"Attributes": {
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					}
+				],
+				"AudioOnlyOutputs": [
+					{
+						"Name": "Output 1",
+						"Attributes": {
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "Output 2",
+						"Attributes": {
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "Output 3",
+						"Attributes": {
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "Output 4",
+						"Attributes": {
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "Output 5",
+						"Attributes": {
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "Output 6",
+						"Attributes": {
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "Output 7",
+						"Attributes": {
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					},
+					{
+						"Name": "Output 8",
+						"Attributes": {
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"Communications": [
+		{
+			"ComType": "Network",
+			"ComSettings": {}
+		}
+	],
+	"Actions": [
+		"Action 1",
+		"Action 2"
+	]
+}

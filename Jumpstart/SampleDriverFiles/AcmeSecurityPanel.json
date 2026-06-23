@@ -1,0 +1,38 @@
+{
+	"DriverName": "security-ACME",
+	"Copyright": "Snap One LLC.",
+	"Manufacturer": "Control4",
+	"Creator": "Control4",
+	"Name": "ACME Pretend Security Panel",
+	"Model": "Fortress AAAA",
+	"Encrypt": "True",
+	"UseCommandQueue": "True",
+	"Proxies": [
+		{
+			"Proxy": "Security Panel",
+			"Name": "AcmePanel"
+		},
+		{
+			"Proxy": "Security Partition",
+			"Name": "Partition 1"
+		},
+		{
+			"Proxy": "Security Partition",
+			"Name": "Partition 2"
+		},
+		{
+			"Proxy": "Security Partition",
+			"Name": "Partition 3"
+		}
+	],
+	"Communications": [
+		{
+			"ComType": "Network",
+			"ComSettings": {}
+		},
+		{
+			"ComType": "Serial",
+			"ComSettings": {}
+		}
+	]
+}

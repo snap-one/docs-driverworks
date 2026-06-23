@@ -1,0 +1,20 @@
+{
+	"DriverName": "lock-ACME",
+	"Copyright": "Snap One LLC.",
+	"Manufacturer": "Control4",
+	"Creator": "Control4",
+	"Name": "ACME Pretend Lock",
+	"Model": "Nessie 22",
+	"Proxies": [
+		{
+			"Proxy": "Lock",
+			"Name": "AcmeLock"
+		}
+	],
+	"Communications": [
+		{
+			"ComType": "Zigbee",
+			"ComSettings": {}
+		}
+	]
+}

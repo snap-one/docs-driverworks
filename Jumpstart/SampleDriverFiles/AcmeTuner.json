@@ -1,0 +1,169 @@
+{
+	"DriverName": "receiver-ACME",
+	"Copyright": "Snap One LLC.",
+	"Manufacturer": "ACME",
+	"Creator": "Control4",
+	"Name": "ACME Pretend Receiver",
+	"Model": "1234-A",
+	"Proxies": [
+		{
+			"Proxy": "Receiver",
+			"Name": "ACME Receiver",
+			"AVConnections": {
+				"AudioVideoInputs": [
+					{
+						"Name": "INPUT CBL/SAT",
+						"Attributes": {}
+					},
+					{
+						"Name": "INPUT GAME",
+						"Attributes": {}
+					},
+					{
+						"Name": "INPUT PC",
+						"Attributes": {}
+					},
+					{
+						"Name": "INPUT EXTRA1",
+						"Attributes": {}
+					},
+					{
+						"Name": "INPUT EXTRA2",
+						"Attributes": {}
+					},
+					{
+						"Name": "INPUT EXTRA3",
+						"Attributes": {}
+					},
+					{
+						"Name": "INPUT BD/DVD",
+						"Attributes": {}
+					},
+					{
+						"Name": "INPUT PHONO",
+						"Attributes": {}
+					},
+					{
+						"Name": "INPUT CD",
+						"Attributes": {}
+					},
+					{
+						"Name": "INPUT STRM BOX",
+						"Attributes": {}
+					},
+					{
+						"Name": "INPUT TV",
+						"Attributes": {}
+					}
+				],
+				"AudioOnlyInputs": [
+					{
+						"Name": "Audio In 1",
+						"Attributes": {}
+					},
+					{
+						"Name": "Audio In 2",
+						"Attributes": {}
+					},
+					{
+						"Name": "Audio In 3",
+						"Attributes": {}
+					}
+				],
+				"VideoOnlyInputs": [
+					{
+						"Name": "INPUT AUX",
+						"Attributes": {
+							"VideoClasses": [
+								"HDMI"
+							]
+						}
+					},
+					{
+						"Name": "Video In 2",
+						"Attributes": {}
+					}
+				],
+				"AudioVideoOutputs": [
+					{
+						"Name": "Main Output",
+						"Attributes": {}
+					},
+					{
+						"Name": "Zone2 Output",
+						"Attributes": {
+							"VideoClasses": [
+								"HDMI"
+							]
+						}
+					}
+				],
+				"AudioOnlyOutputs": [
+					{
+						"Name": "Zone3 Output",
+						"Attributes": {
+							"AudioClasses": [
+								"STEREO"
+							]
+						}
+					}
+				],
+				"VideoOnlyOutputs": [
+					{
+						"Name": "Video Out 3",
+						"Attributes": {}
+					}
+				]
+			}
+		},
+		{
+			"Proxy": "Tuner",
+			"Name": "AM/FM Tuner"
+		},
+		{
+			"Proxy": "Media Player",
+			"Name": "ACME Net"
+		}
+	],
+	"MiniApps": [
+		"MiniApp 1",
+		"MiniApp 2",
+		"MiniApp 3"
+	],
+	"Capabilities": {
+		"has_discrete_treble_control": "False",
+		"surround_modes": {
+			"surround_mode": [
+				{ "id": 22621, "name": "Stereo" },
+				{ "id": 22625, "name": "THX" },
+				{ "id": 10001, "name": "SoupCans" }
+			]
+		}
+
+	},
+	"Communications": [
+		{
+			"ComType": "Network",
+			"ComSettings": {
+				"Address": "192.168.1.1",
+				"Port": 82
+			}
+		},
+		{
+			"ComType": "Serial",
+			"ComSettings": {
+				"BaudRate": 19200,
+				"DataBits": 8,
+				"StopBits": 1
+			}
+		},
+		{
+			"ComType": "IR",
+			"ComSettings": {}
+		}
+	],
+	"Actions": [
+		"Action 1",
+		"Action 2"
+	]
+}

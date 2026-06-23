@@ -1,0 +1,14 @@
+{
+	"DriverName": "driver_combo_sample",
+	"Copyright": "Snap One LLC.",
+	"Manufacturer": "Control4",
+	"Creator": "Wendell Hellewell",
+	"Name": "Driver Sample",
+	"Model": "Non Device",
+	"Proxies": [
+		{
+			"Proxy": "Combo",
+			"Name": "driver_combo_sample"
+		}
+	]
+}
