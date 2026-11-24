@@ -12,5 +12,5 @@ The purpose of this directory is provide the latest information regarding Contro
 
 - Driver Certification
 
-For more information regarding the licensing agreement, please contact us at: busdev@contol4.com.
+For more information regarding the licensing agreement, please contact us at: c4iq@adiglobal.com.
 
